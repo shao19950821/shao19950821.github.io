@@ -81,17 +81,17 @@
 
 <meta name="description" content="引言写代码时总会出很多的if…else，或者case。如果在一个条件语句中又包含了多个条件语句就会使得代码变得臃肿，维护的成本也会加大，而策略模式就能较好的解决这个问题。 &amp;lt; !–more–&amp;gt; 策略模式的定义和使用场景定义：策略模式定义了一系列的算法，并将每一个算法封装起来，而且使他们可以相互替换，让算法独立于使用它的客户而独立变化。 分析下定义，策略模式定义和封装了一系列的算法，它们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式(一)-策略模式(Strategy)">
-<meta property="og:url" content="http://yoursite.com/2018/06/10/设计模式-一-策略模式-Strategy/index.html">
+<meta property="og:title" content="设计模式-策略模式(Strategy)">
+<meta property="og:url" content="http://yoursite.com/2018/06/10/设计模式-策略模式-Strategy/index.html">
 <meta property="og:site_name" content="夏至微风">
 <meta property="og:description" content="引言写代码时总会出很多的if…else，或者case。如果在一个条件语句中又包含了多个条件语句就会使得代码变得臃肿，维护的成本也会加大，而策略模式就能较好的解决这个问题。 &amp;lt; !–more–&amp;gt; 策略模式的定义和使用场景定义：策略模式定义了一系列的算法，并将每一个算法封装起来，而且使他们可以相互替换，让算法独立于使用它的客户而独立变化。 分析下定义，策略模式定义和封装了一系列的算法，它们">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/06/10/设计模式-一-策略模式-Strategy/策略模式.png">
-<meta property="og:updated_time" content="2018-06-25T15:13:10.730Z">
+<meta property="og:image" content="http://yoursite.com/2018/06/10/设计模式-策略模式-Strategy/策略模式.png">
+<meta property="og:updated_time" content="2018-06-29T17:17:23.148Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式(一)-策略模式(Strategy)">
+<meta name="twitter:title" content="设计模式-策略模式(Strategy)">
 <meta name="twitter:description" content="引言写代码时总会出很多的if…else，或者case。如果在一个条件语句中又包含了多个条件语句就会使得代码变得臃肿，维护的成本也会加大，而策略模式就能较好的解决这个问题。 &amp;lt; !–more–&amp;gt; 策略模式的定义和使用场景定义：策略模式定义了一系列的算法，并将每一个算法封装起来，而且使他们可以相互替换，让算法独立于使用它的客户而独立变化。 分析下定义，策略模式定义和封装了一系列的算法，它们">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/10/设计模式-一-策略模式-Strategy/策略模式.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/10/设计模式-策略模式-Strategy/策略模式.png">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/10/设计模式-一-策略模式-Strategy/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/10/设计模式-策略模式-Strategy/"/>
 
 
 
 
 
-  <title>设计模式(一)-策略模式(Strategy) | 夏至微风</title>
+  <title>设计模式-策略模式(Strategy) | 夏至微风</title>
   
 
 
@@ -266,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/设计模式-一-策略模式-Strategy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/设计模式-策略模式-Strategy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="なつ初夏倾城">
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设计模式(一)-策略模式(Strategy)</h1>
+          <h1 class="post-title" itemprop="name headline">设计模式-策略模式(Strategy)</h1>
         
 
         <div class="post-meta">
@@ -370,7 +370,7 @@
 <h1 id="策略模式的定义和使用场景"><a href="#策略模式的定义和使用场景" class="headerlink" title="策略模式的定义和使用场景"></a>策略模式的定义和使用场景</h1><h2 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h2><p>策略模式定义了一系列的算法，并将每一个算法封装起来，而且使他们可以相互替换，让算法独立于使用它的客户而独立变化。</p>
 <p>分析下定义，策略模式定义和封装了一系列的算法，它们是可以相互替换的，也就是说它们具有共性，而它们的共性就体现在策略接口的行为上，另外为了达到最后一句话的目的，也就是说让算法独立于使用它的客户而独立变化，我们需要让客户端依赖于策略接口。</p>
 <h2 id="策略模式的使用场景："><a href="#策略模式的使用场景：" class="headerlink" title="策略模式的使用场景："></a>策略模式的使用场景：</h2><p>1.针对同一类型问题的多种处理方式，仅仅是具体行为有差别时；<br>2.需要安全地封装多种同一类型的操作时；<br>3.出现同一抽象类有多个子类，而又需要使用 if-else 或者 switch-case 来选择具体子类时。</p>
-<h1 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h1><p><img src="/2018/06/10/设计模式-一-策略模式-Strategy/策略模式.png" alt="策略模式"></p>
+<h1 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h1><p><img src="/2018/06/10/设计模式-策略模式-Strategy/策略模式.png" alt="策略模式"></p>
 <p>模式涉及到三个角色:<br><br>1.Context 环境:持有一个策略(strategy)的引用;<br><br>2.Strategy 抽象策略:这是一个抽象的角色。通常是一个抽象类或者接口。为了提供给具体策略实现接口;<br><br>3.ConcreteStrategy 具体策略:包装相关策略。</p>
 <h1 id="具体例子"><a href="#具体例子" class="headerlink" title="具体例子"></a>具体例子</h1><h2 id="两个浮点数的计算"><a href="#两个浮点数的计算" class="headerlink" title="两个浮点数的计算"></a>两个浮点数的计算</h2><p>先定义一个抽象策略的接口</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface Opretator &#123;</span><br><span class="line"></span><br><span class="line">    double opretator(double numberA, double numberB);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
