@@ -1,0 +1,129 @@
+/**
+ * gaoyang user block css
+ */
+
+.row-body-left-title {
+    background: #fff;
+    height: 30px;
+    padding-top: 8px;
+    border-radius: 5px 5px 0px 0px;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 7px;
+    background-size: 20px;
+    padding-left: 33px;
+}
+
+.row-body-left-body {
+    background: #fff;
+    height: 30px;
+    position: relative;
+}
+
+.row-body-left-progress {
+    padding: 0;
+    position: relative;
+    height: 4px;
+    background: #03b3b2;
+}
+
+.row-body-left-foot {
+    background: #fff;
+    height: 58px;
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+.row-body-left-foot-area {
+    height: 58px;
+    width: 290px;
+    border-top: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    float: left;
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 58px;
+    cursor: pointer;
+}
+
+.row-body-left-foot-area:hover, focus {
+    color: #262626;
+}
+
+.foot-area3 {
+    border-right: 0px !important;
+}
+.row-body-left-body > ul {
+    list-style: none;
+    position: absolute;
+    padding: 0px;
+    height: 30px;
+}
+
+.row-body-left-body > ul > li {
+    float: left;
+    text-align: center;
+    width: 217.5px;
+    font-size: 13px;
+    height: inherit;
+    line-height: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.row-body-left-body-li-active {
+    border-right: 1px solid #e5e5e5;
+    border-bottom: none !important;
+    color: #262626;
+}
+
+.row-body-right-body-li-active {
+    border-left: 1px solid #e5e5e5;
+    border-bottom: none !important;
+    color: #262626;
+}
+
+.row-body-body-li-active {
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-bottom: none !important;
+    color: #262626;
+}
+
+.row-body-left-body > ul > li a:hover, focus {
+    color: #262626;
+}
+
+.row-body-left-body > ul > li a {
+    width: 217.5px;
+    display: block;
+}
+
+.row-body-left-body > ul > li a {
+    width: 217.5px;
+    display: block;
+}
+
+.foot-area-imags{
+    float:left;
+    height:68px;
+    width:80px;
+}
+
+.foot-area-imags-detail{
+    margin-top: -4px;
+    width: 30px;
+    height: 30px;
+}
+.foot-area-texts{
+    float: left;
+    width:200px;
+    left:0px;
+    text-align: left;
+}
+
+.row-body-left-title{
+    border-radius: 5px 5px 0px 0px;
+}
+

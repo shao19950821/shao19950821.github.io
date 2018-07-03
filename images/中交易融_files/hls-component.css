@@ -1,0 +1,899 @@
+/**
+ *   grid-hlsRollTable
+ */
+label,p{
+    padding:0;
+    margin:0;
+}
+.hls-pagging-grid {
+    position:relative;
+    width: 870px;
+    height: 355px;
+    margin:0 auto;
+    background: white;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    border-radius: 5px;
+}
+.hls-pagging-grid .grid-title  img{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.hls-pagging-grid .grid-title {
+    position: relative;
+    padding: 0 10px;
+    height: 40px;
+    border-bottom: 4px solid #F57B69;
+    line-height: 40px;
+    color: #000;
+    font-weight: bold;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.hls-pagging-grid .grid-title .title-img {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.hls-pagging-grid .grid-body {
+    color:#333;
+    padding: 0 10px;
+    overflow: auto;
+}
+.hls-pagging-grid .grid-body table {
+    width: 100%;
+    color: #333;
+}
+.hls-pagging-grid .grid-body table tr {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    overflow: auto;
+    font-size:12px;
+    height:45px;
+}
+.hls-pagging-grid .grid-body table tbody tr:first-child{
+    font-size: 12px;
+    height: 45px;
+}
+.hls-pagging-grid .grid-body table tr:first-child {
+    font-size: 13px;
+    height:50px;
+}
+
+.hls-pagging-grid .grid-body table tr td {
+    /*padding: 7px;*/
+}
+.hls-pagging-grid .grid-foot {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 40px;
+    line-height:40px;
+}
+.hls-pagging-grid .grid-foot .page-btn {
+    min-width: 100px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.page-message{
+    color: #888;
+    position:absolute;
+    bottom:0px;
+    right:20px;
+    z-index: 1;
+}
+.page-count{
+    color: #888;
+    display: inline-block;
+    text-align: center;
+}
+.page-img-next{
+    cursor:pointer;
+    display:inline-block;
+    width:15px;
+    height:15px;
+    position: relative;
+    z-index: 2;
+}
+.page-img-prev{
+    cursor:pointer;
+    display:inline-block;
+    width:15px;
+    height:15px;
+}
+
+.selfCheckBox {
+    display: none;
+}
+.selfCheckBox + label {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 20px;
+    background-color: #FFF;
+    border: 1px solid rgb(0, 179, 179);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
+
+.selfCheckBox + label:active {
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.selfCheckBox:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: 100%;
+    font-size: 14px;
+}
+/**************************************************************** hlsRollTable END *****************************************************/
+
+
+/**
+  * 列表 - hlsNoticeTable
+  */
+.hls-notice-table{
+    border-radius:5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    float:left;
+}
+/**************************************************************** hlsRollTable END *****************************************************/
+
+
+
+
+/**
+  * 列表 - hlsRecordTable
+  */
+.hls-record-table {
+    height:100%;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    color: #333;
+}
+.hls-record-table-title .left-img {
+    width: 20px;
+    height: 20px;
+    margin-right:6px;
+    vertical-align: middle;
+}
+.hls-record-table  .hls-record-table-title {
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-weight: 600;
+}
+.hls-record-table  .hls-record-table-notice-font {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.hls-record-table  .hls-record-table-notice_row {
+    width: 264px;
+    min-height: 65px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    height: 80px;
+}
+
+.hls-record-table  .hls-record-table-notice_row strong {
+    font-size: 13px;
+    font-weight: lighter;
+    display: block;
+}
+.hls-record-table  .hls-record-table-iremove {
+    position: absolute;
+    right: -16px;
+    top: 24px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+.hls-record-table  .hls-record-table-border-bottom-blue {
+    border-bottom: 4px solid #00B3B3;
+}
+/**************************************************************** hlsRecordTable  END *****************************************************/
+
+
+
+/**
+  * 列表 - hlsBusinessTable
+  */
+
+.hls-business-table{
+    width:270px;
+    height:545px;
+    border-radius:5px;
+}
+
+.hls-business-table .least-event{
+    color:#666;
+    font-weight: 300!important;
+}
+.hls-business-table .latest-event-item {
+    width: inherit;
+    height: 82.5px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hls-business-table  .latest-event-item:hover
+{
+    background-color:#FBFBFB;
+}
+.hls-business-table .lei-content {
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+    width: inherit;
+    height: 40px;
+    color: #666;
+    line-height: 40px;
+    vertical-align: middle
+}
+.hls-business-table .lei-foot {
+    height: 42px;
+    width: inherit;
+}
+
+.hls-business-table .lei-foot-time-img {
+    display: block;
+    float: left;
+    width: 17px;
+    height: 20px;
+    margin-top: 6px;
+    color: #999;
+}
+
+.hls-business-table .lei-foot-time {
+    float: left;
+    height: inherit;
+    width: 80px;
+    padding-top: 8px;
+    color: #999;
+    font-size: 12px;
+}
+
+.hls-business-table .lei-foot-amt {
+    float: left;
+    width: 120px;
+    height: inherit;
+    color: #666;
+    padding-top: 7px;
+    padding-left: 70px;
+    font-size: 12px;
+}
+/**************************************************************** hlsBusinessTable  END *****************************************************/
+
+
+
+
+
+
+
+
+
+
+/*
+ *   Form
+ */
+
+/* hlsQueryForm */
+.hls-query-form {
+    height: 355px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+}
+
+.hls-query-form .hls-query-form-title {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-weight: 600;
+}
+.hls-query-form .hls-query-form-title .left-img {
+    width: 20px;
+    height: 20px;
+    margin-right:6px;
+    vertical-align: middle;
+}
+.hls-query-form .hls-query-form-title .right-img {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top:8px;
+    cursor: pointer;
+    margin-right:4px;
+}
+.hls-query-form .border-bottom-blue {
+    border-bottom: 4px solid #00B3B3;
+}
+
+
+/* hlsHBox */
+.hls-hbox-row {
+    width: 264px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    border-bottom: 1px solid #CCC;
+}
+
+
+/* hlsDisplayForm */
+.hls-display-form{
+    width: 870px;
+    height:355px;
+    background-color: white;
+    border-radius: 5px;
+}
+.hls-display-form .form-title {
+    margin-top: 20px;
+    width: inherit;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    color: #666666;
+    border-left: 10px solid #f89035;
+}
+.hls-display-form .split-line {
+    background-color: #e4e4e4;
+    height: 1px;
+    width: 96%;
+    margin: 0 auto;
+    clear:both;
+}
+
+/* hlsDisplayFormTextBox */
+.display-form-text-box-span {
+    margin-top:10px;
+    font-size: 12px;
+}
+.display-form-text-box-val{
+    color:  #000;
+}
+.display-form-text-box-text{
+    color: #868686;
+}
+
+/*********************************************** Form END *******************************************/
+
+
+
+/**
+  *  图-hlsSolidPieChart
+  */
+.hls-solid-pie-chart {
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    background:white;
+    min-height:260px;
+    width: 270px;
+}
+.hls-solid-pie-chart strong {
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    display: block;
+}
+.hls-solid-pie-chart .foot-info {
+    width: 240px;
+    position: absolute;
+    left: 25px;
+    line-height: 30px;
+}
+.hls-solid-pie-chart .foot-info i {
+    margin-right: 10px;
+    font-style: normal;
+}
+.hls-solid-pie-chart .foot-info span {
+    display: inline-block;
+    width: 80px;
+    float: left;
+    font-size: 14px;
+}
+/*********************************************** hlsSolidPieChart END *******************************************/
+
+
+/**
+  * 图-hlsCircularChart
+  */
+.hls-circular-chart {
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    min-height:260px;
+    width: 270px;
+}
+.hls-circular-chart .foot-info {
+    width: 240px;
+    position: absolute;
+    left: 25px;
+    line-height: 30px;
+}
+.hls-circular-chart .foot-info i {
+    margin-right: 10px;
+    font-style: normal;
+}
+.hls-circular-chart .foot-info span {
+    display: inline-block;
+    width: 80px;
+    float: left;
+    font-size: 14px;
+}
+/*********************************************** hlsCircularChart END *******************************************/
+
+
+
+
+/*
+ * 图-HlsRateSumChart
+ */
+.hls-rate-sum-chart{
+    height: 100px;
+    background: white;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    width: 1170px;
+    border-radius: 5px;
+}
+.hls-rate-sum-chart .hls-rate-sum-chart-title {
+    float: left;
+    width: 16%;
+    height: 100px;
+    padding-top: 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.hls-rate-sum-chart .hls-rate-sum-chart-info {
+    width: 80%;
+    height: 100px;
+    float: left;
+}
+
+.hls-rate-sum-chart .chart_nav {
+    margin: 10px 0;
+}
+.hls-rate-sum-chart .chart_nav i {
+    margin-right: 6px;
+    font-style: normal;
+}
+.hls-rate-sum-chart .igreen {
+    color: #A0D469;
+    font-style: normal;
+}
+.hls-rate-sum-chart .iyellow {
+    color: #FFCD55;
+    font-style: normal;
+}
+.hls-rate-sum-chart .hls-rate-sum-chart-info .rate_info_title {
+    width: 100%;
+    height: 17px;
+    background-color: #FFCD55;
+}
+.hls-rate-sum-chart .hls-rate-sum-chart-info .rate_info_own {
+    width: 0px;
+    height: 17px;
+    text-align: right;
+    color: #fff;
+    line-height: 15px;
+    background: #A0D469;
+    padding-right: 10px;
+    border-right: 1px solid #FFF;
+}
+.hls-rate-sum-chart .hls-rate-sum-chart-title .money {
+    font-size: 18px;
+    height: 18px;
+    line-height: 18px;
+    display: block;
+    margin-left: 20px;
+}
+.hls-rate-sum-chart .hls-rate-sum-chart-title .title {
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+/*********************************************** HlsRateSumChart END *******************************************/
+
+
+
+/*
+ * 图-hlsLineChart
+ **/
+.hls-line-chart{
+    background:white;
+    border-radius:5px;
+}
+.hls-line-chart .right-area1-up {
+    height: 115px;
+    width: inherit;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #a0d468;
+}
+.hls-line-chart .right-area1-down {
+    height: 50px;
+    width: inherit;
+}
+.hls-line-chart .right-area-down-left {
+    height: inherit;
+    width: 130px;;
+    float: left
+}
+.hls-line-chart .right-area-down-right {
+    height: inherit;
+    width: 130px;
+    float: left
+}
+.hls-line-chart .right-area-down1 {
+    margin-left: 10px;
+    margin-top: 8px;
+    color: #666;
+    font-size: 12px;
+}
+.hls-line-chart .right-area-down2 {
+    margin-left: 30px;
+    margin-top: 5px;
+    color: #666;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+}
+/*********************************************** hlsLineChart END *******************************************/
+
+
+
+/**
+  * 图-hlsBrokenChart
+  */
+.hls-broken-chart-overdue-title {
+    height: 40px;
+    width: inherit;
+    background-color: #FA6A4D;
+    color: #FFF;
+    line-height: 40px;
+    vertical-align: middle;
+}
+.hls-broken-chart-overdue-title-img {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 6px;
+
+}
+
+.hls-broken-chart-overdue-title-content {
+    float: left;
+    color: #ffffff;
+}
+.hls-broken-chart-overdue-title-content {
+    float: left;
+    color: #ffffff;
+}
+.hls-broken-chart-body-title {
+    height: 80px;
+    width: inherit
+}
+
+.hls-broken-chart-body-title1 {
+    height: inherit;
+    width: 142.5px;
+    float: left
+}
+
+.hls-broken-chart-body-title1-amt {
+    margin-top: 5px;
+    height: 25px;
+    width: inherit;
+    color: #F97064;
+    line-height: 25px;
+    vertical-align: middle;
+    margin-left:20px;
+}
+
+.hls-broken-chart-body-title1-name {
+    font-size: 12px;
+    height: 25px;
+    width: inherit;
+    color: #2cc2e3;;
+    line-height: 25px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+/*********************************************** hlsBrokenChart END *******************************************/
+
+
+/**
+  * 图- hlsPieChart
+  */
+hls-pie-chart{
+    width:270px;
+    height:70px;
+}
+.hls-pie-chart .easyPieChart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hls-pie-chart canvas {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.hls-pie-chart .white{
+    color:#fff;
+}
+/*********************************************** hlsPieChart END *******************************************/
+
+
+
+/**
+  * 图—hlsBarChart
+  */
+.hls-bar-chart {
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+    border-radius: 5px;
+    position: relative;
+}
+.hls-bar-chart .chart-title {
+    height: 50px;
+    line-height: 50px;
+    background: rgb(231, 91, 141);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.hls-bar-chart .chart-title .title-left {
+    float: left;
+    margin-left: 12px;
+}
+.hls-bar-chart .chart-title .title-right{
+    float: right;
+    margin-right: 16px;
+}
+.hls-bar-chart .chart-title img{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.hls-bar-chart .hls-bar-chart-body{
+    width:inherit;
+    height:305px;
+}
+.hls-bar-chart .chart-title .title-right .icon-able-click{
+    cursor: pointer;
+}
+
+/*.hls-bar-chart .morris-default-style{*/
+    /*position:absolute;*/
+/*}*/
+
+.hls-bar-chart-body{
+    width:inherit;
+    height:305px;
+}
+.hls-bar-chart-statistical-case-col{
+    position: absolute;
+    top: 10px;
+}
+.hls-bar-chart-statistical-case-col-text,.hls-bar-chart-statistical-case-col-value {
+    color:white;
+    margin: 0px;
+    display: inline-block;
+}
+/*********************************************** hlsBarChart END *******************************************/
+
+
+
+
+/**
+  * 图 - hlsAnalyseCountChart
+  */
+.hls-analyse-count-chart {
+    float: left;
+    background-color: #FFF;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgb(204, 204, 204);
+            box-shadow: 3px 3px 3px rgb(204, 204, 204);
+}
+
+.hls-analyse-count-chart p{
+    padding: 0;
+    margin: 0;
+}
+
+.hls-analyse-count-chart .row-second-middle-top-body-common {
+    height: 190px;
+}
+
+.hls-analyse-count-chart .row-second-middle-top-left-number {
+    color: #000;
+}
+.hls-analyse-count-chart .row-second-middle-top-left-name {
+    margin-top: 3px;
+    margin-left: 8px;
+}
+.hls-analyse-count-chart .igreen {
+    color: #2EC3E8;
+    font-style: normal;
+}
+.hls-analyse-count-chart .row-second-middle-top-right-percent1 {
+    width: 0px;
+    border-right: 1px solid #fff;
+}
+.hls-analyse-count-chart .row-second-middle-top-right-percent-common {
+    float: left;
+    height: 16px;
+    margin-top: 2px;
+}
+.hls-analyse-count-chart .new-blue-bgcolor {
+    background-color: #2EC3E8;
+}
+.hls-analyse-count-chart .row-second-middle-top-right-percent2 {
+    width: 680px;
+}
+.hls-analyse-count-chart .row-second-middle-top-right-percent-common {
+    float: left;
+    height: 16px;
+    margin-top: 2px;
+}
+.hls-analyse-count-chart .other-orange-bgcolor {
+    background-color: #FA800A;
+}
+.hls-analyse-count-chart .row-second-middle-top-body-common {
+    height: 190px;
+}
+.hls-analyse-count-chart .row-second-middle-top-body-foot2 {
+    height: inherit;
+    width: 220px;
+}
+.hls-analyse-count-chart .row-second-middle-top-body-foot2-table {
+    width: 400px;
+    height: 25px;
+    border-bottom: 1px solid #cccccc;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+.hls-analyse-count-chart .row-second-middle-top-body-foot2-table-div-1 {
+    background-color: #2EC3E8;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+.hls-analyse-count-chart .con-status-kind-name {
+    float: left;
+    width: 70px;
+    text-align: left;
+    font-size: 12px;
+    color: #888;
+    margin-left: 10px;
+}
+
+.hls-analyse-count-chart .con-status-kind-per {
+    float: left;
+    margin-left: 60px;
+    width: 40px;
+}
+/*********************************************** hlsAnalyseCountChart END *******************************************/
+
+
+/**
+  * 图 - hlsInfoList
+  */
+.hls-info-list {
+    background: white;
+    width:570px;
+    height: 410px;
+    position:relative;
+    padding:10px;
+}
+.hls-info-list .border-bottom {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.hls-info-list .content-row {
+    height: 45px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-tbox-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.hls-info-list .hls-info-list-title-row{
+    height: 50px;
+    width: 550px;
+    margin: 0 auto;
+}
+.hls-info-list .hls-info-list-title-row .bottom{
+    border-bottom:4px solid #F57B69;
+}
+.hls-info-list .hls-info-list-title-row .left-span {
+    margin-left: 70px;
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+    color: #333;
+}
+.hls-info-list .hls-info-list-title-row .left-span-title {
+    margin-left: 70px;
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+.hls-info-list .hls-info-list-title-row .right-span  {
+    margin-right:40px;
+    line-height: 50px;
+    height: 50px;
+    text-align: right;
+    float: right;
+    display: inline-block;
+    color: #9f9f9f;
+}
+.hls-info-list .content-row .left-span {
+    margin-left: 70px;
+    height: 100%;
+    line-height: 45px;
+    display: inline-block;
+    color: #333;
+}
+.hls-info-list .content-row .right-span  {
+    margin-right:40px;
+    line-height: 45px;
+    height: 45px;
+    text-align: right;
+    float: right;
+    display: inline-block;
+    color: #9f9f9f;
+}
+.hls-info-list .side-strip{
+    position:absolute;
+    left:-10px;
+    top:0;
+    height:50px;
+    width:8px;
+}
+.hls-info-list .arrows-icon{
+    position:absolute;
+    top:12px;
+    right:0px;
+    width:20px;
+    height:20px;
+}
+.hls-info-list .link-row{
+    position:relative;
+    cursor:pointer;
+}
+/*********************************************** hlsInfoList END *******************************************/
+
+
+
+

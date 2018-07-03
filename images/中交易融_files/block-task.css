@@ -1,0 +1,15 @@
+/**
+ * gaoyang user block css
+ */
+
+.row-task-left {
+    background: #ed4e2a !important;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.row-task-right-number {
+    color: #ed4e2a !important;
+}
+.row-task-right-content-image {
+    color: #ed4e2a;
+}

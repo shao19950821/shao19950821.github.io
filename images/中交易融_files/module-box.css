@@ -1,0 +1,149 @@
+
+    /*模块列表container*/
+    .module-container{
+        width: 270px;
+        position: fixed;
+        height: 570px;
+        background-color: white;
+        z-index: 999;
+        top: 45px;
+        right: 40px;
+        display: none;
+        box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.25);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .module-show-or-not{
+        display:block;
+        overflow-x: hidden;
+    }
+    /*模块列表头*/
+    .module-content-title{
+        width:240px;
+        margin-left: auto;
+        margin-right: auto;
+        height:100px;
+        margin-top:10px;
+    }
+    .module-content-title-text{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color:#03b3b2;
+        font-weight: bold;
+    }
+    .module-search-container{
+        border: 1px solid #cccccc;
+        width: 235px;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .module-search-container > img {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    .module-search-container input {
+        background: #fff;
+        border: none;
+        width: 205px;
+        height: 27px;
+    }
+    .module-content-sortname-common{
+        cursor: pointer;
+       display: inline-block;
+        background-color: white;
+        color:black;
+        border: 1px solid #cccccc;
+       width:75px;
+       height:24px;
+       border-radius: 5px;
+       line-height: 24px;
+       text-align: center;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+    .module-content-sortway-common{
+        cursor: pointer;
+       display: inline-block;
+        background-color: white;
+        border: 1px solid #cccccc;
+        color:black;
+       width:30px;
+       height:24px;
+       border-radius: 5px;
+      line-height: 24px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .module-content-sortname-selected{
+        background-color: #03b3b2;
+        color:white;
+    }
+    .module-content-sortway-selected{
+        color:white;
+        background-color: #03b3b2;
+    }
+    /*模块列表主体*/
+    .module-content-tab{
+        height: 450px;
+        width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-y: scroll;
+        overflow-x:hidden;
+    }
+    /*模块列表-数字部分*/
+    #module-content-tab-digital{
+        display: block;
+        height:420px;
+        width:287px;
+    }
+    .module-btn-box{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 10px;
+        height: 70px;
+        width: 220px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .module-btn-icon{
+       width:60px;
+        height:40px;
+    }
+    .module-btn-english{
+        text-align: right;
+        width: 200px;
+        color: white;
+    }
+    /*模块列表-字母部分*/
+    #module-content-tab-letter{
+        display: none;
+        width:287px;
+    }
+    .letter-module-list-container{
+        height: 450px;
+        width: 240px;
+        margin-left:15px;
+    }
+    .letter-search-container{
+        width: 15px;
+        height: 460px;
+        position: absolute;
+        top: 110px;
+        right: 5px;
+        color:#03b3b2;
+    }
+    .letter-search-container p{
+        margin: 0;
+    }
+    .letter-search-box{
+        text-align: center;
+        cursor: pointer;
+    }

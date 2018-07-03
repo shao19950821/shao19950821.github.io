@@ -1,0 +1,14 @@
+/**
+ * gaoyang user block css
+ */
+
+.row-notice-left {
+    background: #ffce55 !important;
+    border-radius: 5px 0px 0px 5px;
+}
+.row-notice-right-number {
+    color: #ffce55 !important;
+}
+.row-notice-right-content-image {
+    color: #ffce55;
+}

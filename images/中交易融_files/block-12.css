@@ -1,0 +1,46 @@
+/**
+ * gaoyang 1*2 block css
+ */
+
+.row-body-right-area {
+    background: #fff;
+}
+
+.right-area1-up {
+    height: 115px;
+    width: inherit;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.right-area-down-left {
+    height: inherit;
+    width: 130px;;
+    float: left
+}
+
+.right-area-down-right {
+    height: inherit;
+    width: 130px;
+    float: left
+}
+
+.right-area1-down {
+    height: 50px;
+    width: inherit;
+}
+
+.right-area-down1 {
+    margin-left: 10px;
+    margin-top: 8px;
+    color: #666;
+    font-size: 12px;
+}
+
+.right-area-down2 {
+    margin-left: 30px;
+    margin-top: 5px;
+    color: #666;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+}

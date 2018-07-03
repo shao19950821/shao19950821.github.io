@@ -1,0 +1,81 @@
+.global-font-size9{
+    font-size: 9px!important;
+}
+.global-font-size10{
+    font-size: 10px!important;
+}
+.global-font-size11{
+    font-size: 11px!important;
+}
+.global-font-size12{
+    font-size: 12px!important;
+}
+.global-font-size13{
+    font-size: 13px!important;
+}
+.global-font-size14{
+    font-size: 14px!important;
+}
+.global-font-size15{
+     font-size:15px!important;
+ }
+.global-font-size16{
+    font-size:16px!important;
+}
+.global-font-size17{
+     font-size:17px!important;
+}
+.global-font-size18{
+    font-size:18px!important;
+}
+.global-font-size20{
+    font-size:20px!important;
+}
+.global-font-size22{
+    font-size:22px!important;
+}
+.global-font-size24{
+    font-size:24px!important;
+}
+.global-font-size40{
+    font-size:40px!important;
+}
+.global-font-size30{
+    font-size:30px!important;
+}
+.global-font-size32{
+    font-size:32px!important;
+}
+.global-font-size38{
+    font-size:38px!important;
+}
+
+html {
+    font-size: 10px!important;
+}
+
+body {
+    font-size: 12px!important;
+    font-family:"Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Microsoft Yahei", "Hiragino Sans GB", sans-serif !important;
+}
+input{
+    font-family:"Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Microsoft Yahei", "Hiragino Sans GB", sans-serif !important;
+}
+
+/*grid字体大小*/
+.k-filter-row th, .k-grid-header th.k-header{
+    /*font-size: 1.05em!important;*/
+    font-size:14px !important;
+}
+
+/*grid导航栏高度*/
+.k-pager-sizes .k-dropdown-wrap .k-input {
+    line-height: 2em!important;
+}
+
+
+/*checkbox宽度*/
+.k-checkbox{
+    width: 18px!important;
+    height: 18px!important;
+}

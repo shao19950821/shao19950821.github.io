@@ -1,0 +1,68 @@
+/**
+ * gaoyang 1*1 block css
+ */
+
+.hls-11-circle-common {
+    width: 70px;
+}
+
+.row-area-left-circle {
+    width: 50px;
+    height: 50px;
+    margin-top: 13px;
+    float: left;
+    margin-left: 13px;
+}
+
+.row-area-right {
+    width: 210px;
+    margin-left: 80px;
+}
+
+.row-area-right-content {
+    width: 120px;
+    float: left;
+    padding-left: 10px;
+}
+
+.row-area-right-number {
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    top: 7px;
+    position: relative;
+    font-family: 'Roboto', 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+}
+
+.row-area-left-percent {
+    width: 50px;
+    margin-top: 16px;
+    float: left;
+    margin-left: 5px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.row-area-left-circle-canvas {
+    position: absolute;
+    left: 12px;
+}
+
+.row-area-right-msg {
+    margin-top: 5px;
+    color: #999 !important;
+    position: relative;
+    top: 12px;
+    font-size: 11px;
+}
+
+.row-area-right-content-image {
+    display: inline-block;
+    top: 7px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    margin-left: 30px;
+    font-size: 18px;
+    margin-top: 3px;
+}

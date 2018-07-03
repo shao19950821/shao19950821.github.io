@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&menu_name= -->
+<html class="k-webkit k-webkit67"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>中交易融</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="_csrf" content="70be9d40-491c-4c23-b285-2d8b65f17336">
+    <meta name="_csrf_header" content="X-CSRF-TOKEN">
+    <link href="http://localhost:8080/resources/upload/favicon.png" rel="shortcut icon">
+    <!--[if IE 8]>
+    <script src="/lib/polyfill/respond.min.js"></script>
+    <script src="/lib/polyfill/es5-shim.min.js"></script>
+    <![endif]-->
+    <script src="./jquery.min.js"></script>
+    <script src="./kendo.all.min.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="./kendo.common-bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./kendo.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="/lib/kendoui/styles/kendo.common-classic.min.css?v=20170911" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="/lib/kendoui/styles/kendo.classic.min.css?v=20170911" rel="stylesheet" type="text/css"/>-->
+
+    <!-- <link href="/lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/lib/kendoui/styles/kendo.uniform.min.css" rel="stylesheet" type="text/css"/> -->
+
+    <link href="./kendo.hap.css" rel="stylesheet" type="text/css">
+    <script src="./kendo.culture.zh-CN.js"></script>
+    <script src="./kendo.messages.zh-CN.js"></script>
+    <script src="./kendo.hap.js"></script>
+    <script src="./prompts"></script>
+    <script src="./jquery.blockui.min.js"></script>
+    <script src="./sockjs.js"></script>
+    <script>
+        _basePath = '', _locale = 'zh_CN';
+        kendo.culture("zh-CN");
+        _currentFunctionCode = '';
+         window.accessConfig = {};
+    </script>
+<link href="./font-awesome.min(1).css" rel="stylesheet" type="text/css">
+<link href="./hlsWindow.css" rel="stylesheet" type="text/css">
+<link href="./button.css" rel="stylesheet" type="text/css">
+<link href="./hls-all.css" rel="stylesheet" type="text/css">
+<link href="./hls-switch.css" rel="stylesheet" type="text/css">
+<link href="./hlsToolBar.css" rel="stylesheet" type="text/css">
+<link href="./hlsPannel.css" rel="stylesheet" type="text/css">
+<link href="./hlsButton.css" rel="stylesheet" type="text/css">
+<link href="./jquery.mloading.css" rel="stylesheet" type="text/css">
+<link href="./hlsPage.css" rel="stylesheet" type="text/css">
+<link href="./navigationBar.css" rel="stylesheet" type="text/css">
+<link href="./hls-chart.css" rel="stylesheet" type="text/css">
+<link href="./hls-font.css" rel="stylesheet" type="text/css">
+<link href="./HlsCusNormalize.css" rel="stylesheet" type="text/css">
+<link href="./hls-default.css" rel="stylesheet" type="text/css">
+
+<script src="./bootstrap.min.js"></script>
+<script src="./hls-all.js"></script>
+<script src="./hls-field.js"></script>
+<script src="./hlsWindow.js"></script>
+<script src="./hlsToolBar.js"></script>
+<script src="./hls-switch.js" type="text/javascript"></script>
+<script src="./hls-chart.js" type="text/javascript"></script>
+<script src="./hlsDynamicBox.js"></script>
+<script src="./hlsDynamicBox(1).js"></script>
+<script src="./jquery.mloading.js" type="text/javascript"></script>
+<script src="./hls-mask.js" type="text/javascript"></script>
+<script src="./hlsPage.js" type="text/javascript"></script>
+<script src="./hlsDataSource.js" type="text/javascript"></script>
+<script src="./kendo.editor.js"></script>
+<script src="./navigationBar.js" type="text/javascript"></script>
+<script src="./jquery.blockUI.js"></script>
+<script src="./hls-format.js"></script>
+<!--<link href="/resources/hls/hlsTheme/hls-theme-standard.css" id="hls-theme" rel="stylesheet" type="text/css"/>-->
+<link href="./hls-theme-classic.css" rel="stylesheet" type="text/css">
+<script src="./hls-default.js"></script>
+<style>
+    /*文本域、输入框字体颜色*/
+    .k-dropzone .k-upload-status, .k-dropzone em, .k-other-month, .k-other-month .k-link, .k-slider .k-draghandle, .k-state-disabled, .k-state-disabled .k-button, .k-state-disabled .k-link, .k-tile-empty strong{
+        color:#333 !important;
+    }
+
+    /*文本域高度*/
+    textarea.k-textbox{
+        min-height:100px !important;
+    }
+
+    /*只读文本域高度*/
+    textarea.k-state-textarea{
+        min-height:100px !important;
+    }
+
+
+    textarea{
+        border:1px solid #ccc !important;
+    }
+
+    /*去掉input框的X*/
+    ::-ms-clear{display: none;}
+    ::-ms-reveal{display: none;}
+</style>        <style>
+            body {
+                width: 100%;
+            }
+        </style>
+</head>
+<body>
+<style type="text/css">
+
+  .left{
+  	margin: 7px;
+  	width: 16%;
+    float: left;
+   	position: absolute;
+    top:0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #FFFFFF;
+  }
+  #treeView{
+    height: 100%;
+  }
+
+
+  .right{
+    float: right;
+    width: 83%;
+  }
+</style>
+
+<div class="panel-body">
+    <div class="row">
+        <div class="left">
+            <div id="treeView" data-role="treeview" class="k-widget k-treeview" tabindex="0" aria-activedescendant="treeView_tv_active"><ul class="k-group k-treeview-lines" role="tree"><li role="treeitem" class="k-item k-first" data-uid="40d6f86f-2a34-40f0-95e6-8b0191f68d2b" aria-selected="false "><div class="k-top k-top"><span class="k-icon k-i-expand"></span><span class="k-in">目录1</span></div></li><li role="treeitem" class="k-item" data-uid="9c0848c2-fd45-49ce-ac5f-0848a0f81dc0" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(99)">保理提款文件</span></span></div></li><li role="treeitem" class="k-item" data-uid="c59a5061-b704-416b-9cc7-eca96baaada2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(6666)">租赁付款申请</span></span></div></li><li role="treeitem" class="k-item" data-uid="14061c45-e9fa-401e-b755-d922640c72ec" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(6667)">保理付款申请</span></span></div></li><li role="treeitem" class="k-item" data-uid="8b50b752-5c38-48ec-b72e-3fb0fe79ef22" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(6668)">保理提前还款</span></span></div></li><li role="treeitem" class="k-item" data-uid="adff6806-2d6e-4690-8315-6e2524e83aa8" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10001)">商业伙伴</span></span></div></li><li role="treeitem" class="k-item" data-uid="091be7db-c35b-4606-8fe1-415767a8a9a2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10002)">模块管理图标</span></span></div></li><li role="treeitem" class="k-item" data-uid="fa2bde98-8b2b-4229-b6a1-56745b672269" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10003)">合同文件</span></span></div></li><li role="treeitem" class="k-item" data-uid="0f69eba6-d91e-40d3-9f0a-e19bc570c941" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10005)">反馈</span></span></div></li><li role="treeitem" class="k-item" data-uid="926082ee-69d8-406d-991c-ae7f7f18c646" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10006)">项目文件</span></span></div></li><li role="treeitem" class="k-item" data-uid="4caf879d-543a-40db-b5f9-5d387c0d8776" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10007)">合同文本模板</span></span></div></li><li role="treeitem" class="k-item" data-uid="0e4e5595-5c3a-49b6-9663-ecaaadd1c122" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10008)">TEST</span></span></div></li><li role="treeitem" class="k-item" data-uid="52b8bf9d-e396-4212-8401-3b84d26855bc" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(10009)">报表Logo</span></span></div></li><li role="treeitem" class="k-item" data-uid="6cd659b0-2ba2-42f6-881f-0d3993e6f19b" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15000)">商业伙伴拜访记录附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="2d215a9d-8c62-4af7-97a0-2b694c3803ae" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15020)">融资合同附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="59c2cc78-8017-42c8-9d2c-2ff46d7b0e7d" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15040)">内保外贷附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="e66c134d-5aa5-4c26-85c1-a446bda85938" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15061)">收款明细附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="1a3e3bb0-e8d4-470a-9269-5279821ec0c1" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15080)">基础交易附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="b486c1a5-cff3-40fe-b9be-75a54914d870" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15100)">合同签约文本</span></span></div></li><li role="treeitem" class="k-item" data-uid="6a6ae559-7987-4cb2-b8d3-9a6b1a227e9a" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15120)">融资机构附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="cfa9db2f-9a87-4490-a37c-c1fb325f032e" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15121)">项目上会信息附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="c97012c4-4fbc-4048-a040-ed9216b3ccd7" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15122)">项目风险评估报告</span></span></div></li><li role="treeitem" class="k-item" data-uid="2bd3f42d-4e68-4b34-b2be-03c3e070e0f9" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15123)">补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="b6275e7c-26f5-4f83-8b44-08383ffc586f" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15140)">合同附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="d13c81b0-dd87-4ae3-bc48-63081080dffe" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15160)">特殊情况申请附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="dc781c1c-3dec-48c0-9343-3de3bbd60c30" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15161)">用款需求申请</span></span></div></li><li role="treeitem" class="k-item" data-uid="57797bf9-0eb5-439c-a79e-81e7c189f629" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15162)">预计收款安排制作</span></span></div></li><li role="treeitem" class="k-item" data-uid="deed5a53-fc08-4920-bac8-254aeab995ba" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15163)">保理合同提款单附件表</span></span></div></li><li role="treeitem" class="k-item" data-uid="4a931d66-f06b-4e97-a695-6e8707b16ec3" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15164)">保理合同提款附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="26180eed-598e-42c0-824f-f207d6e0d09d" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15165)">合同签约其他协议附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="1b93227f-7929-4c81-aa4d-8ce22960fc31" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15168)">会前补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="5ac05cb5-b568-4913-8725-5e7fc9cb1515" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15169)">会后补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="d080122c-c11a-47cb-b2f1-a5304987ec1c" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15180)">风险评估报告</span></span></div></li><li role="treeitem" class="k-item" data-uid="8ff224f0-523f-47a4-822b-486b17a761c1" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15200)">授信审批风险评估报告</span></span></div></li><li role="treeitem" class="k-item" data-uid="71d21248-667f-4a0e-a6ae-59282668b5fa" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15201)">补充材料附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="374e80cf-6269-4cca-8b39-e9a9ec02e4a2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15203)">线上上会后补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="c338bae9-db97-4723-a62f-9234265cf820" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15204)">线下上会后补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="b72c7492-cc69-474b-9cfe-520a92769318" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15205)">上会前补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="598c1203-07e4-4fcc-8b50-f5a936c179f7" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15206)">线上上会前补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="ae8b44c2-9ade-4213-9a87-f6b33d509f9b" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15207)">线下上会前补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="247b7236-efc5-4421-b78c-1ce93c3a808f" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15208)">会议纪要</span></span></div></li><li role="treeitem" class="k-item" data-uid="f8882206-d865-47a9-a012-8a8f53e1853c" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15209)">上会纪要</span></span></div></li><li role="treeitem" class="k-item" data-uid="2720c2b8-4536-4ce9-ac88-b660dc34ff6b" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15220)">应收账款债权转让通知书</span></span></div></li><li role="treeitem" class="k-item" data-uid="ac6e5a1e-c051-4803-97d0-cd4dd7b7ff0e" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15221)">应收账款债权转让通知书回执</span></span></div></li><li role="treeitem" class="k-item" data-uid="ed46ffc4-d8e4-4cb8-8e42-6cb9c1b503a5" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15223)">应收账款转让申请审核意见</span></span></div></li><li role="treeitem" class="k-item" data-uid="50fca079-5e5b-4abb-b316-caa1c2605240" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15224)">应收账款转让申请书</span></span></div></li><li role="treeitem" class="k-item" data-uid="f16174eb-f868-459b-9573-eca9dde9f35e" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15225)">保理融资凭证</span></span></div></li><li role="treeitem" class="k-item" data-uid="af3e071c-f322-4f43-8606-5e8a918ffad4" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15226)">综合授信业务经办补充材料</span></span></div></li><li role="treeitem" class="k-item" data-uid="459b5d1c-a7ac-4e91-9f1d-56e6dfad118b" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15240)">进项发票附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="a20078b2-433f-4959-8e2b-7916dc39e260" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15260)">保理其他协议附属附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="ae7fdf35-a186-4ec8-9cc7-9388de83eb99" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15280)">保理合同结束</span></span></div></li><li role="treeitem" class="k-item" data-uid="fd4dfaed-5e88-4f5c-ac5d-4e676b7d174e" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15300)">保理签约合同附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="ace1cfd1-0215-403c-b717-e15421b0e79c" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15320)">保理合同买方合作协议</span></span></div></li><li role="treeitem" class="k-item" data-uid="496c3523-fb76-4b9e-b630-f9e0ef0421eb" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15321)">保理合同明细附件-PDF</span></span></div></li><li role="treeitem" class="k-item" data-uid="b06969bd-6382-491c-98a1-3a766777d1ca" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15322)">保理其他协议附属附件-PDF</span></span></div></li><li role="treeitem" class="k-item" data-uid="d99963f5-3395-4dbb-9a99-b7a36cff9160" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15340)">合同文件-PDF</span></span></div></li><li role="treeitem" class="k-item" data-uid="6fa92043-1bdc-471a-a8bb-963a5b39eaf5" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15342)">其他附件-PDF</span></span></div></li><li role="treeitem" class="k-item" data-uid="9a251844-cddc-4103-a60d-034f1c0e1ed4" aria-selected="false "><div class="k-mid"><span class="k-icon k-i-expand"></span><span class="k-in">基础交易明细附件</span></div></li><li role="treeitem" class="k-item" data-uid="55738740-917e-456d-a00c-5d270f9f75d7" aria-selected="true" id="treeView_tv_active"><div class="k-mid"><span class="k-in k-state-selected"><span onclick="searchFile(15362)">审批表单</span></span></div></li><li role="treeitem" class="k-item" data-uid="4b565dc6-aed2-4870-a884-c9c028976992" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(15380)">保理合同买方合作协议-PDF</span></span></div></li><li role="treeitem" class="k-item" data-uid="bbd6a880-3397-47bb-a82c-99793aa8551b" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16000)">	资产巡视</span></span></div></li><li role="treeitem" class="k-item" data-uid="2b2d5e6f-c665-423b-a790-240785f82a3e" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16001)">保理授信审批业务调查报告</span></span></div></li><li role="treeitem" class="k-item" data-uid="26cf53e6-109d-4aa5-a965-dbb3a5d193e4" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16002)">保理授信审批附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="3da876f6-3e83-416f-9ff1-09af82bbe82c" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16003)">保理立项附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="4e6cdc44-bb17-46c5-81d5-d19a9883e292" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16004)">保理综合授信额度</span></span></div></li><li role="treeitem" class="k-item" data-uid="c6287d81-f76f-494b-b2a8-3e58bef5c707" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16005)">保理授信额度附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="df561266-e5bc-4d86-bf1c-c4e64a910d22" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16006)">保险管理附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="d8d2fceb-65cf-4c06-963d-d02473d78714" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16007)">保理合同文本</span></span></div></li><li role="treeitem" class="k-item" data-uid="b722bc24-c501-45e8-b402-5e50c0d1c01c" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16008)">保理合同签约</span></span></div></li><li role="treeitem" class="k-item" data-uid="c864845b-0eec-472a-a176-bfa22cb47da5" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16009)">项目尽调报告附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="a9b837bd-1e06-4ace-b876-86d4a61e69c7" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16010)">商机预立项</span></span></div></li><li role="treeitem" class="k-item" data-uid="ca026b2b-1fb1-4dfd-8c12-ded1b6327955" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16011)">商机报价</span></span></div></li><li role="treeitem" class="k-item" data-uid="dfc1d92a-e41a-4b2e-8d8c-7be97bc8bff3" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16012)">商机立项</span></span></div></li><li role="treeitem" class="k-item" data-uid="4245d7d8-3f6e-479e-a5d3-1796130c160f" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16777)">预立项变更</span></span></div></li><li role="treeitem" class="k-item" data-uid="1f474161-3fde-4bbe-a64f-b04cba3e9a1f" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16778)">报价变更</span></span></div></li><li role="treeitem" class="k-item" data-uid="b4746841-58a2-4edf-9ca0-c8d7963e68c2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16779)">立项变更</span></span></div></li><li role="treeitem" class="k-item" data-uid="f9cd9a08-ac78-4863-9483-3ace3a1d0bf7" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16780)">尽调报告变更</span></span></div></li><li role="treeitem" class="k-item" data-uid="1a9aea73-8a89-425b-8873-d97eb6ca04f2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(16781)">资料清单变更</span></span></div></li><li role="treeitem" class="k-item" data-uid="97c517ae-b7e4-4a2c-8668-d9c827bd80c2" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(17009)">test2</span></span></div></li><li role="treeitem" class="k-item" data-uid="f7e43863-ccf7-4825-8ecf-5ebc12f08273" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(19999)">水印附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="d5243bd3-85f5-4814-b031-21bcd4ee5ecc" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(99998)">合同变更附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="8a4baa6b-7e50-4972-92ff-52684462ef5a" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(99999)">通知书附件</span></span></div></li><li role="treeitem" class="k-item" data-uid="f5e30cc3-5b13-4cbd-9816-4d0bd088daff" aria-selected="false "><div class="k-mid"><span class="k-in"><span onclick="searchFile(999990)">通知书快递单</span></span></div></li><li role="treeitem" class="k-item k-last" data-uid="f170832b-ffb2-4170-ba85-33da58f40946" aria-selected="false "><div class="k-bot"><span class="k-in"><span onclick="searchFile(999999)">合同变更附件PDF</span></span></div></li></ul></div>
+        </div>
+
+
+        <div class="right">
+            <div class="form-group">
+                <div id="grid-container">
+                    <div id="sysfile_grid" style="clear: both;" data-role="grid" class="k-grid k-widget"><div class="k-header k-grid-toolbar"><span onclick="deleteData()" class="btn btn-danger"><i class="fa fa-trash-o" style="margin-right:3px;"></i>删除</span></div><div class="k-grid-header" style="padding-right: 15px;"><div class="k-grid-header-wrap k-auto-scrollable" data-role="resizable" style="touch-action: none;"><table role="grid" tabindex="-1"><colgroup><col style="width:40px"><col style="width:60px"><col style="width:60px"><col style="width:80px"><col style="width:260px"><col style="width:30px"></colgroup><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader" aria-haspopup="true" rowspan="1" data-index="0" id="7a9ca186-3f7b-4055-950a-910e8ac069fb" style="text-align:center" class="k-header"><span class="k-checkbox k-headbox"></span></th><th scope="col" role="columnheader" data-field="fileName" aria-haspopup="true" rowspan="1" data-title="文件名" data-index="1" id="bc9e82b3-8e6d-4e5b-9d9f-ec26156e90f1" class="k-header" data-role="columnsorter"><a class="k-link" href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" tabindex="-1">文件名</a></th><th scope="col" role="columnheader" data-field="fileSize" aria-haspopup="true" rowspan="1" data-title="文件大小" data-index="2" id="bd9e10cd-4937-45d8-9129-a463cef72af0" class="k-header" data-role="columnsorter"><a class="k-link" href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" tabindex="-1">文件大小</a></th><th scope="col" role="columnheader" data-field="uploadDate" aria-haspopup="true" rowspan="1" data-title="上传日期" data-index="3" id="bd7162e2-7336-41ce-93cf-6b630f4a4033" class="k-header" data-role="columnsorter"><a class="k-link" href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" tabindex="-1">上传日期</a></th><th scope="col" role="columnheader" data-field="fileType" aria-haspopup="true" rowspan="1" data-title="文件类型" data-index="4" id="91eb796d-59c7-4d5d-85af-821a3b5a31ef" class="k-header" data-role="columnsorter"><a class="k-link" href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" tabindex="-1">文件类型</a></th><th scope="col" role="columnheader" aria-haspopup="true" rowspan="1" data-index="5" id="8dc3d837-d5cd-4fb4-a050-b3f051a4e704" class="k-header"></th></tr></thead></table></div></div><div class="k-grid-content k-auto-scrollable"><table role="grid" tabindex="0" data-role="selectable" class="k-selectable" aria-multiselectable="true" aria-activedescendant="sysfile_grid_active_cell"><colgroup><col style="width:40px"><col style="width:60px"><col style="width:60px"><col style="width:80px"><col style="width:260px"><col style="width:30px"></colgroup><tbody role="rowgroup"><tr data-uid="8bcd6ea5-8de9-45a9-b0ed-43a57dd9616c" role="row"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-006 租赁项目评审委员会会议纪要_模板.docx</td><td role="gridcell">100989</td><td role="gridcell">2018-07-02 11:00:41</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4895&amp;token=5431af715179e9cba16fcbcb69d9aa4f">下载</a></td></tr><tr class="k-alt" data-uid="2f661c43-61cb-438d-b815-0fc8335eaef9" role="row"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-007 租赁项目风险管理政策清单_模板.docx</td><td role="gridcell">61968</td><td role="gridcell">2018-07-02 11:00:46</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4896&amp;token=283050a59f3c9e8381a8e1319ab1d7ae">下载</a></td></tr><tr data-uid="f0bad027-e602-4601-aa67-e572792d13b3" role="row"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-006 租赁项目评审委员会会议纪要_模板.docx</td><td role="gridcell">100989</td><td role="gridcell">2018-07-02 11:02:37</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4897&amp;token=6276bcaf924a7c89281f791afe3f90bb">下载</a></td></tr><tr class="k-alt" data-uid="e489704b-0ee3-403a-a2b5-e822b2115740" role="row"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-007 租赁项目风险管理政策清单_模板.docx</td><td role="gridcell">61969</td><td role="gridcell">2018-07-02 11:02:38</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4898&amp;token=d7b470c5a14f788f58dc5d8591c326c4">下载</a></td></tr><tr data-uid="e3b14eaa-88c6-4fe5-ab63-793caf8e8639" role="row" class="k-state-current"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-006 租赁项目评审委员会会议纪要_模板.docx</td><td role="gridcell">101062</td><td role="gridcell">2018-07-02 11:07:00</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell" id="sysfile_grid_active_cell" class="" aria-describedby="8dc3d837-d5cd-4fb4-a050-b3f051a4e704 sysfile_grid_active_cell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4900&amp;token=27f1911a15fa672bee30da2f600bfa9b">下载</a></td></tr><tr class="k-alt" data-uid="a40d6a10-0b47-400a-a242-5c1ca98bc29d" role="row"><td class="k-rowbox-col" role="gridcell"><span class="k-checkbox fa k-rowbox"></span></td><td role="gridcell">ZL17-02-007 租赁项目风险管理政策清单_模板.docx</td><td role="gridcell">61969</td><td role="gridcell">2018-07-02 11:07:20</td><td role="gridcell">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td><td role="gridcell"><a target="_blank" href="http://localhost:8080/sys/attach/file/download?fileId=4901&amp;token=a34d5d87d42243ee846431d07236d534">下载</a></td></tr></tbody></table></div><div class="k-pager-wrap k-grid-pager k-widget k-floatwrap" data-role="pager"><a href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" aria-label="首页" title="首页" class="k-link k-pager-nav k-pager-first k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w"></span></a><a href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" aria-label="上一页" title="上一页" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w"></span></a><ul class="k-pager-numbers k-reset"><li class="k-current-page"><span class="k-link k-pager-nav">1</span></li><li><span class="k-state-selected">1</span></li></ul><a href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" aria-label="下一页" title="下一页" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-e"></span></a><a href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" aria-label="末页" title="末页" class="k-link k-pager-nav k-pager-last k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-e"></span></a><span class="k-pager-sizes k-label"><span title="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-busy="false" aria-activedescendant="fd57fe39-1891-49be-9b32-94d9212fa9d2" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">20</span><span unselectable="on" class="k-select" aria-label="select"><span class="k-icon k-i-arrow-s"></span></span></span><select data-role="dropdownlist" style="display: none;"><option value="5">5</option><option value="10">10</option><option value="20" selected="selected">20</option><option value="50">50</option></select></span>每页</span><a href="http://localhost:8080/attach/sys_file_manage.html?menu_code=SYS_FILE_MANAGE_SYS_FILE_MANAGE&amp;menu_name=#" class="k-pager-refresh k-link" title="刷新"><span class="k-icon k-i-refresh">刷新</span></a><span class="k-pager-info k-label">显示条目 1 - 6 共 6</span></div></div>
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    window.viewModel = kendo.observable({
+        categoryId : 0
+    });
+
+    function convertToTree(datas){
+    	
+    	var map={};
+    	$.each(datas,function(i,r){
+    		map[r.categoryId]=r;
+    	});
+    	
+    	function build(d){
+    		if(d.parentCategoryId){
+    			var p = map[d.parentCategoryId];
+    			if(p){
+    				var items = p.items||[]
+    				if(items.indexOf(d)<0)
+    					p.items=items.concat(d);
+    				build(p);
+    			}
+    		}
+    	}
+    	
+    	$.each(datas,function(i,r){
+    		build(r);
+    	});
+    	var arr=[]
+    	$.each(map,function(i,r){
+    		if(!r.parentCategoryId){
+    			arr.push(r);
+    		}
+    	});
+    	
+    	return arr;
+    }
+    
+    var datas=[];
+    $.ajax({
+    	  url: "/sys/attachment/category/queryTree",
+          type: "post",
+          dataType: "json",
+          async:false,
+          success:function(args){
+        	  datas=convertToTree(args);
+          }
+    });
+   
+
+    $("#treeView").kendoTreeView({
+  		dataSource : {
+  			data:datas
+  		},
+      template: function(e){
+        
+        if(e.item.leafFlag==='1'){
+            return "<span onclick='searchFile(" + e.item.categoryId + ")'  >"+  e.item.categoryName +"</span>";
+        }else{
+            return e.item.categoryName;
+        }
+      }
+      
+  	});
+
+
+   var gridDataSource=new kendo.data.DataSource({
+      transport:{
+          read: {
+              url: '/sys/attach/file/query',
+              type: "post",
+              dataType: "json"
+          },
+          destroy: {
+              url: '/sys/attach/file/remove',
+              contentType: "application/json",
+              type : "POST"
+          },
+          parameterMap: function (options, type) {
+             
+              if (type !== "read" && options.models) {
+                  return kendo.stringify(options.models);
+              }else if (type === "read") {
+                  var map = {};
+                  map.page = options.page;
+                  map.pagesize = options.pageSize;
+                  map.categoryId = viewModel.get("categoryId");
+                  return map;
+              }
+          }
+      },
+       batch: true,
+       serverPaging : true,
+       pageSize: 20,
+           schema: {
+           model:{id:'fileId'},
+           data:'rows',
+           total:'total'
+       }
+   });
+
+    var grid= $("#sysfile_grid").kendoGrid({
+        dataSource: gridDataSource,
+        navigatable: true,
+        dataBound: function(){
+            if(parent.autoResizeIframe){
+                parent.autoResizeIframe('')
+            }
+        },
+        resizable: true,
+        sortable: true,
+        scrollable: true,
+        editable:false,
+        selectable : 'multiple, rowbox',
+        pageable: {
+            pageSizes:[5, 10, 20, 50],
+            refresh:true,
+            buttonCount:5
+        },
+        toolbar: [{
+                template:'<span  onclick="deleteData()"  class="btn btn-danger"><i class="fa fa-trash-o" style="margin-right:3px;"></i>删除</span>'
+            }],
+            columns: [
+            { field: "fileName", title: '文件名', width: 60 },
+            { field: "fileSize", title:'文件大小', width: 60 },
+            { field: "uploadDate", title:'上传日期', width: 80 },
+            { field: "fileType", title:'文件类型', width: 260 },
+             {
+                template:function(e){
+                            return '<a target="_blank" href="/sys/attach/file/download?fileId='+ e.fileId+'&token='+ e._token+'">下载</a>';
+                    },width:30
+                } ]
+    }).data("kendoGrid");
+
+
+   function searchFile(id){
+       viewModel.set('categoryId',id);
+       gridDataSource.page(1);
+   }
+
+    function deleteData() {
+
+    	 var checked = grid.selectedDataItems();
+         if(grid.selectedDataItems().length){  
+	        kendo.ui.showConfirmDialog({
+	        	title:$l('hap.tip.info'),
+	        	message: $l('hap.tip.delete_confirm')
+	        }).done(function (event) {
+	            if (event.button == 'OK') {
+	            	$.each(checked,function(i,v){
+	            		grid.dataSource.remove(v)
+	            	})
+	                grid.dataSource.sync();
+	            }
+	        }) 
+         }
+
+    }
+
+
+</script><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="off" data-role="staticlist" role="listbox"><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="0">5</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="1">10</li><li tabindex="-1" role="option" unselectable="on" class="k-item k-state-selected k-state-focused" aria-selected="true" data-offset-index="2" id="fd57fe39-1891-49be-9b32-94d9212fa9d2">20</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="3">50</li></ul></div><div class="k-nodata" style="display:none"><div>No data found.</div></div></div>
+
+</body></html>

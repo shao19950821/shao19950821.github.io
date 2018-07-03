@@ -1,0 +1,58 @@
+.switchery {
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+      
+.small {
+    font-size: 85%;
+}
+
+.switchery>small {
+    background: #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    height: 25px;
+    position: absolute;
+    top: 0;
+    width: 25px;
+}
+
+.switchery-checked{
+	background-color: rgb(0, 172, 172); 
+	border-color: rgb(0, 172, 172); 
+	-webkit-box-shadow: rgb(0, 172, 172) 0px 0px 0px 16px inset; 
+	        box-shadow: rgb(0, 172, 172) 0px 0px 0px 16px inset; 
+	-webkit-transition: border 0.5s, background-color 1.5s, -webkit-box-shadow 0.5s; 
+	transition: border 0.5s, background-color 1.5s, -webkit-box-shadow 0.5s; 
+	transition: border 0.5s, box-shadow 0.5s, background-color 1.5s; 
+	transition: border 0.5s, box-shadow 0.5s, background-color 1.5s, -webkit-box-shadow 0.5s;
+}
+
+.switchery-unchecked{
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(223, 223, 223);
+	-webkit-box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset;
+	        box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset;
+	-webkit-transition: border 0.5s, -webkit-box-shadow 0.5s;
+	transition: border 0.5s, -webkit-box-shadow 0.5s;
+	transition: border 0.5s, box-shadow 0.5s;
+	transition: border 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.switchery-span-small-checked{
+	left: 25px; -webkit-transition: left 0.25s; transition: left 0.25s;
+}
+
+.switchery-span-small-unchecked{
+	left: 0px; -webkit-transition: left 0.25s; transition: left 0.25s;
+}

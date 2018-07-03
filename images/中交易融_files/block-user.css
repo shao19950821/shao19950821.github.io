@@ -1,0 +1,19 @@
+/**
+ * gaoyang user block css
+ */
+
+.row-user-left {
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: 40px;
+    border-radius: 5px 0px 0px 5px;
+    background-position-x: 15px;
+    background-position-y: 15px;
+}
+.row-user-right-number {
+    font-size: 15px !important;
+    color: #666;
+}
+.row-user-right-content-image {
+    color: rgb(0,72,152);
+}

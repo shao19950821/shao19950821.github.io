@@ -1,0 +1,39 @@
+/**
+ * gaoyang user block css
+ */
+
+.row-warning-left {
+    background: #03b3b2 !important;
+    border-radius: 5px 0px 0px 5px;
+}
+.row-warning-right-number {
+    color: #03b3b2 !important;
+}
+.row-warning-right-content-image {
+    color: #ffffff;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 50%;
+    -moz-background-clip: padding;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #03b3b2;
+    text-align: center;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    border: 2px solid #fff;
+}
+
+.row-warning-right-content-image i {
+    line-height: 20px;
+    line-height: 20px;
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -6px;
+    font-size: 13px;
+}

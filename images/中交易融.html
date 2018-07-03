@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html class="k-webkit k-webkit67"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>中交易融</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="_csrf" content="70be9d40-491c-4c23-b285-2d8b65f17336">
+    <meta name="_csrf_header" content="X-CSRF-TOKEN">
+    <link href="http://localhost:8080/resources/upload/favicon.png" rel="shortcut icon">
+    <!--[if IE 8]>
+    <script src="/lib/polyfill/respond.min.js"></script>
+    <script src="/lib/polyfill/es5-shim.min.js"></script>
+    <![endif]-->
+    <script src="./中交易融_files/jquery.min.js"></script>
+    <script src="./中交易融_files/kendo.all.min.js"></script>
+    <link href="./中交易融_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./中交易融_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="./中交易融_files/kendo.common-bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./中交易融_files/kendo.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="/lib/kendoui/styles/kendo.common-classic.min.css?v=20170911" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="/lib/kendoui/styles/kendo.classic.min.css?v=20170911" rel="stylesheet" type="text/css"/>-->
+
+    <!-- <link href="/lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/lib/kendoui/styles/kendo.uniform.min.css" rel="stylesheet" type="text/css"/> -->
+
+    <link href="./中交易融_files/kendo.hap.css" rel="stylesheet" type="text/css">
+    <script src="./中交易融_files/kendo.culture.zh-CN.js"></script>
+    <script src="./中交易融_files/kendo.messages.zh-CN.js"></script>
+    <script src="./中交易融_files/kendo.hap.js"></script>
+    <script src="./中交易融_files/prompts"></script>
+    <script src="./中交易融_files/jquery.blockui.min.js"></script>
+    <script src="./中交易融_files/sockjs.js"></script>
+    <script>
+        _basePath = '', _locale = 'zh_CN';
+        kendo.culture("zh-CN");
+        _currentFunctionCode = '';
+         window.accessConfig = {};
+    </script>
+<link href="./中交易融_files/font-awesome.min(1).css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hlsWindow.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/button.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hls-all.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hls-switch.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hlsToolBar.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hlsPannel.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hlsButton.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/jquery.mloading.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hlsPage.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/navigationBar.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hls-chart.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hls-font.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/HlsCusNormalize.css" rel="stylesheet" type="text/css">
+<link href="./中交易融_files/hls-default.css" rel="stylesheet" type="text/css">
+
+<script src="./中交易融_files/bootstrap.min.js"></script>
+<script src="./中交易融_files/hls-all.js"></script>
+<script src="./中交易融_files/hls-field.js"></script>
+<script src="./中交易融_files/hlsWindow.js"></script>
+<script src="./中交易融_files/hlsToolBar.js"></script>
+<script src="./中交易融_files/hls-switch.js" type="text/javascript"></script>
+<script src="./中交易融_files/hls-chart.js" type="text/javascript"></script>
+<script src="./中交易融_files/hlsDynamicBox.js"></script>
+<script src="./中交易融_files/hlsDynamicBox(1).js"></script>
+<script src="./中交易融_files/jquery.mloading.js" type="text/javascript"></script>
+<script src="./中交易融_files/hls-mask.js" type="text/javascript"></script>
+<script src="./中交易融_files/hlsPage.js" type="text/javascript"></script>
+<script src="./中交易融_files/hlsDataSource.js" type="text/javascript"></script>
+<script src="./中交易融_files/kendo.editor.js"></script>
+<script src="./中交易融_files/navigationBar.js" type="text/javascript"></script>
+<script src="./中交易融_files/jquery.blockUI.js"></script>
+<script src="./中交易融_files/hls-format.js"></script>
+<!--<link href="/resources/hls/hlsTheme/hls-theme-standard.css" id="hls-theme" rel="stylesheet" type="text/css"/>-->
+<link href="./中交易融_files/hls-theme-classic.css" rel="stylesheet" type="text/css">
+<script src="./中交易融_files/hls-default.js"></script>
+<style>
+    /*文本域、输入框字体颜色*/
+    .k-dropzone .k-upload-status, .k-dropzone em, .k-other-month, .k-other-month .k-link, .k-slider .k-draghandle, .k-state-disabled, .k-state-disabled .k-button, .k-state-disabled .k-link, .k-tile-empty strong{
+        color:#333 !important;
+    }
+
+    /*文本域高度*/
+    textarea.k-textbox{
+        min-height:100px !important;
+    }
+
+    /*只读文本域高度*/
+    textarea.k-state-textarea{
+        min-height:100px !important;
+    }
+
+
+    textarea{
+        border:1px solid #ccc !important;
+    }
+
+    /*去掉input框的X*/
+    ::-ms-clear{display: none;}
+    ::-ms-reveal{display: none;}
+</style>        <style>
+            body {
+                width: 100%;
+            }
+        </style>
+<link href="./中交易融_files/toastr.min.css" rel="stylesheet" type="text/css"><script src="./中交易融_files/toastr.js" type="text/javascript"></script><script src="./中交易融_files/convertToPy.js" type="text/javascript"></script><style>
+    body {
+        min-width: 1225px;
+        max-width: 100%;
+        overflow-y: hidden;
+    }
+
+    #hls-topbar-container {
+        background-color: #00b3b3;
+        height: 45px;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .05), 0 1px 0 rgba(0, 0, 0, .05);
+        position: relative;
+    }
+
+    .hls-topbar-left-area {
+        width: 390px;
+        height: 45px;
+        float: left;
+    }
+
+    .hls-topbar-left-area a {
+        height: inherit;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 40px;
+        display: inline;
+        width: 215px;
+        float: left;
+        cursor: pointer;
+        background-size: 20px;
+    }
+
+    .hls-topbar-logo {
+        background-image: url('/resources/images/MAIN/logo.png');
+        height: inherit;
+        background-repeat: no-repeat;
+        /*background-color: #00B3B3;*/
+        background-position: center;
+        width: 100px;
+        display: block;
+        float: left;
+    }
+
+    .hls-topbar-main {
+        /*background-image: url('/resources/images/MAIN/hls-hand-logo.jpg');*/
+        /*background-color: #00B3B3;*/
+        color: #fff;
+    }
+
+    .hls-topbar-main:hover, .hls-topbar-main:focus {
+        /*background-image: url('/resources/images/MAIN/homepage-selected.png');*/
+        color: #fff;
+        background-color: #00B3B3;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-main-selected {
+    /*/ / background-image: url('/resources/images/MAIN/homepage-selected.png');*/
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-main-selected:hover, focus {
+        background-color: #00B3B3;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-content {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    / / margin-left: 10 px;
+    / / margin-top: 14 px;
+    }
+
+    .hls-topbar-main-content {
+        width: 205px;
+        font-size: 15px;
+    }
+
+    .hls-topbar-main-content-selected {
+        color: #fff;
+    }
+
+    .hls-topbar-module-content {
+        margin-left: 70px !important;
+        width: 60px;
+    }
+
+    .hls-topbar-module-content-selected {
+        margin-left: 70px !important;
+        color: #fff;
+    }
+
+    .hls-topbar-module {
+        background-image: url('/resources/images/MAIN/module.png');
+        background-position-x: 15px !important;
+        width: 50px !important;
+    }
+
+    .hls-topbar-module:hover, .hls-topbar-module:focus {
+        background-position-x: 15px !important;
+        background-image: url('/resources/images/MAIN/module.png');
+        color: #fff;
+        background-color: #00B3B3;
+        width: 50px !important;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-module-selected {
+        width: 15px !important;
+        background-position-x: 15px !important;
+        background-image: url('/resources/images/MAIN/module.png');
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        background-size: 20px !important;
+    }
+
+    .hls-topbar-module-selected:hover, focus {
+        width: 15px !important;
+        background-color: #00B3B3;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-indexchange {
+        width: 50px !important;
+        line-height: 50px;
+        font-size: 18px;
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .hls-topbar-indexchange:hover, focus {
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .hls-topbar-right-area {
+        margin: 0;
+        float: right !important;
+        padding-left: 0;
+        list-style: none;
+        height: inherit;
+    }
+
+    .hls-topbar-right-area > li {
+        position: relative;
+        display: block;
+        height: inherit;
+    }
+
+    .hls-topbar-right-area > li a {
+        height: inherit;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline;
+        float: right;
+        cursor: pointer;
+        background-size: 25px;
+    }
+
+    .hls-topbar-right-area-toolbar {
+        width: 70px;
+        float: left;
+
+    }
+
+    .hls-topbar-logout {
+        width: 60px;
+    }
+
+    .hls-topbar-logout-bg {
+        background-image: url('/resources/images/MAIN/logout-selected.png');
+    }
+
+    .hls-topbar-logout-bg:hover, focus {
+        background-image: url('/resources/images/MAIN/logout-selected.png');
+    }
+
+    .hls-topbar-logout-bg-selected {
+        background-image: url('/resources/images/MAIN/logout-selected.png');
+    }
+
+    .hls-topbar-logout-bg-selected:hover, focus {
+        background-image: url('/resources/images/MAIN/logout-selected.png');
+        background-color: #505156;
+    }
+
+    .logout {
+        width: 60px;
+    }
+
+    .contact {
+        width: 45px;
+    }
+
+    .hls-topbar-contact {
+        width: 45px;
+    }
+
+    .hls-topbar-contact-bg {
+        background-image: url('/resources/images/MAIN/contact.png');
+        background-size: 25px;
+    }
+
+    .single {
+        width: 45px;
+    }
+
+    .hls-topbar-single {
+        width: 45px;
+    }
+
+    .hls-topbar-single-bg {
+        background-image: url('/resources/images/MAIN/OA.png');
+        background-size: 25px;
+    }
+
+    .search {
+        width: 200px;
+        margin-top: 17px;
+    }
+
+    .searchbox {
+        width: 200px;
+        border-radius: 20px;
+        border: 1px solid;
+        margin-top: 14px;
+        background: #fff;
+    }
+
+    .searchbox input {
+        height: 25px;
+        width: 180px;
+        border: none;
+        margin-left: 10px;
+    }
+
+    .searchbox input:focus {
+        outline: white auto 0;
+    }
+
+    .hls-module {
+        padding: 15px;
+        position: fixed;
+        z-index: 9999;
+        top: 0px;
+        right: 0;
+        left: 0;
+        height: 100%;
+        overflow-x: auto;
+        background-color: #f3f3f5;
+        transform: translateY(-100%);
+        transition: transform 0.3s 0s;
+        height: auto;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        white-space: nowrap;
+    }
+
+    .hls-module-a {
+        display: inline-table;
+        border-radius: 10px;
+        /*border-radius: 5px 5px 5px 5px;*/
+    }
+
+    .hls-module-a-detail {
+        width: 230px;
+        height: 100px;
+        border-radius: 10px;
+        /*border-radius: 5px 5px 5px 5px;*/
+        margin-top: 5px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    body.hls-lock-show {
+        overflow-y: hidden;
+        background: url('/resources/images/login_bg.jpg');
+    }
+
+    body.hls-lock-win-show {
+        overflow-y: hidden;
+        background: url('/resources/images/login_bg.jpg');
+    }
+
+    body.hls-module-show {
+        overflow-y: hidden;
+        background: url('/resources/images/login_bg.jpg');
+    }
+
+    body.hls-module-show .hls-module {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        transition: transform 0.3s 0s;
+    }
+
+    body.hls-lock-show #moduleTab {
+        -webkit-transform: scale(0.8) translateX(160px);
+        -ms-transform: scale(0.8) translateX(160px);
+        -o-transform: scale(0.8) translateX(160px);
+        transform: scale(0.8) translateX(160px);
+    }
+
+    body.hls-module-show #moduleTab {
+        -webkit-transform: scale(0.8) translateY(70px);
+        -ms-transform: scale(0.8) translateY(70px);
+        -o-transform: scale(0.8) translateY(70px);
+        transform: scale(0.8) translateY(70px);
+    }
+
+    body.hls-lock-show .hls-module-underlay {
+        display: block;
+    }
+
+    body.hls-module-show .hls-module-underlay {
+        display: block;
+    }
+
+    .hls-module-underlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9998;
+        background: rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+
+    .hls-info-title {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        transform: translateY(0px);
+        background: #ffc107;
+        border-color: #ffc107;
+        box-shadow: none;
+        overflow: hidden;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    .hls-title-icon {
+        /*position: absolute;*/
+        float: left;
+        height: 40px;
+        width: 40px;
+        right: 20px;
+        margin-top: 24px;
+    }
+
+    .hls-title-heading {
+        text-align: left;
+        color: #ffecb3;
+        height: 20px;
+        line-height: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding-top: 10px;
+    }
+
+    .hls-title-body {
+        text-align: left;
+        width: 100px;
+        float: left;
+        color: #ffffff !important;
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 40px;
+        position: relative;
+        z-index: 1;
+        margin-top: 27px;
+        margin-left: 40px;
+    }
+
+    .hls-title-footer {
+        text-align: left;
+        font-size: 11px;
+        position: absolute;
+        left: 16px;
+        bottom: 8px;
+    }
+
+    .hls-info-title .hls-title-icon i {
+        font-size: 48px;
+        position: absolute;
+        left: 96px;
+        top: 20px;
+    }
+
+    #moduleTab {
+        display: table;
+        width: 99.5%;
+        table-layout: fixed;
+        overflow-y: hidden;
+        height: 100%;
+        position: relative;
+        transition: transform 0.3s;
+        padding: 0px 1px 0px 0px;
+    }
+
+    /* Main Tab */
+    .k-tabstrip li.k-item {
+        min-width: 70px;
+        text-align: center;
+    }
+
+    #tabstrip-parent, #tabstrip {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+    }
+
+    #moduleTab > .k-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    #moduleTab .k-tabstrip-items {
+        background-color: rgb(42, 187, 155);
+    }
+
+    #moduleTab .k-tabstrip-items .k-state-default .k-link {
+        color: #fff;
+    }
+
+    #moduleTab .k-tabstrip-items .k-state-active .k-link {
+        color: #333;
+    }
+
+    #moduleTab .k-tabstrip-items .k-state-default.k-state-hover {
+        border-color: rgb(42, 187, 155);
+    }
+
+    #moduleTab .k-tabstrip-items .k-item.k-state-hover .k-link {
+        color: #333;
+    }
+
+    #moduleTab .k-tabstrip-items li.k-state-active {
+        border-top-color: rgb(42, 187, 155);
+    }
+
+    #moduleTab .k-tabstrip-prev, #moduleTab .k-tabstrip-next {
+        top: 2px;
+        background-color: #fff !important;
+    }
+
+    #moduleTab .k-i-arrow-w {
+        background-position: 0 -50px;
+    }
+
+    #moduleTab .k-i-arrow-e {
+        background-position: 0 -18px;
+    }
+
+    .k-tabstrip-wrapper .k-content iframe {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .k-tabstrip-items {
+        height: 0;
+        display: none;
+    }
+
+    .k-tabstrip > .k-content {
+        border-width: 0px;
+        overflow: hidden;
+    }
+
+    .page-breadcrumbs {
+        position: relative;
+        background: #f3f3f3;
+        height: 42px;
+        width: 100%;
+        line-height: 39px;
+        padding: 0;
+        z-index: 1;
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+        -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    }
+
+    .breadcrumb {
+        background-color: transparent;
+        display: inline-block;
+        line-height: 24px;
+        margin: 7px 22px 0 20px;
+        padding: 0;
+        font-size: 13px;
+        color: #333;
+        border-radius: 0;
+        list-style: none;
+    }
+
+    .breadcrumb > li {
+        display: inline-block;
+    }
+
+    .breadcrumb > li, .breadcrumb > li.active {
+        color: #777;
+        -webkit-text-shadow: none;
+        text-shadow: none;
+    }
+
+    .breadcrumb > li > i {
+        margin-left: 4px;
+        margin-right: 2px;
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+    }
+
+    .breadcrumb > li:first-child > a {
+        padding-left: 4px;
+    }
+
+    .breadcrumb > li > a {
+        display: inline-block;
+        color: #00B3B3;
+    }
+
+    .breadcrumb > li > a:focus, .breadcrumb > li > a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .breadcrumb > li, .breadcrumb > li.active {
+        color: #777;
+        -webkit-text-shadow: none;
+        text-shadow: none;
+    }
+
+    #breadcrumb-arrow-left {
+
+    }
+
+    .breadcrumb > li + li:before {
+        padding: 0 5px;
+        color: #999;
+        content: "/\00a0";
+        box-sizing: border-box;
+        font-family: inherit;
+        margin-left: 5px;
+        font-size: 15px;
+    }
+
+    #breadcrumb-arrow-left:before {
+        content: "";
+        margin-left: 0px !important;
+    }
+
+    #breadcrumb-arrow-right:before {
+        content: "";
+        margin-left: 0px !important;
+    }
+
+    #breadcrumb-refresh:before {
+        content: "";
+        margin-left: 0px !important;
+    }
+
+    #breadcrumb-arrow-right {
+    }
+
+    #breadcrumb-refresh {
+    }
+
+    #breadcrumb-home {
+    }
+
+    #breadcrumb-home:before {
+        content: "";
+        margin-left: 0px !important;
+    }
+
+    .user-logo-div {
+        color: #ffffff;
+        width: 50px;
+        float: left;
+        margin-top: 12px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .user-logo-user-name-font {
+        display: none;
+        text-align: center;
+        color: #d0d0d0;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .user-logo-email-font {
+        text-align: center;
+        font-size: 12px;
+        color: #d0d0d0;
+    }
+
+    li .avatar-area {
+        position: relative;
+        text-align: center;
+        margin: 10px auto;
+        width: 128px;
+    }
+
+    li .avatar-area .avatar {
+        width: 128px;
+        height: 128px;
+    }
+
+    li .avatar-area .caption {
+        background-color: #2dc3e8;
+        zoom: 1;
+        filter: alpha(opacity=70);
+        -webkit-opacity: 0.7;
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        font-size: 10px;
+        line-height: 9px;
+        position: absolute;
+        padding: 7px 0;
+        text-align: center;
+        width: 128px;
+        cursor: pointer;
+    }
+
+    li.hls-index-edit {
+        min-height: 25px;
+        border-bottom: 1px solid #f6f6f6;
+        border-top: 1px solid #f6f6f6;
+    }
+
+    li.hls-index-edit a {
+        color: #999999;
+        display: inline-block;
+        clear: none;
+        font-size: 13px;
+    }
+
+    li.hls-index-edit a:hover {
+        color: #11a9cc;
+    }
+
+    li.hls-index-theme-area {
+        display: table;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    li.hls-index-theme-area .hls-index-colorpicker {
+        padding: 10px 4px;
+        width: 100%;
+    }
+
+    li.hls-index-theme-area .hls-index-colorpicker > li {
+        display: block;
+        float: left;
+        width: 25px;
+        height: 25px;
+        margin: 2px 2px 2px 10px;
+        padding: 0;
+    }
+
+    li.hls-index-theme-area .hls-index-colorpicker > li > .hls-index-colorpick-btn {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+        -webkit-border-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-border-radius: 0;
+        -moz-background-clip: padding;
+        border-radius: 0;
+        background-clip: padding-box;
+        position: relative;
+        -webkit-transition: all ease 0.1s;
+        -moz-transition: all ease 0.1s;
+        -o-transition: all ease 0.1s;
+        transition: all ease 0.1s;
+    }
+
+    li.hls-index-theme-area .hls-index-colorpicker > li > .hls-index-colorpick-btn:hover {
+        text-decoration: none;
+        zoom: 1;
+        filter: alpha(opacity=80);
+        -webkit-opacity: 0.8;
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+        -webkit-transform: scale(1.08);
+        -moz-transform: scale(1.08);
+        -o-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+        transform: scale(1.08);
+    }
+
+    li.hls-index-theme-area .hls-index-colorpicker > li > .hls-index-colorpick-btn.selected:after {
+        content: "\f00c";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 11px;
+        color: #ffffff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .navbar .navbar-inner .navbar-header .navbar-account .account-area > li .dropdown-menu.dropdown-login-area > li.theme-area .btn-colorpicker {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #DDD;
+        vertical-align: middle;
+        border-radius: 0;
+    }
+
+    li.hls-index-dropdown-footer {
+        padding: 10px;
+        border-top: 3px solid #2dc3e8;
+        border-bottom: 0;
+        text-align: right;
+    }
+
+    li.hls-index-dropdown-footer a {
+        color: #717171;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .hls-title-body-english {
+        width: 210px;
+        float: left;
+        text-align: right;
+        font-size: 13px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .bread-lock {
+        font-size: 18px;
+        left: 180px;
+        top: 3px;
+        display: block;
+        float: left;
+        position: absolute;
+        cursor: pointer;
+        width: 30px;
+        height: inherit;
+        text-align: center;
+    }
+
+    .bread-lock:hover, focus {
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .lock-win-item {
+        height: 88px;
+        width: 180px;
+        margin: 0 auto;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+
+    .lock-win-item-function {
+        cursor: pointer;
+        border-bottom: 1px solid #999;
+    }
+
+    .lock-win-item-name {
+        height: 20px;
+        width: inherit;
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        font-size: 16px;
+    }
+
+    .hls-lock-narrow-win {
+        height: 100%;
+        width: 200px;
+        background-color: #eee;
+        position: fixed;
+        top: 90px;
+        display: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        padding-top: 15px;
+        z-index: 9999;
+        overflow-y: auto;
+    }
+
+    .total_div_voice {
+        height: 40px;
+        width: 40px;
+        margin-left: 60px;
+        margin-right: 10px;
+        float: left;
+        line-height: 40px;
+    }
+
+    .voice_content {
+        height: 300px;
+        width: 270px;
+        overflow: hidden;
+    }
+
+    .voice_body_notice_content {
+        width: 100%;
+        height: 97px;
+        /*border: 1px solid  red;*/
+        margin-top: 1px;
+        background-color: white;
+        margin-bottom: 2px;
+    }
+
+    #voice_main_body {
+        margin-top: 5px;
+    }
+
+    .voice_body_notice_title {
+        padding-top: 5px;
+        padding-left: 15px;
+        width: 100%;
+        height: 24%;
+    }
+
+    .voice_body_notice_title span {
+        color: #00B3B3;
+    }
+
+    .voice_body_notice_body {
+        padding-top: 10px;
+        padding-left: 15px;
+        width: 100%;
+        height: 51%;
+        padding-right: 20px;
+    }
+
+    .voice_body_notice_body span {
+        color: black;
+    }
+
+    .voice_body_notice_time {
+        padding-top: 5px;
+        padding-left: 15px;
+        width: 100%;
+        height: 24%;
+    }
+
+    .voice_body_notice_time span {
+        color: silver;
+    }
+
+    .voice_body_notice_content div {
+        /*border: 1px solid blue;*/
+    }
+
+    .notice_time_span {
+        float: right;
+        margin-right: 25px;
+    }
+
+    .notice_time_name {
+        /*margin-left: 15px;*/
+    }
+
+    .total_div_voice img {
+        margin-top: 8px;
+        width: 20px
+    }
+
+    #total_div {
+        height: 45px;
+        width: auto;
+        border-bottom: 2px solid red;
+        padding-bottom: 5px;
+        background-color: white;
+        width: 270px;
+    }
+
+    #info_box {
+        width: 100%;
+        height: 40px;
+        background-color: #00B3B3;
+        text-align: center;
+        margin-bottom: 0px
+    }
+
+    #info_box_a {
+        color: white;
+        width: 269px;
+        height: 38px;
+        text-align: center;
+        padding-top: 10px
+    }
+
+    #push_div {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    #look_db {
+        cursor: pointer;
+        width: 30px;
+        float: left;
+        padding-top: 4px;
+    }
+
+    #look_db img {
+        margin-top: 8px;
+    }
+
+    #breadcrumb-refresh-a {
+        background: url('/resources/images/MAIN/bread-refresh.png');
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-position: center;
+        top: 4px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 20px;
+    }
+
+    #breadcrumb-arrow-left-a {
+        background: url('/resources/images/MAIN/bread-left.png');
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-position: center;
+        top: 4px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 17px;
+    }
+
+    #breadcrumb-arrow-right-a {
+        background: url('/resources/images/MAIN/bread-right-disable.png');
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-position: center;
+        top: 4px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 17px;
+    }
+
+    .hls-theme-btn-checked {
+        border: 2px solid orange;
+    }
+</style><style>
+    .double-bounce1, .double-bounce2 {
+        z-index: 9999;
+        position: absolute;
+        top: 300px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ff5722;
+        opacity: 0.6;
+        left: 0;
+
+        -webkit-animation: bounce 2.0s infinite ease-in-out;
+        animation: bounce 2.0s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes bounce {
+        0%, 100% {
+            -webkit-transform: scale(0.0)
+        }
+        70% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        50% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+
+    /*模块打开点击图标*/
+    #show-module-list-btn {
+        height: inherit;
+        background-repeat: no-repeat;
+        background-image: url('/resources/images/MAIN/module.png');
+        background-position-y: center;
+        display: inline;
+        width: 30px;
+        float: left;
+        cursor: pointer;
+        background-size: 20px;
+    }
+
+    #qr-code {
+        height: inherit;
+        background-repeat: no-repeat;
+        background-image: url('/resources/images/MAIN/qr_code.png');
+        background-position-y: center;
+        display: inline;
+        width: 30px;
+        float: left;
+        cursor: pointer;
+        background-size: 30px;
+    }
+</style><link href="./中交易融_files/indexFloatDiv.css" rel="stylesheet"><link href="./中交易融_files/module-box.css" rel="stylesheet"><link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css"></head>
+
+<!--通过Hap.request方法发送请求，返回信息弹框用到-->
+
+
+
+
+
+
+<!--模块列表部分css-->
+
+<body>
+<!--<script src="/resources/script/CONT/indexFloatDiv.js"></script>-->
+<div id="dialog"></div>
+<div id="hls-module-customer" class="row hls-module">
+<a class="hls-module-a" onclick="moduleOpenTab(&#39;FND1&#39; ,&#39;组织架构首页&#39;,&#39;fnd/FND100/organizational_structure.html&#39;,&#39;false&#39;,&#39;组织架构&#39;,&#39;Organization&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#FF4962"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#FF4962;background-image: url(/resources/images/MAIN/MODULE/org.png)"></div></div><div class="hls-title-body"><span>组织架构</span></div><div class="hls-title-body-english"><span>Organization</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;SYS1&#39; ,&#39;账户管理首页&#39;,&#39;sys/SYS100H/accountManagementIndex.html&#39;,&#39;false&#39;,&#39;账户管理&#39;,&#39;User Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#CA4F79"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(/resources/images/MAIN/MODULE/account.png)"></div></div><div class="hls-title-body"><span>账户管理</span></div><div class="hls-title-body-english"><span>User Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FND2&#39; ,&#39;基础设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础设置&#39;,&#39;Basic settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#0084CC"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#0084CC;background-image: url(/resources/images/MAIN/MODULE/fnd.png)"></div></div><div class="hls-title-body"><span>基础设置</span></div><div class="hls-title-body-english"><span>Basic settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;HLS&#39; ,&#39;基础工具设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础工具设置&#39;,&#39;System Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#009E9E"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#009E9E;background-image: url(/resources/images/MAIN/MODULE/system.png)"></div></div><div class="hls-title-body"><span>基础工具设置</span></div><div class="hls-title-body-english"><span>System Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;INF1&#39; ,&#39;接口管理首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;接口管理&#39;,&#39;Interface management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#68A4B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#68A4B3;background-image: url(/resources/images/MAIN/MODULE/fnd.png)"></div></div><div class="hls-title-body"><span>接口管理</span></div><div class="hls-title-body-english"><span>Interface management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;JOB&#39; ,&#39;计划任务首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;计划任务&#39;,&#39;Job&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/project1.png)"></div></div><div class="hls-title-body"><span>计划任务</span></div><div class="hls-title-body-english"><span>Job</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;SYS0&#39; ,&#39;模块配置首页&#39;,&#39;sys/SYS000H/sysModuleIndex.html&#39;,&#39;false&#39;,&#39;模块配置&#39;,&#39;Module Settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00C5ED"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00C5ED;background-image: url(/resources/images/MAIN/MODULE/module.png)"></div></div><div class="hls-title-body"><span>模块配置</span></div><div class="hls-title-body-english"><span>Module Settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;SYS2&#39; ,&#39;系统设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;系统设置&#39;,&#39;System settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#66669A"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#66669A;background-image: url(/resources/images/MAIN/MODULE/system.png)"></div></div><div class="hls-title-body"><span>系统设置</span></div><div class="hls-title-body-english"><span>System settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;WFL&#39; ,&#39;工作流首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;工作流&#39;,&#39;Workflow&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#F0A746"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#F0A746;background-image: url(/resources/images/MAIN/MODULE/wfls.png)"></div></div><div class="hls-title-body"><span>工作流</span></div><div class="hls-title-body-english"><span>Workflow</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;EMAIL&#39; ,&#39;邮件首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;邮件&#39;,&#39;email&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/mail.png)"></div></div><div class="hls-title-body"><span>邮件</span></div><div class="hls-title-body-english"><span>email</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;RPT.SETUP&#39; ,&#39;报表设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;报表设置&#39;,&#39;Report Settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/invoice1.png)"></div></div><div class="hls-title-body"><span>报表设置</span></div><div class="hls-title-body-english"><span>Report Settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FND3&#39; ,&#39;商业伙伴首页&#39;,&#39;bp/BP100/bp_master_home.html&#39;,&#39;false&#39;,&#39;商业伙伴&#39;,&#39;Business Partner&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#FFCD55"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#FFCD55;background-image: url(/resources/images/MAIN/MODULE/bp.png)"></div></div><div class="hls-title-body"><span>商业伙伴</span></div><div class="hls-title-body-english"><span>Business Partner</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.CREDIT&#39; ,&#39;综合授信管理首页&#39;,&#39;fct/FCT100H/fctAmountIndex.view&#39;,&#39;false&#39;,&#39;综合授信管理&#39;,&#39;Hls Creditline&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>综合授信管理</span></div><div class="hls-title-body-english"><span>Hls Creditline</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;PRJ&#39; ,&#39;租赁项目审批首页&#39;,&#39;prj/PRJ000H/prjManagementIndex.view&#39;,&#39;false&#39;,&#39;租赁项目审批&#39;,&#39;Rent Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#E74B3C"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#E74B3C;background-image: url(/resources/images/MAIN/MODULE/project.png)"></div></div><div class="hls-title-body"><span>租赁项目审批</span></div><div class="hls-title-body-english"><span>Rent Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;CON&#39; ,&#39;租赁合同管理首页&#39;,&#39;cont/CON000H/conManagementIndex.html&#39;,&#39;false&#39;,&#39;租赁合同管理&#39;,&#39;Contract Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#3392FF"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#3392FF;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>租赁合同管理</span></div><div class="hls-title-body-english"><span>Contract Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;CONT&#39; ,&#39;合同设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;合同设置&#39;,&#39;Contract  Setting&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00A3A3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00A3A3;background-image: url(/resources/images/MAIN/MODULE/conbus.png)"></div></div><div class="hls-title-body"><span>合同设置</span></div><div class="hls-title-body-english"><span>Contract  Setting</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.PROJECT&#39; ,&#39;保理立项管理首页&#39;,&#39;fct/FCT200H/fctProjectSetupIndex.view&#39;,&#39;false&#39;,&#39;保理立项管理&#39;,&#39;Fct Project&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#A0D469"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#A0D469;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>保理立项管理</span></div><div class="hls-title-body-english"><span>Fct Project</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.APPROVAL&#39; ,&#39;保理授信审批首页&#39;,&#39;fct/FCT300H/fctCreditManagementIndex.view&#39;,&#39;false&#39;,&#39;保理授信审批&#39;,&#39;Credit Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#FA6E52"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#FA6E52;background-image: url(/resources/images/MAIN/MODULE/process_monitor.png)"></div></div><div class="hls-title-body"><span>保理授信审批</span></div><div class="hls-title-body-english"><span>Credit Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.SIGN&#39; ,&#39;保理合同签约首页&#39;,&#39;fct/FCT500H/fct_con_sign_home.view&#39;,&#39;false&#39;,&#39;保理合同签约&#39;,&#39;Fct ContractSign&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#F4B400"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#F4B400;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>保理合同签约</span></div><div class="hls-title-body-english"><span>Fct ContractSign</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.CONTRACT&#39; ,&#39;保理合同管理首页&#39;,&#39;fct/FCT600H/fct_contract_manager_h.view&#39;,&#39;false&#39;,&#39;保理合同管理&#39;,&#39;Fct ContractManager&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#9871CD"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#9871CD;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>保理合同管理</span></div><div class="hls-title-body-english"><span>Fct ContractManager</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;FCT.BASIC_TRX&#39; ,&#39;基础交易首页&#39;,&#39;fct/FCT400H/fctProjectBasicIndex.view&#39;,&#39;false&#39;,&#39;基础交易&#39;,&#39;Fct PorjectTrx&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>基础交易</span></div><div class="hls-title-body-english"><span>Fct PorjectTrx</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;ACP.INVOICE&#39; ,&#39;进项发票创建首页&#39;,&#39;vat-invoice/VATINVOICE000H/vatInvoiceCheckManagement.html&#39;,&#39;false&#39;,&#39;进项发票创建&#39;,&#39;Invoice Tax Create&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/project.png)"></div></div><div class="hls-title-body"><span>进项发票创建</span></div><div class="hls-title-body-english"><span>Invoice Tax Create</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;AST&#39; ,&#39;资产管理首页&#39;,&#39;ast/AST000H/astManagermentIndex1.view&#39;,&#39;false&#39;,&#39;资产管理&#39;,&#39;Asset Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#386FCB"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#386FCB;background-image: url(/resources/images/MAIN/MODULE/project1.png)"></div></div><div class="hls-title-body"><span>资产管理</span></div><div class="hls-title-body-english"><span>Asset Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;CON.FLOATING&#39; ,&#39;合同调息首页&#39;,&#39;cont/CON200H/baseRateManagement.view?code=CON.FLOATING&#39;,&#39;false&#39;,&#39;合同调息&#39;,&#39;Contract Floating&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>合同调息</span></div><div class="hls-title-body-english"><span>Contract Floating</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;INS&#39; ,&#39;保险管理首页&#39;,&#39;ins/INS100A/insuranceManagement.html&#39;,&#39;false&#39;,&#39;保险管理&#39;,&#39;Insurance Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#1A88D6"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#1A88D6;background-image: url(/resources/images/MAIN/MODULE/project1.png)"></div></div><div class="hls-title-body"><span>保险管理</span></div><div class="hls-title-body-english"><span>Insurance Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;BASE.COLLECTION&#39; ,&#39;催收规则变更首页&#39;,&#39;ast/AST001H/collection_rules.view&#39;,&#39;false&#39;,&#39;催收规则变更&#39;,&#39;Rule of collection&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#B31B63"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#B31B63;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>催收规则变更</span></div><div class="hls-title-body-english"><span>Rule of collection</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;GLD&#39; ,&#39;财务管理模块首页&#39;,&#39;gld/GLD000H/gldManagementIndex.html&#39;,&#39;false&#39;,&#39;财务管理模块&#39;,&#39;Financial Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#FF0A2C"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#FF0A2C;background-image: url(/resources/images/MAIN/MODULE/funds.png)"></div></div><div class="hls-title-body"><span>财务管理模块</span></div><div class="hls-title-body-english"><span>Financial Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;GLD_ADMIN&#39; ,&#39;财务基础设置首页&#39;,&#39;gld/GLD000H/gld_basic_setup_index.html&#39;,&#39;false&#39;,&#39;财务基础设置&#39;,&#39;Financial Basic Settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#BB1A1B"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#BB1A1B;background-image: url(/resources/images/MAIN/MODULE/invoice1.png)"></div></div><div class="hls-title-body"><span>财务基础设置</span></div><div class="hls-title-body-english"><span>Financial Basic Settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;GLD_SETUP&#39; ,&#39;财务系统设置首页&#39;,&#39;gld/GLD000H/gld_setup_index.html&#39;,&#39;false&#39;,&#39;财务系统设置&#39;,&#39;Financial System Settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#B8275D"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#B8275D;background-image: url(/resources/images/MAIN/MODULE/funds.png)"></div></div><div class="hls-title-body"><span>财务系统设置</span></div><div class="hls-title-body-english"><span>Financial System Settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;VAT&#39; ,&#39;发票管理首页&#39;,&#39;vat/VAT000H/vatInvoiceManagement.html&#39;,&#39;false&#39;,&#39;发票管理&#39;,&#39;Invoices Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#CA4F79"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(/resources/images/MAIN/MODULE/invoice1.png)"></div></div><div class="hls-title-body"><span>发票管理</span></div><div class="hls-title-body-english"><span>Invoices Management</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;VAT.ADMIN&#39; ,&#39;发票设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;发票设置&#39;,&#39;Invoices settings&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/invoice1.png)"></div></div><div class="hls-title-body"><span>发票设置</span></div><div class="hls-title-body-english"><span>Invoices settings</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;VAT.INF&#39; ,&#39;金税接口首页&#39;,&#39;vat-inf/VAT500H/vat_inf_index_new.view&#39;,&#39;false&#39;,&#39;金税接口&#39;,&#39;Invoices Interface&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#23CDFC"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#23CDFC;background-image: url(/resources/images/MAIN/MODULE/fnd.png)"></div></div><div class="hls-title-body"><span>金税接口</span></div><div class="hls-title-body-english"><span>Invoices Interface</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;LON.BANK&#39; ,&#39;融资机构管理首页&#39;,&#39;lon/lon_master_home.view&#39;,&#39;false&#39;,&#39;融资机构管理&#39;,&#39;Management of financing institutions &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/credit.png)"></div></div><div class="hls-title-body"><span>融资机构管理</span></div><div class="hls-title-body-english"><span>Management of financing institutions </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;LON.CREDIT&#39; ,&#39;融资授信额度首页&#39;,&#39;lon/lon_credit_home.view&#39;,&#39;false&#39;,&#39;融资授信额度&#39;,&#39;Financing credit line &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/credit.png)"></div></div><div class="hls-title-body"><span>融资授信额度</span></div><div class="hls-title-body-english"><span>Financing credit line </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;LON.CONTRACT&#39; ,&#39;融资合同申请首页&#39;,&#39;lon/LON300H/financing_contract_index.view&#39;,&#39;false&#39;,&#39;融资合同申请&#39;,&#39;Financing contract application &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/conbus.png)"></div></div><div class="hls-title-body"><span>融资合同申请</span></div><div class="hls-title-body-english"><span>Financing contract application </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;LON.REPAYMENT&#39; ,&#39;融资还款申请首页&#39;,&#39;lon/LON500H/lon_repayment_home.view&#39;,&#39;false&#39;,&#39;融资还款申请&#39;,&#39;Financing repayment application &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#00B3B3"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(/resources/images/MAIN/MODULE/credit.png)"></div></div><div class="hls-title-body"><span>融资还款申请</span></div><div class="hls-title-body-english"><span>Financing repayment application </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;HLS.RECE&#39; ,&#39;收款账户变更首页&#39;,&#39;ast/AST500A/receivables_account_management.view&#39;,&#39;false&#39;,&#39;收款账户变更&#39;,&#39;Receivable Account Change&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#B37D87"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#B37D87;background-image: url(/resources/images/MAIN/MODULE/process_monitor.png)"></div></div><div class="hls-title-body"><span>收款账户变更</span></div><div class="hls-title-body-english"><span>Receivable Account Change</span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;SYSRPT&#39; ,&#39;基础报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础报表&#39;,&#39; System Report &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#EBAFAF"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#EBAFAF;background-image: url(/resources/images/MAIN/MODULE/report.png)"></div></div><div class="hls-title-body"><span>基础报表</span></div><div class="hls-title-body-english"><span> System Report </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;Report&#39; ,&#39;资产报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;资产报表&#39;,&#39;Asset Report &#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#EBB84E"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#EBB84E;background-image: url(/resources/images/MAIN/MODULE/report.png)"></div></div><div class="hls-title-body"><span>资产报表</span></div><div class="hls-title-body-english"><span>Asset Report </span></div></div></div></a><a class="hls-module-a" onclick="moduleOpenTab(&#39;CONTRACT_FILE&#39; ,&#39;资料查询首页&#39;,&#39;/cont/CON666/con_contract_file.html?code=10001_CONTRACT_FILE&#39;,&#39;false&#39;,&#39;资料查询&#39;,&#39;Contract Management&#39;)"><div class="hls-module-a-detail"><div class="hls-info-title" style="background-color:#1E29BA"><div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:#1E29BA;background-image: url(/resources/images/MAIN/MODULE/contract.png)"></div></div><div class="hls-title-body"><span>资料查询</span></div><div class="hls-title-body-english"><span>Contract Management</span></div></div></div></a></div>
+<div id="msg_append">
+</div>
+<div id="info_Box_div_open"></div>
+<div class="hls-module-underlay"></div>
+<div id="hls-topbar-container" class="hls-theme-bg-color">
+    <div class="hls-topbar-left-area">
+        <span class="hls-topbar-logo"></span>
+        <a id="hls-topbar-main" class="hls-topbar-main" href="javascript:void 0;" onclick="hls_main_link()">
+            <div id="hls-topbar-main-content" class="hls-topbar-content hls-topbar-main-content hls-topbar-main-content-selected">
+                <div style="height: 25px;width: 205px;margin-top: 12px;">
+                    <div style="float:left;height:50px;width: 70px;font-size: 16px;margin-left: 12px;">中交易融</div>
+                    <div class="global-font-size12" style="float:left;height:25px;width: 120px;font-weight: 400;margin-top:3px;">
+                        --Ease Your Leasing
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <ul class="hls-topbar-right-area">
+        <!--新模块查看列表-->
+        <li id="show-module-list-btn" onclick="showModuleList()">
+        </li>
+
+
+
+
+
+        <li id="qr-code" style="position:relative;">
+            <span style="z-index:999999;position:absolute;top:40px;left:-80px;display:none;">
+                <img alt="二维码" style="width:172px;height:420spx;" src="./中交易融_files/zjzl-app.png">
+            </span>
+        </li>
+
+        <!--小窗口查看消息end-->
+        <li class="hls-topbar-right-area-toolbar contact">
+            <a id="hls-topbar-contact" onclick="contact()" class="hls-topbar-contact hls-topbar-contact-bg">
+            </a>
+        </li>
+        <!--oa单点登录 -->
+        <li class="hls-topbar-right-area-toolbar single">
+            <a id="hls-topbar-single-login" onclick="singleLogin()" class="hls-topbar-single hls-topbar-single-bg">
+            </a>
+        </li>
+        <li class="dropdown" style="width: 100px;float: left;">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <div style="width: 100px;height: 45px;">
+                    <div style="width: 30px;float: left;" title="查看用户信息">
+                        <img style="margin-top: 8px;" width="29px" height="29px" src="./中交易融_files/hls-user-photo.jpg">
+                    </div>
+                    <div class="user-logo-div">
+                        <section style="float: left;">
+                            <span>管理员</span>
+                        </section>
+                    </div>
+                </div>
+            </a>
+            <!--Login Area Dropdown-->
+            <ul class="pull-right dropdown-menu " style="width:216px">
+                <li class="user-logo-user-name-font"><a>管理员</a>
+                </li>
+                <li class="user-logo-email-font"><a></a></li>
+                <!--Avatar Area-->
+                <li>
+                    <div class="avatar-area">
+                        <img src="./中交易融_files/hls-user-photo.jpg" class="avatar">
+                        <span class="caption">Change Photo</span>
+                    </div>
+                </li>
+                <!--Avatar Area-->
+                <li class="hls-index-edit">
+                    <a class="pull-left" style="width: 108px;text-align: center">Theme</a>
+                    <a href="http://localhost:8080/#" class="pull-right" style="width: 108px;text-align: center;" onclick="sysconfig()">Setting</a>
+                </li>
+                <!--Theme Selector Area-->
+                <li class="hls-index-theme-area">
+                    <ul class="hls-index-colorpicker" id="skin-changer">
+                        <li><a class="hls-index-colorpick-btn" href="http://localhost:8080/#" style="background-color:#333;" title="庄重" id="solemn"></a></li>
+                        <li><a class="hls-index-colorpick-btn hls-theme-btn-checked" href="http://localhost:8080/#" style="background-color:#00b3b3;" title="经典" id="classic"></a></li>
+                        <li><a class="hls-index-colorpick-btn" href="http://localhost:8080/#" style="background-color:#2dc3e8;" title="柔合" id="soft"></a></li>
+                        <li><a class="hls-index-colorpick-btn" href="http://localhost:8080/#" style="background-color:#ffa500;" title="怀旧" id="nostalgia"></a></li>
+                        <li><a class="hls-index-colorpick-btn" href="http://localhost:8080/#" style="background-color:rgb(0,72,152);" title="中交蓝" id="zjblue"></a></li>
+                        <li><a class="hls-index-colorpick-btn" href="http://localhost:8080/#" style="background-color:rgb(240,131,31);" title="金辉黄" id="gold"></a></li>
+                    </ul>
+                </li>
+                <!--/Theme Selector Area-->
+                <li class="hls-index-dropdown-footer">
+                    <span style="white-space:nowrap;text-overflow:ellipsis;text-align: center;overflow:hidden;width: 98px;display: inline-block">中交租赁</span>
+                    <span style="white-space:nowrap;text-overflow:ellipsis;text-align: center;overflow:hidden;width: 92px;display: inline-block">管理员</span>
+                </li>
+            </ul>
+        </li>
+        <li class="hls-topbar-right-area-toolbar logout">
+            <a id="hls-topbar-logout" onclick="logout()" class="hls-topbar-logout hls-topbar-logout-bg">
+            </a>
+        </li>
+    </ul>
+    <div class="module-container">
+        <div class="module-content-title">
+            <span class="module-content-title-text">模块清单</span>
+            <div class="module-search-container">
+                <img src="./中交易融_files/search.png" style="position: relative;">
+                <input id="moduleCondition" style="border:none;background-color:white;outline:none" class="global-font-size12" type="text" placeholder="搜索">
+            </div>
+            <span id="sortname-digital" class="module-content-sortname-common module-content-sortname-selected">0-9</span>
+            <span id="sortname-letter" class="module-content-sortname-common">A-Z</span>
+            <span id="sortway-asc" class="module-content-sortway-common module-content-sortway-selected" style="margin-right: 5px;">↑</span>
+            <span id="sortway-desc" class="module-content-sortway-common">↓</span>
+        </div>
+        <div class="module-content-tab" id="module-content-tab-digital">
+            <span style="display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc"></span>
+        <a class="module-btn-box" style="background-color:#FF4962" onclick="openModuleBox(&#39;FND1&#39; ,&#39;组织架构首页&#39;,&#39;fnd/FND100/organizational_structure.html&#39;,&#39;false&#39;,&#39;组织架构&#39;,&#39;Organization&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FF4962;background-image: url(resources/images/MAIN/MODULE/org.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">组织架构</span></div><div class="module-btn-english"><span>Organization</span></div></a><a class="module-btn-box" style="background-color:#CA4F79" onclick="openModuleBox(&#39;SYS1&#39; ,&#39;账户管理首页&#39;,&#39;sys/SYS100H/accountManagementIndex.html&#39;,&#39;false&#39;,&#39;账户管理&#39;,&#39;User Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(resources/images/MAIN/MODULE/account.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">账户管理</span></div><div class="module-btn-english"><span>User Management</span></div></a><a class="module-btn-box" style="background-color:#0084CC" onclick="openModuleBox(&#39;FND2&#39; ,&#39;基础设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础设置&#39;,&#39;Basic settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#0084CC;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础设置</span></div><div class="module-btn-english"><span>Basic settings</span></div></a><a class="module-btn-box" style="background-color:#009E9E" onclick="openModuleBox(&#39;HLS&#39; ,&#39;基础工具设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础工具设置&#39;,&#39;System Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#009E9E;background-image: url(resources/images/MAIN/MODULE/system.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础工具设置</span></div><div class="module-btn-english"><span>System Management</span></div></a><a class="module-btn-box" style="background-color:#68A4B3" onclick="openModuleBox(&#39;INF1&#39; ,&#39;接口管理首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;接口管理&#39;,&#39;Interface management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#68A4B3;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">接口管理</span></div><div class="module-btn-english"><span>Interface management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;JOB&#39; ,&#39;计划任务首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;计划任务&#39;,&#39;Job&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">计划任务</span></div><div class="module-btn-english"><span>Job</span></div></a><a class="module-btn-box" style="background-color:#00C5ED" onclick="openModuleBox(&#39;SYS0&#39; ,&#39;模块配置首页&#39;,&#39;sys/SYS000H/sysModuleIndex.html&#39;,&#39;false&#39;,&#39;模块配置&#39;,&#39;Module Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00C5ED;background-image: url(resources/images/MAIN/MODULE/module.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">模块配置</span></div><div class="module-btn-english"><span>Module Settings</span></div></a><a class="module-btn-box" style="background-color:#66669A" onclick="openModuleBox(&#39;SYS2&#39; ,&#39;系统设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;系统设置&#39;,&#39;System settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#66669A;background-image: url(resources/images/MAIN/MODULE/system.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">系统设置</span></div><div class="module-btn-english"><span>System settings</span></div></a><a class="module-btn-box" style="background-color:#F0A746" onclick="openModuleBox(&#39;WFL&#39; ,&#39;工作流首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;工作流&#39;,&#39;Workflow&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#F0A746;background-image: url(resources/images/MAIN/MODULE/wfls.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">工作流</span></div><div class="module-btn-english"><span>Workflow</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;EMAIL&#39; ,&#39;邮件首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;邮件&#39;,&#39;email&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/mail.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">邮件</span></div><div class="module-btn-english"><span>email</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;RPT.SETUP&#39; ,&#39;报表设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;报表设置&#39;,&#39;Report Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">报表设置</span></div><div class="module-btn-english"><span>Report Settings</span></div></a><a class="module-btn-box" style="background-color:#FFCD55" onclick="openModuleBox(&#39;FND3&#39; ,&#39;商业伙伴首页&#39;,&#39;bp/BP100/bp_master_home.html&#39;,&#39;false&#39;,&#39;商业伙伴&#39;,&#39;Business Partner&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FFCD55;background-image: url(resources/images/MAIN/MODULE/bp.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">商业伙伴</span></div><div class="module-btn-english"><span>Business Partner</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;FCT.CREDIT&#39; ,&#39;综合授信管理首页&#39;,&#39;fct/FCT100H/fctAmountIndex.view&#39;,&#39;false&#39;,&#39;综合授信管理&#39;,&#39;Hls Creditline&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">综合授信管理</span></div><div class="module-btn-english"><span>Hls Creditline</span></div></a><a class="module-btn-box" style="background-color:#E74B3C" onclick="openModuleBox(&#39;PRJ&#39; ,&#39;租赁项目审批首页&#39;,&#39;prj/PRJ000H/prjManagementIndex.view&#39;,&#39;false&#39;,&#39;租赁项目审批&#39;,&#39;Rent Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#E74B3C;background-image: url(resources/images/MAIN/MODULE/project.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">租赁项目审批</span></div><div class="module-btn-english"><span>Rent Management</span></div></a><a class="module-btn-box" style="background-color:#3392FF" onclick="openModuleBox(&#39;CON&#39; ,&#39;租赁合同管理首页&#39;,&#39;cont/CON000H/conManagementIndex.html&#39;,&#39;false&#39;,&#39;租赁合同管理&#39;,&#39;Contract Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#3392FF;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">租赁合同管理</span></div><div class="module-btn-english"><span>Contract Management</span></div></a><a class="module-btn-box" style="background-color:#00A3A3" onclick="openModuleBox(&#39;CONT&#39; ,&#39;合同设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;合同设置&#39;,&#39;Contract  Setting&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00A3A3;background-image: url(resources/images/MAIN/MODULE/conbus.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">合同设置</span></div><div class="module-btn-english"><span>Contract  Setting</span></div></a><a class="module-btn-box" style="background-color:#A0D469" onclick="openModuleBox(&#39;FCT.PROJECT&#39; ,&#39;保理立项管理首页&#39;,&#39;fct/FCT200H/fctProjectSetupIndex.view&#39;,&#39;false&#39;,&#39;保理立项管理&#39;,&#39;Fct Project&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#A0D469;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理立项管理</span></div><div class="module-btn-english"><span>Fct Project</span></div></a><a class="module-btn-box" style="background-color:#FA6E52" onclick="openModuleBox(&#39;FCT.APPROVAL&#39; ,&#39;保理授信审批首页&#39;,&#39;fct/FCT300H/fctCreditManagementIndex.view&#39;,&#39;false&#39;,&#39;保理授信审批&#39;,&#39;Credit Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FA6E52;background-image: url(resources/images/MAIN/MODULE/process_monitor.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理授信审批</span></div><div class="module-btn-english"><span>Credit Management</span></div></a><a class="module-btn-box" style="background-color:#F4B400" onclick="openModuleBox(&#39;FCT.SIGN&#39; ,&#39;保理合同签约首页&#39;,&#39;fct/FCT500H/fct_con_sign_home.view&#39;,&#39;false&#39;,&#39;保理合同签约&#39;,&#39;Fct ContractSign&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#F4B400;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理合同签约</span></div><div class="module-btn-english"><span>Fct ContractSign</span></div></a><a class="module-btn-box" style="background-color:#9871CD" onclick="openModuleBox(&#39;FCT.CONTRACT&#39; ,&#39;保理合同管理首页&#39;,&#39;fct/FCT600H/fct_contract_manager_h.view&#39;,&#39;false&#39;,&#39;保理合同管理&#39;,&#39;Fct ContractManager&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#9871CD;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理合同管理</span></div><div class="module-btn-english"><span>Fct ContractManager</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;FCT.BASIC_TRX&#39; ,&#39;基础交易首页&#39;,&#39;fct/FCT400H/fctProjectBasicIndex.view&#39;,&#39;false&#39;,&#39;基础交易&#39;,&#39;Fct PorjectTrx&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础交易</span></div><div class="module-btn-english"><span>Fct PorjectTrx</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;ACP.INVOICE&#39; ,&#39;进项发票创建首页&#39;,&#39;vat-invoice/VATINVOICE000H/vatInvoiceCheckManagement.html&#39;,&#39;false&#39;,&#39;进项发票创建&#39;,&#39;Invoice Tax Create&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/project.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">进项发票创建</span></div><div class="module-btn-english"><span>Invoice Tax Create</span></div></a><a class="module-btn-box" style="background-color:#386FCB" onclick="openModuleBox(&#39;AST&#39; ,&#39;资产管理首页&#39;,&#39;ast/AST000H/astManagermentIndex1.view&#39;,&#39;false&#39;,&#39;资产管理&#39;,&#39;Asset Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#386FCB;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资产管理</span></div><div class="module-btn-english"><span>Asset Management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;CON.FLOATING&#39; ,&#39;合同调息首页&#39;,&#39;cont/CON200H/baseRateManagement.view?code=CON.FLOATING&#39;,&#39;false&#39;,&#39;合同调息&#39;,&#39;Contract Floating&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">合同调息</span></div><div class="module-btn-english"><span>Contract Floating</span></div></a><a class="module-btn-box" style="background-color:#1A88D6" onclick="openModuleBox(&#39;INS&#39; ,&#39;保险管理首页&#39;,&#39;ins/INS100A/insuranceManagement.html&#39;,&#39;false&#39;,&#39;保险管理&#39;,&#39;Insurance Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#1A88D6;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保险管理</span></div><div class="module-btn-english"><span>Insurance Management</span></div></a><a class="module-btn-box" style="background-color:#B31B63" onclick="openModuleBox(&#39;BASE.COLLECTION&#39; ,&#39;催收规则变更首页&#39;,&#39;ast/AST001H/collection_rules.view&#39;,&#39;false&#39;,&#39;催收规则变更&#39;,&#39;Rule of collection&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B31B63;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">催收规则变更</span></div><div class="module-btn-english"><span>Rule of collection</span></div></a><a class="module-btn-box" style="background-color:#FF0A2C" onclick="openModuleBox(&#39;GLD&#39; ,&#39;财务管理模块首页&#39;,&#39;gld/GLD000H/gldManagementIndex.html&#39;,&#39;false&#39;,&#39;财务管理模块&#39;,&#39;Financial Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FF0A2C;background-image: url(resources/images/MAIN/MODULE/funds.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务管理模块</span></div><div class="module-btn-english"><span>Financial Management</span></div></a><a class="module-btn-box" style="background-color:#BB1A1B" onclick="openModuleBox(&#39;GLD_ADMIN&#39; ,&#39;财务基础设置首页&#39;,&#39;gld/GLD000H/gld_basic_setup_index.html&#39;,&#39;false&#39;,&#39;财务基础设置&#39;,&#39;Financial Basic Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#BB1A1B;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务基础设置</span></div><div class="module-btn-english"><span>Financial Basic Settings</span></div></a><a class="module-btn-box" style="background-color:#B8275D" onclick="openModuleBox(&#39;GLD_SETUP&#39; ,&#39;财务系统设置首页&#39;,&#39;gld/GLD000H/gld_setup_index.html&#39;,&#39;false&#39;,&#39;财务系统设置&#39;,&#39;Financial System Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B8275D;background-image: url(resources/images/MAIN/MODULE/funds.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务系统设置</span></div><div class="module-btn-english"><span>Financial System Settings</span></div></a><a class="module-btn-box" style="background-color:#CA4F79" onclick="openModuleBox(&#39;VAT&#39; ,&#39;发票管理首页&#39;,&#39;vat/VAT000H/vatInvoiceManagement.html&#39;,&#39;false&#39;,&#39;发票管理&#39;,&#39;Invoices Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">发票管理</span></div><div class="module-btn-english"><span>Invoices Management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;VAT.ADMIN&#39; ,&#39;发票设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;发票设置&#39;,&#39;Invoices settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">发票设置</span></div><div class="module-btn-english"><span>Invoices settings</span></div></a><a class="module-btn-box" style="background-color:#23CDFC" onclick="openModuleBox(&#39;VAT.INF&#39; ,&#39;金税接口首页&#39;,&#39;vat-inf/VAT500H/vat_inf_index_new.view&#39;,&#39;false&#39;,&#39;金税接口&#39;,&#39;Invoices Interface&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#23CDFC;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">金税接口</span></div><div class="module-btn-english"><span>Invoices Interface</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.BANK&#39; ,&#39;融资机构管理首页&#39;,&#39;lon/lon_master_home.view&#39;,&#39;false&#39;,&#39;融资机构管理&#39;,&#39;Management of financing institutions &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资机构管理</span></div><div class="module-btn-english"><span>Management of financing institutions </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.CREDIT&#39; ,&#39;融资授信额度首页&#39;,&#39;lon/lon_credit_home.view&#39;,&#39;false&#39;,&#39;融资授信额度&#39;,&#39;Financing credit line &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资授信额度</span></div><div class="module-btn-english"><span>Financing credit line </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.CONTRACT&#39; ,&#39;融资合同申请首页&#39;,&#39;lon/LON300H/financing_contract_index.view&#39;,&#39;false&#39;,&#39;融资合同申请&#39;,&#39;Financing contract application &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/conbus.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资合同申请</span></div><div class="module-btn-english"><span>Financing contract application </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.REPAYMENT&#39; ,&#39;融资还款申请首页&#39;,&#39;lon/LON500H/lon_repayment_home.view&#39;,&#39;false&#39;,&#39;融资还款申请&#39;,&#39;Financing repayment application &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资还款申请</span></div><div class="module-btn-english"><span>Financing repayment application </span></div></a><a class="module-btn-box" style="background-color:#B37D87" onclick="openModuleBox(&#39;HLS.RECE&#39; ,&#39;收款账户变更首页&#39;,&#39;ast/AST500A/receivables_account_management.view&#39;,&#39;false&#39;,&#39;收款账户变更&#39;,&#39;Receivable Account Change&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B37D87;background-image: url(resources/images/MAIN/MODULE/process_monitor.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">收款账户变更</span></div><div class="module-btn-english"><span>Receivable Account Change</span></div></a><a class="module-btn-box" style="background-color:#EBAFAF" onclick="openModuleBox(&#39;SYSRPT&#39; ,&#39;基础报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础报表&#39;,&#39; System Report &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#EBAFAF;background-image: url(resources/images/MAIN/MODULE/report.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础报表</span></div><div class="module-btn-english"><span> System Report </span></div></a><a class="module-btn-box" style="background-color:#EBB84E" onclick="openModuleBox(&#39;Report&#39; ,&#39;资产报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;资产报表&#39;,&#39;Asset Report &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#EBB84E;background-image: url(resources/images/MAIN/MODULE/report.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资产报表</span></div><div class="module-btn-english"><span>Asset Report </span></div></a><a class="module-btn-box" style="background-color:#1E29BA" onclick="openModuleBox(&#39;CONTRACT_FILE&#39; ,&#39;资料查询首页&#39;,&#39;/cont/CON666/con_contract_file.html?code=10001_CONTRACT_FILE&#39;,&#39;false&#39;,&#39;资料查询&#39;,&#39;Contract Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#1E29BA;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资料查询</span></div><div class="module-btn-english"><span>Contract Management</span></div></a></div>
+        <div class="module-content-tab" id="module-content-tab-letter">
+            <!--模块列表部分-->
+            <div class="letter-module-list-container"><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-Z">Z</span><a class="module-btn-box" style="background-color:#FF4962" onclick="openModuleBox(&#39;FND1&#39; ,&#39;组织架构首页&#39;,&#39;fnd/FND100/organizational_structure.html&#39;,&#39;false&#39;,&#39;组织架构&#39;,&#39;Organization&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FF4962;background-image: url(resources/images/MAIN/MODULE/org.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">组织架构</span></div><div class="module-btn-english"><span>Organization</span></div></a><a class="module-btn-box" style="background-color:#CA4F79" onclick="openModuleBox(&#39;SYS1&#39; ,&#39;账户管理首页&#39;,&#39;sys/SYS100H/accountManagementIndex.html&#39;,&#39;false&#39;,&#39;账户管理&#39;,&#39;User Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(resources/images/MAIN/MODULE/account.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">账户管理</span></div><div class="module-btn-english"><span>User Management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;FCT.CREDIT&#39; ,&#39;综合授信管理首页&#39;,&#39;fct/FCT100H/fctAmountIndex.view&#39;,&#39;false&#39;,&#39;综合授信管理&#39;,&#39;Hls Creditline&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">综合授信管理</span></div><div class="module-btn-english"><span>Hls Creditline</span></div></a><a class="module-btn-box" style="background-color:#E74B3C" onclick="openModuleBox(&#39;PRJ&#39; ,&#39;租赁项目审批首页&#39;,&#39;prj/PRJ000H/prjManagementIndex.view&#39;,&#39;false&#39;,&#39;租赁项目审批&#39;,&#39;Rent Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#E74B3C;background-image: url(resources/images/MAIN/MODULE/project.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">租赁项目审批</span></div><div class="module-btn-english"><span>Rent Management</span></div></a><a class="module-btn-box" style="background-color:#3392FF" onclick="openModuleBox(&#39;CON&#39; ,&#39;租赁合同管理首页&#39;,&#39;cont/CON000H/conManagementIndex.html&#39;,&#39;false&#39;,&#39;租赁合同管理&#39;,&#39;Contract Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#3392FF;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">租赁合同管理</span></div><div class="module-btn-english"><span>Contract Management</span></div></a><a class="module-btn-box" style="background-color:#386FCB" onclick="openModuleBox(&#39;AST&#39; ,&#39;资产管理首页&#39;,&#39;ast/AST000H/astManagermentIndex1.view&#39;,&#39;false&#39;,&#39;资产管理&#39;,&#39;Asset Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#386FCB;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资产管理</span></div><div class="module-btn-english"><span>Asset Management</span></div></a><a class="module-btn-box" style="background-color:#EBB84E" onclick="openModuleBox(&#39;Report&#39; ,&#39;资产报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;资产报表&#39;,&#39;Asset Report &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#EBB84E;background-image: url(resources/images/MAIN/MODULE/report.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资产报表</span></div><div class="module-btn-english"><span>Asset Report </span></div></a><a class="module-btn-box" style="background-color:#1E29BA" onclick="openModuleBox(&#39;CONTRACT_FILE&#39; ,&#39;资料查询首页&#39;,&#39;/cont/CON666/con_contract_file.html?code=10001_CONTRACT_FILE&#39;,&#39;false&#39;,&#39;资料查询&#39;,&#39;Contract Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#1E29BA;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">资料查询</span></div><div class="module-btn-english"><span>Contract Management</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-J">J</span><a class="module-btn-box" style="background-color:#0084CC" onclick="openModuleBox(&#39;FND2&#39; ,&#39;基础设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础设置&#39;,&#39;Basic settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#0084CC;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础设置</span></div><div class="module-btn-english"><span>Basic settings</span></div></a><a class="module-btn-box" style="background-color:#009E9E" onclick="openModuleBox(&#39;HLS&#39; ,&#39;基础工具设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础工具设置&#39;,&#39;System Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#009E9E;background-image: url(resources/images/MAIN/MODULE/system.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础工具设置</span></div><div class="module-btn-english"><span>System Management</span></div></a><a class="module-btn-box" style="background-color:#68A4B3" onclick="openModuleBox(&#39;INF1&#39; ,&#39;接口管理首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;接口管理&#39;,&#39;Interface management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#68A4B3;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">接口管理</span></div><div class="module-btn-english"><span>Interface management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;JOB&#39; ,&#39;计划任务首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;计划任务&#39;,&#39;Job&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">计划任务</span></div><div class="module-btn-english"><span>Job</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;FCT.BASIC_TRX&#39; ,&#39;基础交易首页&#39;,&#39;fct/FCT400H/fctProjectBasicIndex.view&#39;,&#39;false&#39;,&#39;基础交易&#39;,&#39;Fct PorjectTrx&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础交易</span></div><div class="module-btn-english"><span>Fct PorjectTrx</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;ACP.INVOICE&#39; ,&#39;进项发票创建首页&#39;,&#39;vat-invoice/VATINVOICE000H/vatInvoiceCheckManagement.html&#39;,&#39;false&#39;,&#39;进项发票创建&#39;,&#39;Invoice Tax Create&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/project.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">进项发票创建</span></div><div class="module-btn-english"><span>Invoice Tax Create</span></div></a><a class="module-btn-box" style="background-color:#23CDFC" onclick="openModuleBox(&#39;VAT.INF&#39; ,&#39;金税接口首页&#39;,&#39;vat-inf/VAT500H/vat_inf_index_new.view&#39;,&#39;false&#39;,&#39;金税接口&#39;,&#39;Invoices Interface&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#23CDFC;background-image: url(resources/images/MAIN/MODULE/fnd.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">金税接口</span></div><div class="module-btn-english"><span>Invoices Interface</span></div></a><a class="module-btn-box" style="background-color:#EBAFAF" onclick="openModuleBox(&#39;SYSRPT&#39; ,&#39;基础报表首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;基础报表&#39;,&#39; System Report &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#EBAFAF;background-image: url(resources/images/MAIN/MODULE/report.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">基础报表</span></div><div class="module-btn-english"><span> System Report </span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-M">M</span><a class="module-btn-box" style="background-color:#00C5ED" onclick="openModuleBox(&#39;SYS0&#39; ,&#39;模块配置首页&#39;,&#39;sys/SYS000H/sysModuleIndex.html&#39;,&#39;false&#39;,&#39;模块配置&#39;,&#39;Module Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00C5ED;background-image: url(resources/images/MAIN/MODULE/module.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">模块配置</span></div><div class="module-btn-english"><span>Module Settings</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-X">X</span><a class="module-btn-box" style="background-color:#66669A" onclick="openModuleBox(&#39;SYS2&#39; ,&#39;系统设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;系统设置&#39;,&#39;System settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#66669A;background-image: url(resources/images/MAIN/MODULE/system.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">系统设置</span></div><div class="module-btn-english"><span>System settings</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-G">G</span><a class="module-btn-box" style="background-color:#F0A746" onclick="openModuleBox(&#39;WFL&#39; ,&#39;工作流首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;工作流&#39;,&#39;Workflow&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#F0A746;background-image: url(resources/images/MAIN/MODULE/wfls.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">工作流</span></div><div class="module-btn-english"><span>Workflow</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-Y">Y</span><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;EMAIL&#39; ,&#39;邮件首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;邮件&#39;,&#39;email&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/mail.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">邮件</span></div><div class="module-btn-english"><span>email</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-B">B</span><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;RPT.SETUP&#39; ,&#39;报表设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;报表设置&#39;,&#39;Report Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">报表设置</span></div><div class="module-btn-english"><span>Report Settings</span></div></a><a class="module-btn-box" style="background-color:#A0D469" onclick="openModuleBox(&#39;FCT.PROJECT&#39; ,&#39;保理立项管理首页&#39;,&#39;fct/FCT200H/fctProjectSetupIndex.view&#39;,&#39;false&#39;,&#39;保理立项管理&#39;,&#39;Fct Project&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#A0D469;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理立项管理</span></div><div class="module-btn-english"><span>Fct Project</span></div></a><a class="module-btn-box" style="background-color:#FA6E52" onclick="openModuleBox(&#39;FCT.APPROVAL&#39; ,&#39;保理授信审批首页&#39;,&#39;fct/FCT300H/fctCreditManagementIndex.view&#39;,&#39;false&#39;,&#39;保理授信审批&#39;,&#39;Credit Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FA6E52;background-image: url(resources/images/MAIN/MODULE/process_monitor.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理授信审批</span></div><div class="module-btn-english"><span>Credit Management</span></div></a><a class="module-btn-box" style="background-color:#F4B400" onclick="openModuleBox(&#39;FCT.SIGN&#39; ,&#39;保理合同签约首页&#39;,&#39;fct/FCT500H/fct_con_sign_home.view&#39;,&#39;false&#39;,&#39;保理合同签约&#39;,&#39;Fct ContractSign&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#F4B400;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理合同签约</span></div><div class="module-btn-english"><span>Fct ContractSign</span></div></a><a class="module-btn-box" style="background-color:#9871CD" onclick="openModuleBox(&#39;FCT.CONTRACT&#39; ,&#39;保理合同管理首页&#39;,&#39;fct/FCT600H/fct_contract_manager_h.view&#39;,&#39;false&#39;,&#39;保理合同管理&#39;,&#39;Fct ContractManager&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#9871CD;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保理合同管理</span></div><div class="module-btn-english"><span>Fct ContractManager</span></div></a><a class="module-btn-box" style="background-color:#1A88D6" onclick="openModuleBox(&#39;INS&#39; ,&#39;保险管理首页&#39;,&#39;ins/INS100A/insuranceManagement.html&#39;,&#39;false&#39;,&#39;保险管理&#39;,&#39;Insurance Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#1A88D6;background-image: url(resources/images/MAIN/MODULE/project1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">保险管理</span></div><div class="module-btn-english"><span>Insurance Management</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-S">S</span><a class="module-btn-box" style="background-color:#FFCD55" onclick="openModuleBox(&#39;FND3&#39; ,&#39;商业伙伴首页&#39;,&#39;bp/BP100/bp_master_home.html&#39;,&#39;false&#39;,&#39;商业伙伴&#39;,&#39;Business Partner&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FFCD55;background-image: url(resources/images/MAIN/MODULE/bp.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">商业伙伴</span></div><div class="module-btn-english"><span>Business Partner</span></div></a><a class="module-btn-box" style="background-color:#B37D87" onclick="openModuleBox(&#39;HLS.RECE&#39; ,&#39;收款账户变更首页&#39;,&#39;ast/AST500A/receivables_account_management.view&#39;,&#39;false&#39;,&#39;收款账户变更&#39;,&#39;Receivable Account Change&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B37D87;background-image: url(resources/images/MAIN/MODULE/process_monitor.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">收款账户变更</span></div><div class="module-btn-english"><span>Receivable Account Change</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-H">H</span><a class="module-btn-box" style="background-color:#00A3A3" onclick="openModuleBox(&#39;CONT&#39; ,&#39;合同设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;合同设置&#39;,&#39;Contract  Setting&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00A3A3;background-image: url(resources/images/MAIN/MODULE/conbus.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">合同设置</span></div><div class="module-btn-english"><span>Contract  Setting</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;CON.FLOATING&#39; ,&#39;合同调息首页&#39;,&#39;cont/CON200H/baseRateManagement.view?code=CON.FLOATING&#39;,&#39;false&#39;,&#39;合同调息&#39;,&#39;Contract Floating&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">合同调息</span></div><div class="module-btn-english"><span>Contract Floating</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-C">C</span><a class="module-btn-box" style="background-color:#B31B63" onclick="openModuleBox(&#39;BASE.COLLECTION&#39; ,&#39;催收规则变更首页&#39;,&#39;ast/AST001H/collection_rules.view&#39;,&#39;false&#39;,&#39;催收规则变更&#39;,&#39;Rule of collection&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B31B63;background-image: url(resources/images/MAIN/MODULE/contract.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">催收规则变更</span></div><div class="module-btn-english"><span>Rule of collection</span></div></a><a class="module-btn-box" style="background-color:#FF0A2C" onclick="openModuleBox(&#39;GLD&#39; ,&#39;财务管理模块首页&#39;,&#39;gld/GLD000H/gldManagementIndex.html&#39;,&#39;false&#39;,&#39;财务管理模块&#39;,&#39;Financial Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#FF0A2C;background-image: url(resources/images/MAIN/MODULE/funds.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务管理模块</span></div><div class="module-btn-english"><span>Financial Management</span></div></a><a class="module-btn-box" style="background-color:#BB1A1B" onclick="openModuleBox(&#39;GLD_ADMIN&#39; ,&#39;财务基础设置首页&#39;,&#39;gld/GLD000H/gld_basic_setup_index.html&#39;,&#39;false&#39;,&#39;财务基础设置&#39;,&#39;Financial Basic Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#BB1A1B;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务基础设置</span></div><div class="module-btn-english"><span>Financial Basic Settings</span></div></a><a class="module-btn-box" style="background-color:#B8275D" onclick="openModuleBox(&#39;GLD_SETUP&#39; ,&#39;财务系统设置首页&#39;,&#39;gld/GLD000H/gld_setup_index.html&#39;,&#39;false&#39;,&#39;财务系统设置&#39;,&#39;Financial System Settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#B8275D;background-image: url(resources/images/MAIN/MODULE/funds.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">财务系统设置</span></div><div class="module-btn-english"><span>Financial System Settings</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-F">F</span><a class="module-btn-box" style="background-color:#CA4F79" onclick="openModuleBox(&#39;VAT&#39; ,&#39;发票管理首页&#39;,&#39;vat/VAT000H/vatInvoiceManagement.html&#39;,&#39;false&#39;,&#39;发票管理&#39;,&#39;Invoices Management&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#CA4F79;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">发票管理</span></div><div class="module-btn-english"><span>Invoices Management</span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;VAT.ADMIN&#39; ,&#39;发票设置首页&#39;,&#39;moduleCustomer.html&#39;,&#39;false&#39;,&#39;发票设置&#39;,&#39;Invoices settings&#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/invoice1.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">发票设置</span></div><div class="module-btn-english"><span>Invoices settings</span></div></a><span style="padding-left:10px;color:#03b3b2;display: block;height:16px;width:240px;margin-left:auto;margin-right:auto;border-bottom: 1px solid #cccccc" id="letter-item-R">R</span><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.BANK&#39; ,&#39;融资机构管理首页&#39;,&#39;lon/lon_master_home.view&#39;,&#39;false&#39;,&#39;融资机构管理&#39;,&#39;Management of financing institutions &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资机构管理</span></div><div class="module-btn-english"><span>Management of financing institutions </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.CREDIT&#39; ,&#39;融资授信额度首页&#39;,&#39;lon/lon_credit_home.view&#39;,&#39;false&#39;,&#39;融资授信额度&#39;,&#39;Financing credit line &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资授信额度</span></div><div class="module-btn-english"><span>Financing credit line </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.CONTRACT&#39; ,&#39;融资合同申请首页&#39;,&#39;lon/LON300H/financing_contract_index.view&#39;,&#39;false&#39;,&#39;融资合同申请&#39;,&#39;Financing contract application &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/conbus.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资合同申请</span></div><div class="module-btn-english"><span>Financing contract application </span></div></a><a class="module-btn-box" style="background-color:#00B3B3" onclick="openModuleBox(&#39;LON.REPAYMENT&#39; ,&#39;融资还款申请首页&#39;,&#39;lon/LON500H/lon_repayment_home.view&#39;,&#39;false&#39;,&#39;融资还款申请&#39;,&#39;Financing repayment application &#39;)"><div class="module-btn-icon"> <div style="background-size:25px 25px;height:40px;background-position:center;background-repeat:no-repeat;color:#00B3B3;background-image: url(resources/images/MAIN/MODULE/credit.png)"></div><span style="display: inline-block;left: 80px;width:130px;position: relative;top: -30px;font-size: 16px;color: white;">融资还款申请</span></div><div class="module-btn-english"><span>Financing repayment application </span></div></a></div>
+            <!--字母部分-->
+            <div class="letter-search-container">
+                <!--为了保证居中 高度要根据值进行计算-->
+                <div class="letter-search-box" style="margin-top: 73px;"><p onclick="initLetterBtn(this)">Z</p><p onclick="initLetterBtn(this)">J</p><p onclick="initLetterBtn(this)">M</p><p onclick="initLetterBtn(this)">X</p><p onclick="initLetterBtn(this)">G</p><p onclick="initLetterBtn(this)">Y</p><p onclick="initLetterBtn(this)">B</p><p onclick="initLetterBtn(this)">S</p><p onclick="initLetterBtn(this)">H</p><p onclick="initLetterBtn(this)">C</p><p onclick="initLetterBtn(this)">F</p><p onclick="initLetterBtn(this)">R</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sideBar" id="sideBar" style="display: none">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+<div id="page-breadcrumbs" class="page-breadcrumbs" style=""><ul id="breadcrumb" class="breadcrumb"><li id="breadcrumb-arrow-left"><a id="breadcrumb-arrow-left-a" style="cursor: pointer; background: url(&quot;/resources/images/MAIN/bread-left.png&quot;) center center / 17px no-repeat;" onclick="goHistory(&#39;left&#39;)"></a></li><li id="breadcrumb-arrow-right"><a id="breadcrumb-arrow-right-a" style="cursor: auto; background: url(&quot;/resources/images/MAIN/bread-right-disable.png&quot;) center center / 17px no-repeat;" onclick="goHistory(&#39;right&#39;)"></a></li><li id="breadcrumb-refresh"><a id="breadcrumb-refresh-a" style="cursor:pointer;" onclick="refreshCurrentFunction()"></a></li><li id="breadcrumb-home"><i class="fa fa-home"></i><a id="bread-function-a" style="cursor:pointer;" onclick="moduleOpenTab(&#39;SYS2&#39; ,&#39;系统设置首页&#39;,&#39;module_entrance?code=undefined&#39;,&#39;false&#39;,&#39;系统设置&#39;,&#39;System settings&#39;)">系统设置</a></li><li id="bread-function" class="active">文件管理</li></ul></div>
+<div id="hls-lock-win-float" style="width:10px;position:fixed;height: 100%;z-index:100;opacity: 0;top:0;"></div>
+<div class="k-tabstrip-wrapper" id="tabstrip-parent" style=""><div id="moduleTab" style="height: 1016px;" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top" role="tablist" aria-activedescendant="moduleTab_ts_active"><ul class="k-tabstrip-items k-reset" style=""><li class="k-item k-state-default k-first" role="tab" aria-controls="moduleTab-1"><span class="k-loading k-complete"></span><span class="k-link" data-tabid="TOUCH">入口页面</span></li><li class="k-item k-state-default" role="tab" aria-controls="moduleTab-2"><span class="k-loading k-complete"></span><span class="k-link" data-tabid="SYS2">系统设置首页<span class="k-icon k-i-close"></span></span></li><li class="k-item k-state-default k-last k-tab-on-top k-state-active" role="tab" aria-controls="moduleTab-3" aria-selected="true" id="moduleTab_ts_active"><span class="k-loading k-complete"></span><span class="k-link" data-tabid="SYS_FILE_MANAGE_SYS_FILE_MANAGE">文件管理</span></li></ul><div class="k-content" style="display: none; height: 1058px;" aria-expanded="false" role="tabpanel" id="moduleTab-1" aria-hidden="true"><iframe id="iframe_TOUCH" name="TOUCH" src="./中交易融_files/form_preview.html" style="height: 99%; width: 100%;" frameborder="0"></iframe></div><div class="k-content" style="display: none; height: 1016px;" aria-expanded="false" role="tabpanel" id="moduleTab-2" aria-hidden="true"><iframe id="iframe_SYS2" name="SYS2" src="./中交易融_files/module_entrance.html" style="height: 99%; width: 100%;" frameborder="0"></iframe></div><div class="k-content k-state-active" style="display: block; height: 1016px;" aria-expanded="true" role="tabpanel" id="moduleTab-3"><iframe id="iframe_SYS_FILE_MANAGE_SYS_FILE_MANAGE" name="SYS_FILE_MANAGE_SYS_FILE_MANAGE" src="./中交易融_files/sys_file_manage.html" style="height: 99%; width: 100%;" frameborder="0"></iframe></div></div></div>
+<div id="hls-lock-narrow-win" class="hls-lock-narrow-win">
+</div>
+<div id="top-window-open" style="display: none"></div>
+<form id="logoutForm" method="post" target="_self" action="http://localhost:8080/logout" style="display: none;">
+    <input name="_csrf" value="70be9d40-491c-4c23-b285-2d8b65f17336">
+    <input type="submit">
+</form>
+
+<script>
+
+    /*小窗口消息查看start*/
+    var msgLength = 0;
+    var mytime = 0;
+    var contextPath = '';
+    function show(contextPath) {
+        moment_show(contextPath);
+    }
+    ;
+    function removeNoticeDiv(this_node) {
+        this_node.parentElement.parentElement.parentElement.remove();
+    }
+    function remove_div(i) {
+        $("#moment_notice_" + i).remove();
+    }
+    var stopFlag = 0;
+    function moment_hide(i) {
+        if (i == stopFlag) {
+            stopFlag = 0;
+            return;
+        } else {
+            $("#moment_notice_" + stopFlag).animate({right: '-500px'}, 700, function () {
+                $("#moment_notice_" + stopFlag).remove();
+                if ($("#moment_notice_" + (parseInt(stopFlag) + 1)).height()) {
+                    document.getElementById('moment_notice_' + (parseInt(stopFlag) + 1)).style.cssText = "margin-top:0px!important";
+                }
+                if ($("#moment_notice_" + (parseInt(stopFlag) + 2)).height()) {
+                    document.getElementById('moment_notice_' + (parseInt(stopFlag) + 2)).style.cssText = "margin-top:" + ($("#moment_notice_" + (parseInt(stopFlag) + 1)).height() - 6) + "px!important";
+                }
+                stopFlag++;
+            });
+            setTimeout(function () {
+                moment_hide(i);
+            }, 800);
+        }
+    }
+    function push_float_msg(datas) {
+        $("#msg_append")[0].innerHTML = "";
+        var msgHtml = '';
+        msgLength = datas.length;
+        if (msgLength > 3) {
+            msgLength = 3;
+        }
+        for (var i = 0; i < msgLength; i++) {
+            msgHtml += '<div id="moment_notice_' + i + '" class="page-notification-container">';
+            msgHtml += '<div class="page-notification  bounceInRight animated ">';
+            msgHtml += '<div class="notification-media">';
+            msgHtml += '<i class="ti-email bg-gradient-blue">';
+            msgHtml += '<img style="margin-top: -5px"  class="show_hide" width="24px" height="24px" src="/resources/images/MAIN/msgclose.png">';
+            msgHtml += '</i></div>';
+            msgHtml += '<div style="word-break: break-all;padding-right: 5px; " class="notification-info">';
+            msgHtml += '<h4 style="font-size: 13px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;width: 170px" class="notification-title">' + datas[i].notice_title + '</h4>';
+            msgHtml += ' <p style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;width: 170px;" class="notification-desc">' + datas[i].notice_message + '</p></div>';
+            msgHtml += '<div style="width: 75px;padding: 25px;border-left: 1px solid #dbdbdb" class="notification-btn single-btn">';
+            msgHtml += '<a href="#" onclick="removeNoticeDiv(this);" style="font-weight: 700" data-dismiss="notification">Close</a>';
+            msgHtml += ' </div> </div> </div>';
+        }
+        $("#msg_append")[0].innerHTML = msgHtml;
+        if ($("#moment_notice_1").height()) {
+            document.getElementById('moment_notice_1').style.cssText = "margin-top:" + ($("#moment_notice_0").height() - 5) + "px!important";
+        }
+        if ($("#moment_notice_2").height()) {
+            document.getElementById('moment_notice_2').style.cssText = "margin-top:" + ($("#moment_notice_0").height() + $("#moment_notice_1").height() - 10) + "px!important";
+        }
+    }
+    function sysconfig() {
+        var url = "/sys/um/sys_user_info.html";
+        moduleOpenTab('SYS_CONFIG', '用户信息', url, false);
+    }
+    function moment_show(contextPath) {
+        $.ajax({
+            type: 'POST',
+            async: false, //设为同步
+            url: '/hls/user/send/notice',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (datas) {
+                if (datas.length > 0) {
+                    push_float_msg(datas);
+                    setTimeout(function () {
+                        moment_hide(msgLength);
+                    }, 3000);
+                }
+            }
+        });
+    }
+    ;
+    setInterval(show, 6000);
+    getAllNotice();
+    function getAllNotice() {
+        $.ajax({
+            type: 'GET',
+            url: contextPath + '/hls/system/fivedays/notice/query',
+            contentType: "application/json; charset=utf-8",
+            success: function (datas) {
+                if (datas.rows[0] && (datas.rows[0].unreaded != 0)) {
+                    datas = datas.rows[0]
+                    $("#all_notice_count")[0].style.display = 'block';
+                    if (datas.unreaded < 100) {
+                        $("#notice_count_span")[0].innerHTML = datas.unreaded;
+                    } else {
+                        $("#notice_count_span")[0].innerHTML = "99+";
+                    }
+                } else {
+                    $("#all_notice_count")[0].style.display = 'none';
+                }
+            }
+        });
+    }
+    function hlsCreateMainMsg(html, datas) {
+        html += '<div id="voice_body_todo" class="voice_content show_hide">';
+        if (datas.length >= 1) {
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i];
+                if (data.read_flag == 'Y') {
+                    html += '<div style="cursor: pointer"';
+                } else {
+                    html += '<div style="cursor: pointer;font-weight: bold;"';
+                }
+                html += 'onclick="openDetailWin(\'' + data.notice_url + '\',\'' + data.notice_id + '\',\'' + data.read_flag + '\',\'' + "indexBox" + '\',\'' + "functionCode" + '\');" id="set_read_flag_' + data.notice_id + '" class="voice_body_notice_content show_hide">';
+                html += '<div onMouseOver="change_color(this);" onMouseOut="reback_color(this);" class="voice_body_notice_title show_hide" id="ew_td_title_"' + i + '>';
+                html += '<span class="show_hide">' + (data.notice_title) + '</span>';
+                html += '</div>';
+                html += '<div onMouseOver="change_color(this);" onMouseOut="reback_color(this);" class="voice_body_notice_body show_hide" id="ew_td_body_"' + i + '>';
+                if (data.read_flag == 'Y') {
+                    html += '<div id="cirle_' + data.notice_id + '"></div>';
+                } else {
+                    html += '<div class="circle_read_flag_div" id="cirle_' + data.notice_id + '"></div>';
+                }
+                html += '<span class="show_hide">' + (data.notice_message) + '</span>';
+                html += '</div>';
+                html += '<div class="voice_body_notice_time show_hide" id="ew_td_time_"' + i + '>';
+                html += '<span onMouseOver="change_color(this);" onMouseOut="reback_color(this);" class="notice_time_name show_hide">' + (data.source_user_name) + '</span>';
+                html += '<span class="notice_time_span show_hide">' + (data.notice_datetime) + '</span>';
+                html += '</div>';
+                html += '</div>';
+            }
+        } else {
+            html += '<div style="width: 100%;height: 100%;text-align: center;line-height: 290px;">暂无数据！</div>';
+        }
+        html += '</div>';
+        $("#voice_main_body").append(html);
+    }
+    function hlsLoadMainMsg(notice_type) {
+        $.ajax({
+            type: 'GET',
+            url: '/hls/query/notice/todo?notice_type=' + notice_type,
+            contentType: "application/json; charset=utf-8",
+            success: function (datas) {
+                var html = '';
+                if (datas.rows) {
+                    datas = [].concat(datas.rows);
+                    hlsCreateMainMsg(html, datas);
+                }
+            }
+        });
+    }
+    $("#voice_left_div").click(function () {
+        $("#voice_main_body").empty();
+        hlsLoadMainMsg("TODO")
+        $("#notice_img")[0].src = "/resources/images/MAIN/task-2.png";
+        $("#information_img")[0].src = "/resources/images/MAIN/notice-2.png";
+    });
+    $("#voice_right_div").click(function () {
+        $("#voice_main_body").empty();
+        hlsLoadMainMsg("NOTICE");
+        $("#notice_img")[0].src = "/resources/images/MAIN/task-3.png";
+        $("#information_img")[0].src = "/resources/images/MAIN/notice-3.png";
+    });
+    $("#look_db").click(function () {
+        $("#voice_main_body").empty();
+        hlsLoadMainMsg("TODO");
+        noticeUl();
+    });
+    function noticeUl() {
+        var flag_open_close = false;
+        var stato = $("#open_notice")[0].getAttribute("class");
+        if (stato.substr(stato.length - 4) == "open" || $("#notice_ul")[0].style.display == "block") {
+            flag_open_close = true;
+        }
+        if (flag_open_close) {
+            $("#notice_ul")[0].style.display = "none";
+            $("#look_notice_img")[0].style.cssText = "margin-top: 8px;";
+            $("#look_notice_img")[0].src = "/resources/images/MAIN/msgclose.png";
+        } else {
+            $("#notice_ul")[0].style.display = "block";
+            $("#look_notice_img")[0].style.cssText = "margin-top: 4px;";
+            $("#look_notice_img")[0].src = "/resources/images/MAIN/msgopen.png";
+            $("#notice_img")[0].src = "/resources/images/MAIN/task-2.png";
+            $("#information_img")[0].src = "/resources/images/MAIN/notice-2.png";
+        }
+    }
+    function showNoticeBox() {
+        $("#notice_ul")[0].style.display = "none";
+        $("#look_notice_img")[0].src = "/resources/images/MAIN/msgclose.png";
+        mainGoToNotice('/userNoticeBox.html', '消息盒子');
+    }
+    ;
+    function mainGoToNotice() {
+        var dialog = $("#info_Box_div_open").kendoWindow({
+            width: 990,
+            height: 485,
+            modal: true,
+            content: '/userNoticeBox.html',
+            visible: false,
+            iframe: true,
+            close: function () {
+                hlsWindowClose(this);
+            }
+        }).data("kendoWindow");
+        dialog.title("消息盒子");
+        dialog.center().open();
+    }
+    function change_color(this_event) {
+        this_event.parentNode.style.backgroundColor = "#EEEEEE";
+    }
+    function reback_color(this_event) {
+        this_event.parentNode.style.backgroundColor = "#FFFFFF";
+    }
+
+    function openDetailWin(url, noticeId, readFlag, noticeBox, functionCode) {
+        $("#notice_ul").hide();
+//        $("#look_notice_img").css("margin-top", "8px");
+//        $("#look_notice_img")[0].src = "/resources/images/MAIN/msgclose.png";
+        if (readFlag != 'Y' && readFlag != 'openBox') {
+            var setReadFlagId = "set_read_flag_" + noticeId;
+            var cirleId = "cirle_" + noticeId;
+            $.ajax({
+                type: 'GET',
+                data: {
+                    queryTermValue: noticeId
+                },
+                async: false, //设为同步
+                url: contextPath + '/hls/ntcie/readflag/set',
+                contentType: "application/json; charset=utf-8",
+                success: function (datas) {
+                    $("#" + setReadFlagId)[0].style.fontWeight = "";
+                    $("#" + cirleId).remove();
+                }
+            });
+        }
+        var theRequest = new Object();
+        if (url.indexOf("functionCode") != -1) {
+            var str = url.substr(url.indexOf("?") + 1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+
+            theRequest['noticeId'] = noticeId;
+            $.ajax({
+                url: '/hlsCus/systemBox/notice/query/sfComplete?notice_id=' + noticeId,
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                success: function (json) {
+                    theRequest.sfComplete = json;
+                    Hls.openBox(
+                        {
+                            functionCode: theRequest.functionCode,
+                            winId: "dialog",
+                            width: 550,
+                            height: 1000,
+                            params: theRequest
+                        }
+                    );
+                }
+            });
+
+
+        } else {
+            if (!!url && url != '') {
+                var dialog = $("#dialog").kendoWindow({
+                    actions: ["Close"],
+                    width: 800,
+                    height: 510,
+                    title: '消息盒子',
+                    visible: false,
+                    iframe: true,
+                    modal: true,
+                    close: function (e) {
+                        if (readFlag == 'openBox') {
+                            mainGoToNotice();
+                        }
+                        hlsWindowClose(this);
+                    }
+                }).data("kendoWindow");
+                hlsWindow(dialog, 'FULL', "" + url + "&noticeBox=" + noticeBox + "&functionCode=" + functionCode);
+            }
+        }
+    }
+
+    function openBox(id, title, url, closeIcon, menu_name) {
+        var moduleTab = $("#moduleTab").data("kendoTabStrip");
+        var finnal_url;
+        if (url.indexOf('?') == -1) {
+            finnal_url = url + '?menu_code=' + id + '&menu_name=' + menu_name;
+        } else {
+            finnal_url = url + '&menu_code=' + id + '&menu_name=' + menu_name;
+        }
+        initBoxBreadCrumbs(id, title, url, closeIcon, true, menu_name);
+        currentTabModule = id;
+        var functionExistsFlag = 'N';
+        for (var i = 0; i < openFunctionArray.length; i++) {
+            if (openFunctionArray[i]["id"] == id) {
+                functionExistsFlag = 'Y';
+            }
+        }
+        if (functionExistsFlag == 'N') {
+            openFunctionArray.push({
+                "id": id,
+                "title": title,
+                "url": url,
+                "closeIcon": closeIcon,
+                "menu_name": menu_name
+            });
+        }
+        moduleTab.append({
+            text: title,
+            tabid: id,
+            contentIframe: finnal_url,
+            closeIcon: closeIcon = closeIcon === undefined ? true : closeIcon,
+            encoded: false
+        });
+
+        expandContentDivs($('#moduleTab').children(".k-state-active"), id);
+        if (menu_name == "reback_rebackBox") {
+            hls_main_link();
+            showNoticeBox();
+        }
+        if (menu_name == "reback_mainBoxOpen") {
+            hls_main_link();
+        }
+    }
+    function initBoxBreadCrumbs(id, title, url, closeIcon, moduleFlag, menu_name) {
+        var menu_name = "reback_" + menu_name
+        var breadcrumbs = $('#page-breadcrumbs');
+        if (id.toUpperCase() == 'TOUCH') {
+            breadcrumbs.css('display', 'none');
+            return;
+        } else {
+            breadcrumbs.css('display', '');
+        }
+        var html = [];
+        if (moduleFlag) {
+            breadcrumbs.empty();
+            html.push('<ul id="breadcrumb" class="breadcrumb">');
+            html.push('<li>');
+            html.push('<i class="fa fa-home"></i>');
+            html.push('<a id="open_box_a" onclick="openBox(\'' + id + '\' ,\'' + title + '\',\'' + url + '\',\'' + closeIcon + '\',\'' + (menu_name || title) + '\',\'' + menu_name + '\')">' + '消息盒子' + '</a>');
+            html.push('</li>');
+            html.push('</ul>');
+            breadcrumbs.append(html.join(''));
+        } else {
+            $('#bread-function').remove();
+            html.push('<li id="bread-function" class="active">' + (menu_name || title) + '</li>');
+            $('#breadcrumb').append(html.join(''));
+        }
+    }
+    /*小窗口消息查看end*/
+
+    var $WIN = jQuery(window),
+        $TAB_CONTENT = jQuery('#moduleTab'),
+        topHeight = jQuery('#hls-topbar-container').height(), tabLoadList = {}, currentTabModule = null, gloab_menus = [];
+    var lock_number = 0;
+    var openFunctionArray = [];
+    function handle_lock_win() {
+        var div = $('#hls-lock-narrow-win');
+        if (div.css('display') != 'none') {
+            div.hide(500);
+            $("#sideBar").hide();
+        } else {
+            div.show(500);
+            $("#sideBar").hide();
+        }
+    }
+    function hls_lock_narrow_win() {
+        var div = $('#hls-lock-narrow-win');
+        div.empty();
+        lock_number = 0;
+        if (!openFunctionArray.length) {
+            return;
+        }
+        for (var i = 0; i < openFunctionArray.length; i++) {
+            var openFunction = openFunctionArray[i];
+            hls_lock_function_window(openFunction['id'], openFunction['title'], openFunction['url'], openFunction['closeIcon'], openFunction['menu_name'], openFunction['moduleFlag'], openFunction['module_description']);
+        }
+        var div_handle = $('#hls-lock-narrow-win-handle');
+        $('body').toggleClass('hls-lock-show');
+        handle_lock_win();
+    }
+    function main_css_init() {
+//            if (!$('#hls-topbar-main').hasClass("hls-topbar-main-selected")) {
+//                $('#hls-topbar-main').removeClass("hls-topbar-main");
+//                $('#hls-topbar-main').addClass("hls-topbar-main-selected");
+//                $('#hls-topbar-main-content').addClass("hls-topbar-main-content-selected");
+//            }
+        if ($('#hls-topbar-module').hasClass("hls-topbar-module-selected")) {
+            $('#hls-topbar-module').addClass("hls-topbar-module");
+            $('#hls-topbar-module').removeClass("hls-topbar-module-selected");
+            $('#hls-topbar-module-content').removeClass("hls-topbar-module-content-selected");
+        }
+    }
+    function hls_main_link() {
+        main_css_init();
+        initSize();
+        openTab(index.menuCode, '首页', 'form_preview?code='+index.layoutCode, false, '首页', 'Y','','Y');
+//        openTab('touch', '首页', 'touch.html', false, '首页', 'Y');
+    }
+    function module_css_init() {
+        $('body').toggleClass('hls-module-show');
+        $('#hls-topbar-module').toggleClass("hls-topbar-module");
+        $('#hls-topbar-module').toggleClass("hls-topbar-module-selected");
+        $('#hls-topbar-module-content').toggleClass("hls-topbar-module-content-selected");
+        if ($('#hls-topbar-main').hasClass("hls-topbar-main-selected")) {
+            $('#hls-topbar-main').addClass("hls-topbar-main");
+            $('#hls-topbar-main').removeClass("hls-topbar-main-selected");
+            $('#hls-topbar-main-content').removeClass("hls-topbar-main-content-selected");
+        }
+    }
+    function hls_module_link() {
+        module_css_init();
+    }
+    var currentMainIndex = "touch";
+    function hls_indexchange_link() {
+        main_css_init();
+        if (currentMainIndex == 'touch') {
+            currentMainIndex = 'main';
+            window.top.openTab('main', '首页', 'main.html', false, '首页', 'Y');
+        } else {
+            currentMainIndex = 'touch';
+            window.top.openTab('touch', '首页', 'touch.html', false, '首页', 'Y');
+        }
+    }
+    function logout() {
+        kendo.ui.showConfirmDialog({
+            title: '提示',
+            message: '确定退出？'
+        }).done(function (e) {
+            if (e.button == 'OK') {
+                $("#logoutForm").submit();
+            }
+        });
+    }
+    function contact() {
+        var url = "/fnd/FND340A/fnd_connect_us.view";
+        moduleOpenTab('FND340A', '联系我们', url, false, '联系我们');
+        //var url = "/prj/PRJ220A/fnd_project_deposit_query.html";
+        //openTab(id,title,url, closeIcon,menu_name,'Y')
+        //moduleOpenTab('RJ220A','项目综合查询',url,false,'联系我们');
+
+    }
+
+    var moduleLoadFlag = false;
+
+    function expandContentDivs(divs, id, moduleFlag, functionExistsFlag) {
+        var visibleDiv = divs.filter(":visible");
+        var page_breadcrumbs_height = $('#page-breadcrumbs').height();
+        if (id && id.toUpperCase() == 'TOUCH' || moduleFlag != 'Y' || (moduleFlag == 'Y' && functionExistsFlag == 'Y') || moduleLoadFlag) {
+            page_breadcrumbs_height = 0;
+        }
+        if (!moduleLoadFlag && (moduleFlag == 'Y' && functionExistsFlag == 'N') && (id && id.toUpperCase() != 'TOUCH')) {
+            moduleLoadFlag = true;
+        }
+        divs.height($('#moduleTab').innerHeight() - page_breadcrumbs_height - $('#moduleTab').children(".k-tabstrip-items").outerHeight()
+            - parseFloat(visibleDiv.css("padding-top"))
+            - parseFloat(visibleDiv.css("padding-bottom"))
+            - parseFloat(visibleDiv.css("border-top-width"))
+            - parseFloat(visibleDiv.css("border-bottom-width"))
+            - parseFloat(visibleDiv.css("margin-bottom")));
+        if (moduleFlag == 'Y' && functionExistsFlag == 'N') {
+            $('#moduleTab').height($('#moduleTab').height() - page_breadcrumbs_height);
+        }
+    }
+    function removeOpenFunctionArray(id) {
+        for (var i = 0; i < openFunctionArray.length; i++) {
+            var openFunction = openFunctionArray[i];
+            if (openFunction["id"] == id) {
+                openFunctionArray.splice(i, 1);
+            }
+        }
+    }
+    function getCurrentTab(tabid) {
+        for (var i = 0; i < openFunctionArray.length; i++) {
+            if (openFunctionArray[i].id == tabid)
+                return openFunctionArray[i];
+        }
+        return -1;
+    }
+    function closeTab(tabid) {
+        if (!tabid) return;
+        var that = $("#moduleTab").data("kendoTabStrip"), element = that.element, options = that.options, tab = getCurrentTab(tabid);
+        if (tab == -1)
+            return;
+        var link = $(document).find("span.k-link[data-tabid=" + tabid + "]");
+        if (link.length == 1) {
+            var item = link.closest('li.k-item');
+            index = item.index(), index = item.prev().length == 1 ? item.prev() : item.next(); // modify by hailin.xu@hand-china.com
+            if (item.hasClass('k-state-active')) {
+                that.select(index);
+            }
+            that.remove(item);
+            top.removeOpenFunctionArray(id);
+            that.trigger('close', {tab: tab});
+        }
+    }
+
+    function initBreadArrowImage() {
+        for (var i = 0; i < top.openFunctionArray.length; i++) {
+            if (currentTabModule == top.openFunctionArray[i].id) {
+                if (i > 0) {
+                    $('#breadcrumb-arrow-left-a').css("background", 'url("/resources/images/MAIN/bread-left.png")');
+                } else {
+                    $('#breadcrumb-arrow-left-a').css("background", 'url("/resources/images/MAIN/bread-left-disable.png")');
+                    $('#breadcrumb-arrow-left-a').css("cursor", 'auto');
+                }
+                $('#breadcrumb-arrow-left-a').css("background-size", '17px');
+                $('#breadcrumb-arrow-left-a').css("background-repeat", 'no-repeat');
+                $('#breadcrumb-arrow-left-a').css("background-position", 'center');
+                if (i < top.openFunctionArray.length - 1) {
+                    $('#breadcrumb-arrow-right-a').css("background", 'url("/resources/images/MAIN/bread-right.png")');
+                } else {
+                    $('#breadcrumb-arrow-right-a').css("background", 'url("/resources/images/MAIN/bread-right-disable.png")');
+                    $('#breadcrumb-arrow-right-a').css("cursor", 'auto');
+                }
+                $('#breadcrumb-arrow-right-a').css("background-size", '17px');
+                $('#breadcrumb-arrow-right-a').css("background-repeat", 'no-repeat');
+                $('#breadcrumb-arrow-right-a').css("background-position", 'center');
+            }
+        }
+    }
+
+    var gModuleArr = [];
+    var gTempRateObj = {};
+    function openTab(id, title, url, closeIcon, menu_name, moduleFlag, documentKey, reflashFlag, module_description, boxFlag) {
+        if (!!moduleFlag) {
+            gTempRateObj = {};
+            gTempRateObj.moduleId = id;
+            gTempRateObj.moduleName = title;
+            gTempRateObj.moduleUrl = url;
+            gTempRateObj.moduleCloseIcon = closeIcon;
+            gTempRateObj.moduleMenuName = menu_name;
+            gTempRateObj.moduleModuleDescription = module_description;
+        } else {
+            gTempRateObj.functionName = title;
+            var resultFlag = gModuleArr.some(function (o) {
+                return (o.functionName == title)
+            });
+            if (!resultFlag) {
+                gModuleArr.push(gTempRateObj);
+            }
+        }
+        var moduleTab = $("#moduleTab").data("kendoTabStrip");
+        if (documentKey) {
+            id = id + '_' + documentKey;
+        }
+        if (reflashFlag) {
+            Hls.closeMenuWindow({
+                menuCode: id
+            });
+        }
+        var finnal_url;
+        if (url.indexOf('?') == -1) {
+            finnal_url = url + '?menu_code=' + id + '&menu_name=' + encodeURIComponent(menu_name);
+        } else {
+            var tempUrlArray = url.split("?");
+            var tempUrl = null;
+            var tempParameterArray = tempUrlArray[1].split("&");
+            for (var m = 0; m < tempParameterArray.length; m++) {
+                var mapArr = tempParameterArray[m].split("=");
+                if (m == 0) {
+                    tempUrl = tempUrlArray[0] + "?" + mapArr[0] + "=" + encodeURIComponent(mapArr[1]);
+                } else {
+                    tempUrl = tempUrl + "&" + mapArr[0] + "=" + encodeURIComponent(mapArr[1]);
+                }
+            }
+            url = tempUrl;
+            finnal_url = url + '&menu_code=' + id + '&menu_name=' + encodeURIComponent(menu_name);
+        }
+        initBreadCrumbs(id, title, url, closeIcon, menu_name, moduleFlag, module_description);
+        if (boxFlag == "mainBoxOpen" || boxFlag == "rebackBox") {
+            initBoxBreadCrumbs(id, title, url, closeIcon, true, boxFlag);
+        }
+        currentTabModule = id;
+        var functionExistsFlag = 'N';
+        for (var i = 0; i < openFunctionArray.length; i++) {
+            if (openFunctionArray[i]["id"] == id) {
+                functionExistsFlag = 'Y';
+            }
+        }
+        if (functionExistsFlag == 'N') {
+            openFunctionArray.push({
+                "id": id,
+                "title": title,
+                "url": url,
+                "closeIcon": closeIcon,
+                "menu_name": menu_name,
+                "moduleFlag": moduleFlag,
+                "module_description": module_description
+            });
+        }
+        initBreadArrowImage();
+        moduleTab.append({
+            text: title,
+            tabid: id,
+            contentIframe: finnal_url,
+            closeIcon: closeIcon = closeIcon === undefined ? true : closeIcon,
+            encoded: false
+        });
+        expandContentDivs($('#moduleTab').children(".k-state-active"), id, moduleFlag, functionExistsFlag);
+        if (boxFlag == "mainBoxOpen" || boxFlag == "rebackBox") {
+            if (menu_name == "reback_rebackBox") {
+                hls_main_link();
+                showNoticeBox();
+            }
+            if (menu_name == "reback_mainBoxOpen") {
+                hls_main_link();
+            }
+        }
+
+    }
+    function moduleOpenTab(id, title, url, closeIcon, menu_name, module_description) {
+        openTab(id, title, url, closeIcon, menu_name, 'Y', '', '', module_description);
+    }
+    function lockWindowOpen(id, title, url, closeIcon, menu_name, moduleFlag, module_description) {
+        $('#' + id).css("transform", "scale(1)");
+        openTab(id, title, url, closeIcon, menu_name, moduleFlag, '', '', module_description);
+    }
+    function hlsCreateModule(html, datas) {
+//            //获取当前页面能放图标的最大的宽度
+//            var winWidth= $(window).width()-100;
+//            //向下取整
+//            var imageCount= Math.floor(winWidth/230);
+//            //菜单计数
+//            var menuCount=0;
+        for (var i = 0; i < datas.length; i++) {
+            var data = datas[i];
+            if (!data.parent_menu && data.url) {
+//                    menuCount=menuCount+1;
+//                    if((menuCount)%imageCount==1&&menuCount!=1){
+//                        html.push('22222');
+//                    }
+                var menu_name_homepage = data.menu_name + '首页';
+                var currentUrl = data.url;
+                if (data.layoutCode) {
+                    currentUrl = currentUrl + '?code=' + data.layoutCode;
+                }
+                html.push('<a class="hls-module-a" onclick="moduleOpenTab(\'' + data.menu_code + '\' ,\'' + menu_name_homepage + '\',\'' + currentUrl + '\',\'' + false + '\',\'' + data.menu_name + '\',\'' + data.module_description + '\')">');
+                html.push('<div class="hls-module-a-detail">');
+                html.push('<div class="hls-info-title" style="background-color:' + (data.background_color || 'yellow') + '">');
+                html.push('<div class="hls-title-icon"> <div style="background-size:25px 25px;;height:40px;background-position:center;background-repeat:no-repeat;color:' + (data.background_color || 'yellow') + ';background-image: url(' + '/resources/images/MAIN/MODULE/' + data.icon + ')"></div></div>');
+                html.push('<div class="hls-title-body"><span>' + data.menu_name + '</span></div>');
+                html.push('<div class="hls-title-body-english" ><span>' + data.module_description + '</span></div>');
+                html.push('</div>');
+                html.push('</div>');
+                html.push('</a>');
+            }
+        }
+    }
+    function hlsLoadModule() {
+        $.ajax({
+            type: 'GET',
+            url: '/SysRoleModule/menus',
+            contentType: "application/json; charset=utf-8",
+            success: function (datas) {
+                var html = [];
+                datas = [].concat(datas);
+                gloab_menus = datas;
+                //在oracle中sql排序被union all 打乱
+                moduleSort(datas);
+                hlsCreateModule(html, datas);
+                $("#hls-module-customer").append(html.join(''));
+            }
+        });
+    }
+
+    function moduleSort() {
+
+    }
+
+
+    function initSize() {
+        $TAB_CONTENT.height($WIN.height() - topHeight);
+        expandContentDivs($("#moduleTab").children(".k-content"), 'touch');
+    }
+    function hls_lock_function_window(id, title, url, closeIcon, menu_name, moduleFlag, module_description) {
+        var functionObj = $('#iframe_' + id);
+        var lockObj = $('#hls-lock-narrow-win');
+        var html = [];
+        var item_id = id + '_lockwin';
+        var func_item_id = id + '_lockwin_function';
+        var func_iframe_id = id + '_lockwin_iframe';
+        lock_number = lock_number + 1;
+        var lock_margin = '89px';
+        var item_margin;
+        if (lock_number == 1) {
+            item_margin = '10px'
+        } else {
+            item_margin = '40px'
+        }
+        html.push('<div id="' + item_id + '" class="lock-win-item" style="margin-top:' + item_margin + '">');
+        html.push('<div id="' + func_item_id + '" class="lock-win-item-function" style="width:1225px;height:600px;" onclick="lockWindowOpen(\'' + id + '\' ,\'' + title + '\',\'' + url + '\',\'' + closeIcon + '\',\'' + (menu_name || title) + '\',\'' + (module_description || title) + '\')">');
+        html.push('</div>');
+        html.push('<div class="lock-win-item-name" style="margin-top:' + lock_margin + '">' + (title || menu_name) + '</div>');
+        html.push('</div>');
+        lockObj.append(html.join(''));
+        var newObj = functionObj.clone();
+        newObj.attr('id', functionObj.attr('id') + '_clone');
+        newObj.on('load.lock', function () {
+            newObj.off('load.lock');
+            var iframeWin = newObj[0].contentWindow,
+                iframeDoc = iframeWin.document;
+            var mask = iframeDoc.createElement('div');
+            mask.style.cssText = 'position:fixed;top:0;right:0;bottom:0;left: 0;z-index:1000;opacity:0.01;cursor:pointer';
+            iframeDoc.body.appendChild(mask);
+            mask.addEventListener('click', function () {
+                lockWindowOpen(id, title, url, closeIcon, menu_name, moduleFlag, module_description);
+                hls_module_underlay_click();
+            }, false);
+        });
+        $('#' + func_item_id).append(newObj);
+        $('#' + func_item_id).css("transform", "scale(0.147)");
+        $('#' + func_item_id).css("transform-origin", "left top");
+    }
+    function refreshCurrentFunction() {
+        for (var i = 0; i < top.openFunctionArray.length; i++) {
+            var openFunctionArray = top.openFunctionArray[i];
+            if (currentTabModule == openFunctionArray.id) {
+                Hls.closeMenuWindow({
+                    menuCode: currentTabModule
+                });
+                openTab(openFunctionArray.id, openFunctionArray.title, openFunctionArray.url, openFunctionArray.closeIcon, openFunctionArray.menu_name, openFunctionArray.moduleFlag, '', '', openFunctionArray.module_description);
+            }
+        }
+    }
+
+    function goHistory(dir, id, documentKey) {
+        var currentCount = null;
+        for (var i = 0; i < top.openFunctionArray.length; i++) {
+            if (currentTabModule == top.openFunctionArray[i].id) {
+                currentCount = i;
+            }
+        }
+        if (!currentCount) {
+            return;
+        }
+        for (var i = 0; i < top.openFunctionArray.length; i++) {
+            var openFunctionArray = top.openFunctionArray[i];
+            if (dir == 'left' && i == currentCount - 1) {
+                openTab(openFunctionArray.id, openFunctionArray.title, openFunctionArray.url, openFunctionArray.closeIcon, openFunctionArray.menu_name, openFunctionArray.moduleFlag, '', 'Y', openFunctionArray.module_description);
+                return;
+            } else if (dir == 'right' && i == currentCount + 1) {
+                openTab(openFunctionArray.id, openFunctionArray.title, openFunctionArray.url, openFunctionArray.closeIcon, openFunctionArray.menu_name, openFunctionArray.moduleFlag, '', 'Y', openFunctionArray.module_description);
+                return;
+            }
+        }
+    }
+
+    function initBreadCrumbs(id, title, url, closeIcon, menu_name, moduleFlag, module_description) {
+        var breadcrumbs = $('#page-breadcrumbs');
+        if (id.toUpperCase() == 'TOUCH' || id.toUpperCase() == 'MAIN') {
+            breadcrumbs.css('display', 'none');
+            return;
+        } else {
+            breadcrumbs.css('display', '');
+        }
+        var html = [];
+        if (moduleFlag) {
+            breadcrumbs.empty();
+            html.push('<ul id="breadcrumb" class="breadcrumb">');
+            html.push('<li id="breadcrumb-arrow-left">');
+            html.push('<a id="breadcrumb-arrow-left-a" style="cursor:pointer;" onclick="goHistory(\'' + 'left' + '\')"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-arrow-right">');
+            html.push('<a id="breadcrumb-arrow-right-a" style="cursor:pointer;" onclick="goHistory(\'' + 'right' + '\')"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-refresh">');
+            html.push('<a id="breadcrumb-refresh-a" style="cursor:pointer;" onclick="refreshCurrentFunction()"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-home" class="global-font-size13">');
+            html.push('<i class="fa fa-home"></i>');
+            html.push('<a id="bread-function-a" style="cursor:pointer;" onclick="moduleOpenTab(\'' + id + '\' ,\'' + title + '\',\'' + url + '\',\'' + closeIcon + '\',\'' + (menu_name || title) + '\',\'' + (module_description || title) + '\')">' + (menu_name || title) + '</a>');
+            html.push('</li>');
+            html.push('</ul>');
+            breadcrumbs.append(html.join(''));
+        } else {
+            var mModule = gModuleArr.filter(function (x, index) {
+                return x.functionName == title;
+            });
+            breadcrumbs.empty();
+            //$('#bread-function').remove();
+            html.push('<ul id="breadcrumb" class="breadcrumb">');
+            html.push('<li id="breadcrumb-arrow-left">');
+            html.push('<a id="breadcrumb-arrow-left-a" style="cursor:pointer;" onclick="goHistory(\'' + 'left' + '\')"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-arrow-right">');
+            html.push('<a id="breadcrumb-arrow-right-a" style="cursor:pointer;" onclick="goHistory(\'' + 'right' + '\')"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-refresh">');
+            html.push('<a id="breadcrumb-refresh-a" style="cursor:pointer;" onclick="refreshCurrentFunction()"></a>');
+            html.push('</li>');
+            html.push('<li id="breadcrumb-home">');
+            html.push('<i class="fa fa-home"></i>');
+            html.push('<a id="bread-function-a" style="cursor:pointer;" onclick="moduleOpenTab(\'' + mModule[0].moduleId + '\' ,\'' + mModule[0].moduleName + '\',\'' + mModule[0].moduleUrl + '\',\'' + mModule[0].moduleCloseIcon + '\',\'' + (mModule[0].moduleMenuName || mModule[0].moduleName) + '\',\'' + (mModule[0].moduleModuleDescription || mModule[0].moduleName) + '\')">' + (mModule[0].moduleMenuName || mModule[0].moduleName) + '</a>');
+
+            //html.push('<a id="open_box_a" onclick="openBox(\''+mModule[0].moduleId+'\' ,\''+mModule[0].moduleName+'\',\''+mModule[0].moduleMenuName+'\',\''+mModule[0].moduleCloseIcon+'\',\''+(mModule[0].moduleMenuName||mModule[0].moduleName)+'\',\''+mModule[0].moduleMenuName+'\')">'+'消息盒子'+'</a>');
+            html.push('</li>');
+            html.push('<li id="bread-function" class="active">' + (menu_name || title) + '</li>');
+            html.push('</ul>');
+            breadcrumbs.append(html.join(''));
+
+//            $('#bread-function').remove();
+//            html.push('<li id="bread-function" class="active">' + (menu_name || title) + '</li>');
+//            $('#breadcrumb').append(html.join(''));
+        }
+    }
+
+
+
+    var index = {
+    };
+    function init() {
+        $("#moduleTab").kendoTabStrip({
+            height: '100%',
+            animation: false,
+            closeIcon: true,
+            contextMenu: true,
+            load: function (e) {
+                $("#iframe_" + e.tab.tabid).height("99%");
+                debugger
+                if($("#iframe_"+e.tab.tabid)){
+                    $("#iframe_"+e.tab.tabid)[0].contentWindow.document.body.addEventListener('click',clickHiddenEasy,false);
+                    //防止首页不配置时撑不起高
+                    if(!$("#iframe_"+e.tab.tabid)[0].contentWindow.document.body.style.height){
+//                        $("#iframe_"+e.tab.tabid)[0].contentWindow.document.body.style.height = '700px';
+                    }
+                }
+
+                if (!tabLoadList[e.tab.tabid]) {
+                    tabLoadList[e.tab.tabid] = true;
+                    hls_module_underlay_click();
+                }
+            },
+            select: function (e) {
+                if (tabLoadList[currentTabModule]) {
+                    hls_module_underlay_click();
+                }
+            }
+        }).data("kendoTabStrip");
+        $("#moduleTab").parent().attr("id", "tabstrip-parent");
+        // top.openTab('touch', '首页', 'touch.html', false, '首页', 'Y');
+
+
+
+
+
+
+        $.get(_basePath + '/hls/cus/sys/module/query?moduleCode=TOUCH', function (e) {
+            if (e.success && e.rows[0]) {
+                var data = e.rows[0];
+                index.layoutCode =  data.layoutCode;
+                index.menuCode =  data.menu_code;
+                top.openTab(data.menu_code, '入口页面', 'form_preview?code=' + data.layoutCode, false, '首页', 'Y');
+            } else {
+                Hls.showErrorMessage(e.message);
+            }
+        });
+        initSize();
+//        $(window).on("resize", initSize);
+        hlsLoadModule();
+    }
+    function hls_module_underlay_click() {
+        if ($('body').hasClass('hls-module-show')) {
+            $('body').removeClass('hls-module-show');
+            $('#hls-topbar-module').removeClass("hls-topbar-module-selected");
+            $('#hls-topbar-module').addClass("hls-topbar-module");
+        }
+        if ($('body').hasClass('hls-lock-show')) {
+            $('body').removeClass('hls-lock-show');
+            handle_lock_win();
+        }
+    }
+    var windowNum = 0;
+    function topOpenWindow(_sf, type, content, currentwidth) {
+        var html = [];
+        windowNum = windowNum + 1;
+        var currentWinId = "top-window-open-" + windowNum;
+        html.push('<div id="' + currentWinId + '" style="display:none"></div>');
+        $('#top-window-open').append(html.join(''));
+        var finall_content = content;
+        if (!finall_content && _sf.options.content) {
+            finall_content = _sf.options.content["url"] || _sf.options.content;
+        }
+        if (finall_content.indexOf("?") != -1) {
+            finall_content = finall_content + '&hlsWindowId=' + currentWinId;
+        } else {
+            finall_content = finall_content + '?hlsWindowId=' + currentWinId;
+        }
+
+        if (_sf.options.content) {
+            _sf.options.content = finall_content;
+        }
+
+        var topWin = $("#" + currentWinId).kendoWindow(
+            _sf.options).data("kendoWindow");
+        _hlsWindow(topWin, type, finall_content, currentwidth);
+    }
+    function centerOpenWindow(_sf, content) {
+        var html = [];
+        windowNum = windowNum + 1;
+        var currentWinId = "center-window-open-" + windowNum;
+        html.push('<div id="' + currentWinId + '" style="display:none"></div>');
+        var finall_content = content;
+        if (!finall_content && _sf.options.content) {
+            finall_content = _sf.options.content["url"] || sf.options.content;
+        }
+        if (finall_content.indexOf("?") != -1) {
+            finall_content = finall_content + '&hlsWindowId=' + currentWinId;
+        } else {
+            finall_content = finall_content + '?hlsWindowId=' + currentWinId;
+        }
+
+        if (_sf.options.content) {
+            _sf.options.content = finall_content;
+        }
+        $('#top-window-open').append(html.join(''));
+        var centerWin = $("#" + currentWinId).kendoWindow(
+            _sf.options).data("kendoWindow");
+        centerWin.center().open();
+    }
+    init();
+    $('.hls-module-underlay').click(function (event) {
+        hls_module_underlay_click();
+    });
+    $("#hls-lock-win-float").mouseover(function () {
+        //hls_lock_narrow_win();
+        $(".sideBar").show();
+        setTimeout(function () {
+            $(".sideBar").hide();
+        }, 3000);
+    });
+    $('.sideBar').click(function (event) {
+        hls_lock_narrow_win();
+    });
+
+    function topHlsBoxImage(style) {
+        return getHlsBoxImage('', style);
+    }
+
+
+    var viewHeight = $(window).height(), contentHeight = viewHeight - 159;
+    function autoResizeIframe(id, height, callback) {
+        setTimeout(function () {
+            var iframe = $('#iframe_' + id)[0];
+            if (iframe != null && iframe.contentDocument != null) {
+                var subWeb = iframe.contentDocument;
+                $(iframe).height(Math.max(Math.max(subWeb.body.clientHeight, contentHeight), height || 0));
+            }
+            if (callback) callback.call(window)
+        }, 50)
+    }
+
+
+    $(function () {
+        var themeName = "classic";
+        if (themeName) {
+            $("#" + themeName).addClass("hls-theme-btn-checked");
+        }
+        $("a.hls-index-colorpick-btn").click(function (event) {
+            $(this).addClass("hls-theme-btn-checked").closest("li")
+                .siblings().find("a").removeClass("hls-theme-btn-checked");
+            //设置样式
+            //$("#hls-theme").attr("href","/resources/hls/hlsTheme/"+$(this)[0].id+".css")
+            var preferences = [{
+                preferences: "theme",
+                preferencesValue: $(this)[0].id
+            }];
+            $.ajax({
+                type: "POST",
+                url: "/sys/preferences/savePreferences",
+                contentType: "application/json",
+                data: kendo.stringify(preferences),
+                dataType: "json",
+                success: function (result) {
+                    if (result.success) {
+                        kendo.ui.showInfoDialog({
+                            message: '操作成功'
+                        }).done(function (e) {
+                            top.location.reload();
+                        })
+                    } else {
+                        kendo.ui.showErrorDialog({
+                            message: result.message
+                        })
+                    }
+                }
+            });
+            event.stopPropagation();
+            event.preventDefault();
+        });
+
+    });
+
+</script>
+<!--模块列表部分js-->
+<script src="./中交易融_files/module-box.js"></script>
+<script>
+    document.onkeydown = function (e) {
+        var obj = $("#moduleCondition").val() || null;
+        var theEvent = window.event || e;//兼容ff
+        var code = theEvent.keyCode || theEvent.which;
+        if (code == 13) {
+            getModuleListDs(obj);
+            refreshModuleListDigital();
+            refreshModuleListLetter();
+        }
+    }
+
+    $("#moduleCondition").keydown(function (e) {
+        if (e.keyCode == 13) {
+            var obj = $("#moduleCondition").val() || null;
+            getModuleListDs(obj);
+            refreshModuleListDigital();
+            refreshModuleListLetter();
+            //触发鼠标离开事件
+            $(this).blur();
+        }
+    })
+    function openWin(url) {
+        var a = document.createElement("a");
+        a.setAttribute("href", url);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("id", "oaWinId");
+        document.body.appendChild(a);
+        a.click();
+    }
+
+    function singleLogin() {
+        var url = "/hls/login/oa";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            contentType: "application/json",
+            data: {},
+            success: function (data) {
+                if (data.success) {
+                    //window.location.href = data.url;
+                    openWin(data.url);
+                } else {
+                    kendo.ui.showErrorDialog({
+                        message: data.message
+                    })
+                }
+            }
+        });
+    }
+
+
+    var Xjh={
+    }
+    Xjh.commonUtils = {
+//处理键盘事件 禁止后退键（Backspace）密码或单行、多行文本框除外
+        banBackSpace : function(e){
+            var ev = e || window.event;//获取event对象
+            var obj = ev.target || ev.srcElement;//获取事件源
+
+            var t = obj.type || obj.getAttribute('type');//获取事件源类型
+
+            //获取作为判断条件的事件类型
+            var vReadOnly = obj.getAttribute('readonly');
+            var vEnabled = obj.getAttribute('enabled');
+            //处理null值情况
+            vReadOnly = (vReadOnly == null) ? false : vReadOnly;
+            vEnabled = (vEnabled == null) ? true : vEnabled;
+
+            //当敲Backspace键时，事件源类型为密码或单行、多行文本的，
+            //并且readonly属性为true或enabled属性为false的，则退格键失效
+            var flag1=(ev.keyCode == 8 && (t=="password" || t=="text" || t=="textarea")
+                && (vReadOnly==true || vEnabled!=true))?true:false;
+
+            //当敲Backspace键时，事件源类型非密码或单行、多行文本的，则退格键失效
+            var flag2=(ev.keyCode == 8 && t != "password" && t != "text" && t != "textarea")
+                ?true:false;
+
+            //判断
+            if(flag2){
+                return false;
+            }
+            if(flag1){
+                return false;
+            }
+        },
+    };
+
+
+    function clickHiddenEasy(e){
+        $(top.document.body).find(".use-easy-home-container").css("display","none");
+        $(top.document.body).find(".use-easy-common-container").css("display","none");
+        if($(top.document.body).find(".module-container").hasClass("module-show-or-not")){
+            $(top.document.body).find(".module-container").removeClass("module-show-or-not")
+        }
+        $(top.document.body).find("#notice_ul").css("display","none");
+        $('#qr-code span').hide()
+        //e.stopPropagation();
+    }
+
+    $(function(){
+        document.onkeypress=Xjh.commonUtils.banBackSpace;
+        document.onkeydown=Xjh.commonUtils.banBackSpace;
+    });
+    $(function (){
+        $('#qr-code').click(function(e){
+            $(this).children('span').toggle();
+        })
+
+    })
+</script>
+
+<ul class="tabstrip-context-menu k-widget k-reset k-header k-menu k-context-menu k-popup k-group k-menu-vertical" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default menu-close k-first" role="menuitem"><span class="k-link">关闭当前页</span></li><li class="k-item k-state-default menu-close-others" role="menuitem"><span class="k-link">关闭其他</span></li><li class="k-item k-state-default menu-close-all" role="menuitem"><span class="k-link">关闭所有</span></li><li class="k-item k-state-default menu-reload k-last" role="menuitem"><span class="k-link">刷新</span></li></ul></body></html>

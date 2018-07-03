@@ -1,0 +1,210 @@
+.hlsfa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hlsbtn {
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+     border: 1px solid transparent; 
+    font-size: 13px;
+    line-height: 1.42857;
+    vertical-align: middle;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, .02);
+    -webkit-box-shadow: inset 0 -2px 2px rgba(0, 0, 0, .02);
+    border: 1px solid transparent;
+}
+
+.hlsbtn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/*grid add button*/
+
+.hlsbtn.grid-btn-add {
+	float:left;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-add.fa {
+   font-size:atuo;
+}
+
+.grid-btn-add:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+
+.grid-btn-add-font{
+	margin-right: 2px;
+}
+
+.grid-btn-add-font:before{
+	margin-right: 2px;
+	content: "\f196";
+}
+
+/*grid save button*/
+
+.hlsbtn.grid-btn-save {
+	float:left;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-save.fa {
+   font-size:atuo;
+}
+
+.grid-btn-save:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+
+.grid-btn-save-font{
+	margin-right: 2px;
+}
+
+.grid-btn-save-font:before{
+	margin-right: 2px;
+	content: "\f0c7";
+}
+
+/*grid delete button*/
+
+.hlsbtn.grid-btn-delete {
+	float:left;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-delete.fa {
+   font-size:atuo;
+}
+
+.grid-btn-delete:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+
+.grid-btn-delete-font{
+	margin-right: 2px;
+}
+
+.grid-btn-delete-font:before{
+	margin-right: 2px;
+	content: "\f00d";
+}
+
+/*grid search button*/
+
+.hlsbtn.grid-btn-search {
+	float:left;
+    color: #fff;
+    background-color: #FF9966;
+    border-color: #FF9933;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-search.fa {
+   font-size:atuo;
+}
+
+.grid-btn-search:hover {
+    color: #fff;
+    background-color: #FFCC66;
+    border-color: #FFCC66;
+}
+
+
+.grid-button-search-font{
+	margin-right: 2px;
+}
+
+.grid-button-search-font:before{
+	margin-right: 2px;
+	content: "\f002";
+}
+
+/*grid cancel button*/
+
+.hlsbtn.grid-btn-cancel {
+	margin-right:5px;
+	float:left;
+	color: #fff;
+    background-color: #DEB887;
+    border-color: #DEB887;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-cancel.fa {
+   font-size:atuo;
+}
+
+.grid-btn-cancel:hover {
+    color: #333;
+    background-color:#D2B48C;
+    border-color:#D2B48C
+}
+
+
+.grid-btn-cancel-font{
+	margin-right: 2px;
+}
+
+.grid-btn-cancel-font:before{
+	margin-right: 2px;
+	content: "\f147";
+}
+
+/*grid back button*/
+
+.hlsbtn.grid-btn-back {
+	float:left;
+    color: #fff;
+    background-color: #CC3333;
+    border-color: #CC3333;
+    margin-right:5px;
+}
+
+.hlsbtn.grid-btn-back.fa {
+   font-size:atuo;
+}
+
+.grid-btn-back:hover {
+    color: #fff;
+    background-color: #993333;
+    border-color: #993333;
+}
+
+.grid-btn-back-font{
+	margin-right: 2px;
+}
+
+.grid-btn-back-font:before{
+	margin-right: 2px;
+	content: "\f190";
+}
+

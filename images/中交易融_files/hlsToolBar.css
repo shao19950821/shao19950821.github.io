@@ -1,0 +1,93 @@
+/**
+ * 
+ * 
+ * 
+ * @author yang.gao01@hand-china.com
+ * 
+ */
+.hlstoolbar{
+	width:100%;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: 815;
+    /*transition:transform .3s ease-out;*/
+	/*background: -ms-linear-gradient(top, #FFFFFF,  #B4B4B4);        !* IE 10 *!*/
+	/*background:-moz-linear-gradient(top,#FFFFFF,#B4B4B4);!*火狐*!*/
+	/*background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#FFFFFF), to(#B4B4B4));!*谷歌*!*/
+	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#B4B4B4));      !* Safari 4-5, Chrome 1-9*!*/
+	/*background: -webkit-linear-gradient(top, #FFFFFF, #B4B4B4);   !*Safari5.1 Chrome 10+*!*/
+	/*background: -o-linear-gradient(top, #FFFFFF, #B4B4B4);  !*Opera 11.10+*!*/
+	background: #00b3b3;
+}
+
+.hlstoolbar-in{
+	-webkit-transform:translateY(60px);
+	        transform:translateY(60px);
+}
+
+.hlstoolbar-container{
+	width:60%;
+	display:inline;
+}
+
+.hlstoolbar-container-left{
+	float:left;
+   	width:60%; 
+   	background-color: red;
+
+}
+
+.hlstoolbar-container-middle{
+	float:right;
+	width: 46%;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+}
+
+.hlstoolbar-container-right{
+	float:left;
+    width:0; 
+   	height:0;
+	line-height:0;
+	border:60px solid transparent; 
+	border-bottom-color: #2ABB9B;
+	border-left-color:#2ABB9B;
+	border-top:0;
+}
+
+.hlstoolbar-btn{
+	height:36px;
+    right:2%;
+	width:2.2%;
+	padding-top: 8px;
+	text-align: center;
+	color: black;
+	font-size:18%;
+	cursor: pointer;
+	border-radius:3px;
+    background-color:#2ABB9B;
+}
+
+.hlstoolbar-btn-on{
+	position:absolute;
+	display:none;
+    bottom:16px;
+}
+
+.hlstoolbar-btn-off{
+	position:fixed;
+	display:none;
+    bottom:60px;
+}
+
+.hlstoolbar-btn-show{
+	display:block!important
+}
+
+.cssrefresh{
+	overflow:auto;
+}

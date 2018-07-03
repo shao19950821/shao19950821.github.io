@@ -1,0 +1,61 @@
+/**
+ * gaoyang user block css
+ */
+
+.con-overdue-title {
+    height: 30px;
+    width: inherit;
+    background-color: #F97064;
+    line-height: 30px;
+    vertical-align: middle;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.con-overdue-title-img {
+    display: block;
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.con-overdue-title-content {
+    float: left;
+    color: #ffffff;
+    font-size: 13px;
+    margin-left:5px;
+    margin-top:1px;
+}
+
+.co-body-title {
+    height: 80px;
+    width: inherit
+}
+
+.co-body-title1 {
+    height: inherit;
+    width: 142.5px;
+    float: left
+}
+
+.co-body-title1-amt {
+    margin-top: 5px;
+    font-size: 18px;
+    height: 25px;
+    width: inherit;
+    color: #F97064;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle
+}
+
+.co-body-title1-name {
+    font-size: 12px;
+    height: 25px;
+    width: inherit;
+    color: #2cc2e3;;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle
+}
