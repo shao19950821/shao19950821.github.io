@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:Ensure a class has only one instance,and provide a global poin">
+<meta name="description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。 单例模式的使用场景在一个系统中，要求一个类有且仅能有一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-单例模式(Singleton)">
 <meta property="og:url" content="http://yoursite.com/2018/06/30/设计模式-单例模式-Singleton/index.html">
 <meta property="og:site_name" content="夏至微风">
-<meta property="og:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:Ensure a class has only one instance,and provide a global poin">
+<meta property="og:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。 单例模式的使用场景在一个系统中，要求一个类有且仅能有一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T15:58:37.466Z">
+<meta property="og:updated_time" content="2018-07-16T14:59:47.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-单例模式(Singleton)">
-<meta name="twitter:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:Ensure a class has only one instance,and provide a global poin">
+<meta name="twitter:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。 单例模式的使用场景在一个系统中，要求一个类有且仅能有一个">
 
 
 
@@ -365,7 +365,7 @@
 
       
         <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。</p>
-<h1 id="单例模式的定义和使用场景"><a href="#单例模式的定义和使用场景" class="headerlink" title="单例模式的定义和使用场景"></a>单例模式的定义和使用场景</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>单例模式，定义如下:<br><br>Ensure a class has only one instance,and provide a global point of acess to it.(确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例)</p>
+<h1 id="单例模式的定义和使用场景"><a href="#单例模式的定义和使用场景" class="headerlink" title="单例模式的定义和使用场景"></a>单例模式的定义和使用场景</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>单例模式，定义如下:<br><br>确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。</p>
 <h2 id="单例模式的使用场景"><a href="#单例模式的使用场景" class="headerlink" title="单例模式的使用场景"></a>单例模式的使用场景</h2><p>在一个系统中，要求一个类有且仅能有一个对象，如果出现多个对象就会出现一系列不可预知的错误，就可以采用单例模式了，具体如下:</p>
 <p>1.定义了大量静态常量和静态方法的工具类;<br><br>2.需要生成唯一序列的环境;<br><br>3.需要频繁创建然后销毁的实例;<br><br>4.频繁访问数据库或文件的对象。<br></p>
 <p>具体的应用场景:<br><br>1.网站的计数器，如果不是单例的话就无法实现同步;<br><br>2.Windows的任务管理器（无法打开两个任务管理器）;<br><br>3.Web应用的配置对象的读取;<br><br>4.数据库连接池;<br><br>5.Web应用配置文件的读取。<br></p>
@@ -388,7 +388,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                instance = new Singleton();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>但是这种同步并不能起到线程同步的作用。跟第3种实现方式遇到的情形一致，假如一个线程进入了if (singleton == null)判断语句块，还未来得及往下执行，另一个线程也通过了这个判断语句，这时便会产生多个实例。</p>
 <p>为了解决这个问题，可以采取双重加锁，就是在同步代码块内部在进行一次判断，杜绝这个问题的产生：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">            		 if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">            		 if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;            </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方法在多线程的开发中被称之为Double-Check双重检查，这样实现单例模式的方法，不仅具备了懒汉式延时加载，资源占用较少的有点，也避免了线程不安全以及同步方法效率低的缺点，是比较推荐的方式。</p>
 <p>单例模式还有其他的实现方式，比如静态内部类、枚举等，单都不如上面常见，在此不一一列举，如有兴趣，可以参考以下Blog:<br><br><a href="https://www.cnblogs.com/zhaoyan001/p/6365064.html" target="_blank" rel="noopener">单例模式的八种写法比较</a></p>
 <h1 id="多例模式"><a href="#多例模式" class="headerlink" title="多例模式"></a>多例模式</h1><p>一个类想要有多个对象，很简单，new关键字就可以实现，一个类如果想只有一个对象，则可以使用单例模式，但是一个类如果想产生指定个数的对象，又该如何实现呢？<br><br>这里提供一个思路，在类里定义一个静态int变量，用来表明最多能产生的实例数量，然后定义一个List用来存放产生的对象，然后在类的静态代码块里写生成对象的逻辑，这样就可以实现一个类产生指定个数的对象。(同样，这是在类加载的时候就产生实例的)<br><br>这里举一个皇帝类作为代码的时候，具体可参照《设计模式之禅》第七章《单例模式》。</p>
@@ -427,6 +427,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/08/Java学习-枚举-Enum/" rel="prev" title="Java学习-枚举(Enum)">
+                Java学习-枚举(Enum) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="夏至微风">
-<meta property="og:url" content="http://yoursite.com/categories/Java学习/函数式接口/index.html">
+<meta name="description" content="引言最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了该书里的内容，算是做个借鉴了。软件设计中，最大的难题就是应对需求的变化，但是，在实际工作中，需求的变化是必然存在的，而且也是不可预料的。所以，我们要为这些不可预料的需求变化事先做好准备，这是一件十分痛苦的事情，不过还好，我们已经站在了巨人的肩膀上。软件设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-六大原则(SOLID)">
+<meta property="og:url" content="http://yoursite.com/2018/07/09/设计模式-六大原则/index.html">
 <meta property="og:site_name" content="夏至微风">
+<meta property="og:description" content="引言最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了该书里的内容，算是做个借鉴了。软件设计中，最大的难题就是应对需求的变化，但是，在实际工作中，需求的变化是必然存在的，而且也是不可预料的。所以，我们要为这些不可预料的需求变化事先做好准备，这是一件十分痛苦的事情，不过还好，我们已经站在了巨人的肩膀上。软件设计">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-15T04:36:21.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="夏至微风">
+<meta name="twitter:title" content="设计模式-六大原则(SOLID)">
+<meta name="twitter:description" content="引言最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了该书里的内容，算是做个借鉴了。软件设计中，最大的难题就是应对需求的变化，但是，在实际工作中，需求的变化是必然存在的，而且也是不可预料的。所以，我们要为这些不可预料的需求变化事先做好准备，这是一件十分痛苦的事情，不过还好，我们已经站在了巨人的肩膀上。软件设计">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Java学习/函数式接口/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/09/设计模式-六大原则/"/>
 
 
 
 
 
-  <title>分类: 函数式接口 | 夏至微风</title>
+  <title>设计模式-六大原则(SOLID) | 夏至微风</title>
   
 
 
@@ -141,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/shao19950821" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -246,55 +250,180 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>函数式接口<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/设计模式-六大原则/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="なつ初夏倾城">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏至微风">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/05/Java8学习（一）-Lambda表达式/" itemprop="url">
-              
-                <span itemprop="name">Java8学习(一)-常见的函数式接口</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">设计模式-六大原则(SOLID)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T15:04:42+08:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T23:23:35+08:00">
+                2018-07-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了该书里的内容，算是做个借鉴了。<br><br>软件设计中，最大的难题就是应对需求的变化，但是，在实际工作中，需求的变化是必然存在的，而且也是不可预料的。所以，我们要为这些不可预料的需求变化事先做好准备，这是一件十分痛苦的事情，不过还好，我们已经站在了巨人的肩膀上。软件设计的大师给我们提供了非常好的6大设计原则和23个设计模式来应对这些变化。</p>
+<h1 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h1><p>1.SRP(Single Responsibility Principle)单一职责原则<br>2.OCP(Open Closed Principle)开闭原则<br>3.LSP(Liskov Substitution Principle)里式替换原则<br>4.Law of Demeter 迪米特法则<br>5.ISP(Interface Segregation Principle)接口隔离原则<br>6.DIP(Dependence Inversion Principle)依赖倒置原则<br>把这六个原则的首字母联合起来，就是SOLID(L重复只取一个)，意思是稳定的，这六大原则使用的意义也就是建立出稳定、灵活、健壮的设计用来面对不可预知的需求变更。<br>下面我根据自己看书的理解，结合平常自己写代码的思考,稍微总结一下6大设计原则的基本内容。</p>
+<h1 id="单一职责原则（SRP）"><a href="#单一职责原则（SRP）" class="headerlink" title="单一职责原则（SRP）"></a>单一职责原则（SRP）</h1><p>单一职责原则的定义是:一个类应该有且只有一个原因会引起类的变更。换句话就是说，一个类应该只有有一个职责。<br><br>我在当前项目，也就是中交租赁中发现，很多接口里面都会有很多方法，查询，更新，计算等等多种多样的方法聚集在一个接口里，导致这个接口的实现类代码非常复杂，光是阅读代码就会有很大的阻碍，当客户在这个模块遇到多个Bug的时候，可能会造成，好几个开发人员同时修改这一个类的方法，不免的会产生各种各样的冲突，甚至会导致其中一个开发人员修改的方法对另一个开发人员正在修复的问题产生影响，维护难度呈现几何式的倍增，所以，从中可以看出单一职责原则的重要性。<br><br>单一职责原则的好处主要是:<br><br>1、类的复杂程度降低，可读性提高,可维护性提高，实现了什么职责都有明确的定义，一目了然，维护起来也更加方便;<br><br>2、后期变更引起的风险也降低。<br></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/08/Java学习-枚举-Enum/" rel="next" title="Java学习-枚举(Enum)">
+                <i class="fa fa-chevron-left"></i> Java学习-枚举(Enum)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/16/设计模式-建造者模式-Builder/" rel="prev" title="设计模式-建造者模式(Builder)">
+                设计模式-建造者模式(Builder) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -302,6 +431,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -322,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -378,6 +520,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单一职责原则（SRP）"><span class="nav-number">3.</span> <span class="nav-text">单一职责原则（SRP）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -527,6 +685,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
