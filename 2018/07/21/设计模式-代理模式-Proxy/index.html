@@ -87,7 +87,7 @@
 <meta property="og:description" content="引言最近在准备跳槽的面试，然后在看Spring框架原理的时候，顺便了解一下AOP的设计模式-代理模式。其实，代理模式在我们生活中非常常见，比如，玩游戏的时候不想手动练级，于是我们会去网上找代练帮我们完成练级的过程，这就是代理。再比如打官司的时候请律师，这也是代理，这样子我们只用准备我们的证词发言，而对于那些事件的调查和分析我们都全权交给了律师来做。 代理模式的定义代理模式也被叫做委托模式，是一个日">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/07/21/设计模式-代理模式-Proxy/代理模式.png">
-<meta property="og:updated_time" content="2018-07-22T04:11:30.909Z">
+<meta property="og:updated_time" content="2018-07-26T16:06:29.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-代理模式(Proxy)">
 <meta name="twitter:description" content="引言最近在准备跳槽的面试，然后在看Spring框架原理的时候，顺便了解一下AOP的设计模式-代理模式。其实，代理模式在我们生活中非常常见，比如，玩游戏的时候不想手动练级，于是我们会去网上找代练帮我们完成练级的过程，这就是代理。再比如打官司的时候请律师，这也是代理，这样子我们只用准备我们的证词发言，而对于那些事件的调查和分析我们都全权交给了律师来做。 代理模式的定义代理模式也被叫做委托模式，是一个日">
@@ -386,7 +386,7 @@
 <p>下面就是我们具体的输出结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代练开始</span><br><span class="line">登录名为natsu的用户初夏倾城登陆了</span><br><span class="line">代练结束</span><br><span class="line">用户初夏倾城在打怪</span><br><span class="line">用户初夏倾城升级了</span><br><span class="line">代练结束</span><br></pre></td></tr></table></figure></p>
 <p>这就是一个简单的代理模式的实现。</p>
 <h1 id="代理模式的扩展"><a href="#代理模式的扩展" class="headerlink" title="代理模式的扩展"></a>代理模式的扩展</h1><p>代理模式也分为多种，大致上可以分为静态代理和动态代理，静态代理又可以划分为普通代理和强制代理，我们先来介绍一下普通代理和强制代理，动态代理是个大Boss，我们放在最后再说，现在我们来简单介绍一下普通代理和强制代理。</p>
-<h2 id="普通代理"><a href="#普通代理" class="headerlink" title="普通代理"></a>普通代理</h2><p>普通代理，就是要求客户端只能访问代理角色，而不能访问真实角色。我们该怎么实现呢。<br>拿上面例子来说，作为一个游戏玩家，</p>
+<h2 id="普通代理"><a href="#普通代理" class="headerlink" title="普通代理"></a>普通代理</h2><p>普通代理，就是要求客户端只能访问代理角色，而不能访问真实角色。我们该怎么实现呢。</p>
 <h2 id="强制代理"><a href="#强制代理" class="headerlink" title="强制代理"></a>强制代理</h2><p>一般代理都是通过代理找到真是角色，但是强制代理确实强制的，就是你必须通过真实角色找到代理角色。<br>很典型的一个例子，我们要找一个明显拍广告，于是直接拨通了这个明星的电话，但是他却必须要求你去找他的经纪人，本来你想绕过经纪人，结果返回的还是他的经纪人，这里经纪人就是代理。就是说，你可以不必知道代理的存在，但是你所有的所作所为还是代理提供的。</p>
 <h1 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h1><h2 id="静态代理和动态代理的区别"><a href="#静态代理和动态代理的区别" class="headerlink" title="静态代理和动态代理的区别"></a>静态代理和动态代理的区别</h2><p>最重要的当然要放到最后来说，之前我们所有的代码实现都是静态代理，那么静态代理和动态代理又有什么区别呢？<br>静态代理是由程序员创建或特定工具自动生成源码，也就是说，在编译时就已经将接口、被代理类、代理类确定下来。也就是说，在程序运行之前，代理类的.class文件就已经生成。<br>静态代理有一个坏处，因为每一个代理类都需要自己去实现，所以就会造成程序中的代理类越来越多，那有什么解决方法呢，这时候就要用到动态代理。<br>动态代理的意思就是在实现阶段我们并不需要关心去代理谁，而是在运行阶段才能确定是代理哪一个对象。</p>
 <h2 id="动态代理的简单实现"><a href="#动态代理的简单实现" class="headerlink" title="动态代理的简单实现"></a>动态代理的简单实现</h2><p>动态代理现在有两种的实现方法，一种是JDK动态代理，一种是CGLIB动态代理。<br>这两个的区别是，JDK动态代理只能对实现了接口的类生成代理，而并不能只单单针对类。<br>而CGLIB则是针对类实现代理，主要是对指定的类生成子类，覆盖其中的方法。<br>有关JDK和CGLIB实现动态代理的区别，我会单独写一篇博客记录一下，这篇博客，主要实现方法就是JDK的动态代理。<br>动态代理的主要实现需要JDK提供的动态代理接口InvocationHandler和Proxy类。<br>举个例子吧，就拿卖水果来说，以前都是水果商自己出来摆摊或者开店，但随着电商的越来越发达，很多水果商都选择将自己销售交给电商去代理，我们就用动态代理来实现一下这个例子。</p>
@@ -516,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -527,7 +527,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -538,7 +538,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
