@@ -83,13 +83,13 @@
 
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发也要懂点算法(一)-A*寻路算法">
+<meta property="og:title" content="开发也要懂点算法(一)-AStar寻路算法">
 <meta property="og:url" content="http://nastublog.com/2018/07/29/开发也要懂点算法-一-A-寻路算法/index.html">
 <meta property="og:site_name" content="夏至微风">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-28T16:06:35.832Z">
+<meta property="og:updated_time" content="2018-07-31T15:40:34.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发也要懂点算法(一)-A*寻路算法">
+<meta name="twitter:title" content="开发也要懂点算法(一)-AStar寻路算法">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>开发也要懂点算法(一)-A*寻路算法 | 夏至微风</title>
+  <title>开发也要懂点算法(一)-AStar寻路算法 | 夏至微风</title>
   
 
 
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开发也要懂点算法(一)-A*寻路算法</h1>
+          <h1 class="post-title" itemprop="name headline">开发也要懂点算法(一)-AStar寻路算法</h1>
         
 
         <div class="post-meta">
@@ -323,6 +323,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/AStar/" itemprop="url" rel="index">
+                    <span itemprop="name">AStar</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -333,20 +344,54 @@
 
           
           
-             <span id="/2018/07/29/开发也要懂点算法-一-A-寻路算法/" class="leancloud_visitors" data-flag-title="开发也要懂点算法(一)-A*寻路算法">
+             <span id="/2018/07/29/开发也要懂点算法-一-A-寻路算法/" class="leancloud_visitors" data-flag-title="开发也要懂点算法(一)-AStar寻路算法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">热度&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
+                 <span>°C</span>
              </span>
           
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
           
 
           
@@ -371,17 +416,62 @@
     
     
 
-    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/07/29/开发也要懂点算法-一-A-寻路算法/">开发也要懂点算法(一)-AStar寻路算法</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
+  <p><span>发布时间:</span>2018年07月29日 - 00:07</p>
+  <p><span>最后更新:</span>2018年07月31日 - 23:07</p>
+  <p><span>原始链接:</span><a href="/2018/07/29/开发也要懂点算法-一-A-寻路算法/" title="开发也要懂点算法(一)-AStar寻路算法">http://nastublog.com/2018/07/29/开发也要懂点算法-一-A-寻路算法/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/07/29/开发也要懂点算法-一-A-寻路算法/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+  </div>
 
     
 
     
+
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"># 算法</a>
+            <a href="/tags/算法/" <i class="fa fa-tag"></i> 算法</a>
           
         </div>
       
@@ -434,6 +524,11 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxNS8xNTA0Mw=="></div>
+    </div>
 
   
 
@@ -489,7 +584,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -500,7 +595,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -560,6 +655,12 @@
 </span>
 </div>
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共18.7k字</span>
+</div>
+
+<!--
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
@@ -571,6 +672,7 @@
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
+-->
 
 
 
@@ -711,6 +813,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -856,3 +969,5 @@
   
 </body>
 </html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
