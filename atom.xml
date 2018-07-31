@@ -42,51 +42,6 @@
   </entry>
   
   <entry>
-    <title>设计模式-模板方法模式(Template)</title>
-    <link href="http://nastublog.com/2018/07/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F-Template/"/>
-    <id>http://nastublog.com/2018/07/29/设计模式-模板方法模式-Template/</id>
-    <published>2018-07-29T13:46:21.000Z</published>
-    <updated>2018-07-29T13:49:38.806Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://nastublog.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://nastublog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发也要懂点算法(一)-AStar寻路算法</title>
-    <link href="http://nastublog.com/2018/07/29/%E5%BC%80%E5%8F%91%E4%B9%9F%E8%A6%81%E6%87%82%E7%82%B9%E7%AE%97%E6%B3%95-%E4%B8%80-A-%E5%AF%BB%E8%B7%AF%E7%AE%97%E6%B3%95/"/>
-    <id>http://nastublog.com/2018/07/29/开发也要懂点算法-一-A-寻路算法/</id>
-    <published>2018-07-28T16:05:44.000Z</published>
-    <updated>2018-07-31T15:40:34.566Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="算法" scheme="http://nastublog.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="AStar" scheme="http://nastublog.com/categories/%E7%AE%97%E6%B3%95/AStar/"/>
-    
-    
-      <category term="算法" scheme="http://nastublog.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>面试总结-有赞电面</title>
     <link href="http://nastublog.com/2018/07/28/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93-%E6%9C%89%E8%B5%9E%E7%94%B5%E9%9D%A2/"/>
     <id>http://nastublog.com/2018/07/28/面试总结-有赞电面/</id>
@@ -108,32 +63,6 @@
     
     
       <category term="面试" scheme="http://nastublog.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UML类图总结</title>
-    <link href="http://nastublog.com/2018/07/28/UML%E7%B1%BB%E5%9B%BE%E6%80%BB%E7%BB%93/"/>
-    <id>http://nastublog.com/2018/07/28/UML类图总结/</id>
-    <published>2018-07-28T06:56:49.000Z</published>
-    <updated>2018-07-31T15:39:24.623Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在写有关设计模式的Blog，但涉及到UML类图这方面的话，总是从网上下载现成的图片，这也导致了我对UML类图这一方面，并没有一个很深的印象，所以决定写这么一篇文章，加深一下自己对UML类图的印象。</p><h1 id="为什么需要UML图"><a href="#为什么需要UML图" class="headerlink" title="为什么需要UML图"></a>为什么需要UML图</h1><p>UML：Unified Modeling Language，即统一建模语言，简单地说就是一种有特殊用处的语言<br>我们做项目的需求分析，最开始往往得到的是一堆文字，往往我们对业务逻辑一无所知，这时候，我们迫切需要的就是理清这些业务概念以及它们之间的关系，这时候，UML类图就显得尤为重要了。对于现在的我菜来说，让我们做的可能性不大，但至少能看懂是必要的。</p><h1 id="什么"><a href="#什么" class="headerlink" title="什么"></a>什么</h1><h1 id="UML类的工具"><a href="#UML类的工具" class="headerlink" title="UML类的工具"></a>UML类的工具</h1><p>Visio是一款不错的工具，还有一款不错的在线编辑工具，ProgressOn，这里贴上链接。<br><a href="https://www.processon.com/" target="_blank" rel="noopener">ProgressOn</a></p><h1 id="怎么画UML类图"><a href="#怎么画UML类图" class="headerlink" title="怎么画UML类图"></a>怎么画UML类图</h1><p>在类图中一共包含了以下几种元素:类、接口以及类之间的关系。</p><h2 id="类结构"><a href="#类结构" class="headerlink" title="类结构"></a>类结构</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>在面向对象编程中,类是对现实世界中一组具有相同特征的物体的抽象。下面是一个简单的类图。<br><img src="/2018/07/28/UML类图总结/Class.png" alt="类图"><br>其中，+ - # 代表的是作用域，+代表public，-代表private，#代表protected。<br>:后跟的则是返回类型。<br>如果类是抽象类，名称用斜体表示，同理，如果方法是抽象方法，也用斜体表示。<br>属性的表示方式为：【可见性】【属性名称】：【类型】={缺省值，可选}<br>方法的表示方式为：【可见性】【方法名称】（【参数列表】）：【类型】<br>上面类图对应的代码如下:</p><pre><code>public class Student {    public String name;    private Integer age;    protected String sex;    public void work1() {    }    private void work2() {    }    protected String work3(String age) {        return age;    }}</code></pre><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>接口是一种特殊的类，具有类的结构但不可被实例化，只可以被实现（继承）。在UML中，接口使用一个带有名称的小圆圈来进行表示(也可以通过在名字上标注《interface》，ProgressOn因为小圆圈不显示，我们采取这种形式)。<br>注意，接口中的方法都是abstract的，所以我们采取斜体模式。</p><p>#参考<br><a href="http://www.uml.org.cn/oobject/201610282.asp" target="_blank" rel="noopener">详解UML图之类图</a><br><a href="https://www.awaimai.com/patterns/uml" target="_blank" rel="noopener">UML类图详解</a><br><a href="http://www.cnblogs.com/edisonchou/p/3977829.html" target="_blank" rel="noopener">OOAD利器之UML基础</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近在写有关设计模式的Blog，但涉及到UML类图这方面的话，总是从网上下载现成的图片，这也导致了我对UML类图这一方面，并没有一个很深的印象，所以决定写这么一篇文章，加深一下自己对UML类图的印象。&lt;/p&gt;
-&lt;h1 id=&quot;为什么需要UML图&quot;&gt;&lt;a href=&quot;#为什么
-      
-    
-    </summary>
-    
-      <category term="UML" scheme="http://nastublog.com/categories/UML/"/>
-    
-    
-      <category term="UML" scheme="http://nastublog.com/tags/UML/"/>
     
   </entry>
   
@@ -215,31 +144,6 @@
   </entry>
   
   <entry>
-    <title>设计模式-六大原则(SOLID)</title>
-    <link href="http://nastublog.com/2018/07/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/"/>
-    <id>http://nastublog.com/2018/07/09/设计模式-六大原则/</id>
-    <published>2018-07-09T15:23:35.000Z</published>
-    <updated>2018-07-15T04:36:21.410Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了该书里的内容，算是做个借鉴了。<br><br>软件设计中，最大的难题就是应对需求的变化，但是，在实际工作中，需求的变化是必然存在的，而且也是不可预料的。所以，我们要为这些不可预料的需求变化事先做好准备，这是一件十分痛苦的事情，不过还好，我们已经站在了巨人的肩膀上。软件设计的大师给我们提供了非常好的6大设计原则和23个设计模式来应对这些变化。</p><h1 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h1><p>1.SRP(Single Responsibility Principle)单一职责原则<br>2.OCP(Open Closed Principle)开闭原则<br>3.LSP(Liskov Substitution Principle)里式替换原则<br>4.Law of Demeter 迪米特法则<br>5.ISP(Interface Segregation Principle)接口隔离原则<br>6.DIP(Dependence Inversion Principle)依赖倒置原则<br>把这六个原则的首字母联合起来，就是SOLID(L重复只取一个)，意思是稳定的，这六大原则使用的意义也就是建立出稳定、灵活、健壮的设计用来面对不可预知的需求变更。<br>下面我根据自己看书的理解，结合平常自己写代码的思考,稍微总结一下6大设计原则的基本内容。</p><h1 id="单一职责原则（SRP）"><a href="#单一职责原则（SRP）" class="headerlink" title="单一职责原则（SRP）"></a>单一职责原则（SRP）</h1><p>单一职责原则的定义是:一个类应该有且只有一个原因会引起类的变更。换句话就是说，一个类应该只有有一个职责。<br><br>我在当前项目，也就是中交租赁中发现，很多接口里面都会有很多方法，查询，更新，计算等等多种多样的方法聚集在一个接口里，导致这个接口的实现类代码非常复杂，光是阅读代码就会有很大的阻碍，当客户在这个模块遇到多个Bug的时候，可能会造成，好几个开发人员同时修改这一个类的方法，不免的会产生各种各样的冲突，甚至会导致其中一个开发人员修改的方法对另一个开发人员正在修复的问题产生影响，维护难度呈现几何式的倍增，所以，从中可以看出单一职责原则的重要性。<br><br>单一职责原则的好处主要是:<br><br>1、类的复杂程度降低，可读性提高,可维护性提高，实现了什么职责都有明确的定义，一目了然，维护起来也更加方便;<br><br>2、后期变更引起的风险也降低。<br></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;最近在看《设计模式之禅》这本书，看完了前六章的6大原则后，结合自己所写过的代码，感触颇深，于是随笔写一下这6大原则的主要内容，部分内容参考了
-      
-    
-    </summary>
-    
-      <category term="Java学习" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="设计模式" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>设计模式-单例模式(Singleton)</title>
     <link href="http://nastublog.com/2018/06/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-Singleton/"/>
     <id>http://nastublog.com/2018/06/30/设计模式-单例模式-Singleton/</id>
@@ -261,109 +165,6 @@
     
     
       <category term="设计模式" scheme="http://nastublog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-策略模式(Strategy)</title>
-    <link href="http://nastublog.com/2018/06/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F-Strategy/"/>
-    <id>http://nastublog.com/2018/06/10/设计模式-策略模式-Strategy/</id>
-    <published>2018-06-10T06:16:24.000Z</published>
-    <updated>2018-07-31T15:41:24.744Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>写代码时总会出很多的if…else，或者case。如果在一个条件语句中又包含了多个条件语句就会使得代码变得臃肿，维护的成本也会加大，而策略模式就能较好的解决这个问题。<br> &lt; !–more–&gt;</p><h1 id="策略模式的定义和使用场景"><a href="#策略模式的定义和使用场景" class="headerlink" title="策略模式的定义和使用场景"></a>策略模式的定义和使用场景</h1><h2 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h2><p>策略模式定义了一系列的算法，并将每一个算法封装起来，而且使他们可以相互替换，让算法独立于使用它的客户而独立变化。</p><p>分析下定义，策略模式定义和封装了一系列的算法，它们是可以相互替换的，也就是说它们具有共性，而它们的共性就体现在策略接口的行为上，另外为了达到最后一句话的目的，也就是说让算法独立于使用它的客户而独立变化，我们需要让客户端依赖于策略接口。</p><h2 id="策略模式的使用场景："><a href="#策略模式的使用场景：" class="headerlink" title="策略模式的使用场景："></a>策略模式的使用场景：</h2><p>1.针对同一类型问题的多种处理方式，仅仅是具体行为有差别时；<br>2.需要安全地封装多种同一类型的操作时；<br>3.出现同一抽象类有多个子类，而又需要使用 if-else 或者 switch-case 来选择具体子类时。</p><h1 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h1><p><img src="/2018/06/10/设计模式-策略模式-Strategy/策略模式.png" alt="策略模式"></p><p>模式涉及到三个角色:<br><br>1.Context 环境:持有一个策略(strategy)的引用;<br><br>2.Strategy 抽象策略:这是一个抽象的角色。通常是一个抽象类或者接口。为了提供给具体策略实现接口;<br><br>3.ConcreteStrategy 具体策略:包装相关策略。</p><h1 id="具体例子"><a href="#具体例子" class="headerlink" title="具体例子"></a>具体例子</h1><h2 id="两个浮点数的计算"><a href="#两个浮点数的计算" class="headerlink" title="两个浮点数的计算"></a>两个浮点数的计算</h2><p>先定义一个抽象策略的接口</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface Opretator &#123;</span><br><span class="line"></span><br><span class="line">    double opretator(double numberA, double numberB);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后定义两个实现该抽象策略的具体策略类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class PlusOpretator implements Opretator &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public double opretator(double numberA, double numberB) &#123;</span><br><span class="line">        return numberA + numberB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class MinusOpretator implements Opretator &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public double opretator(double numberA, double numberB) &#123;</span><br><span class="line">        return numberA - numberB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后定义持有策略的环境Context<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class OpretatorTest &#123;</span><br><span class="line">    private Opretator opretator;</span><br><span class="line"></span><br><span class="line">    public OpretatorTest(Opretator opretator) &#123;</span><br><span class="line">        this.opretator = opretator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public double opretator(double numberA, double numberB) &#123;</span><br><span class="line">        return this.opretator.opretator(numberA, numberB);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>最后用Main函数测试一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        OpretatorTest plusTest = new OpretatorTest(new PlusOpretator());</span><br><span class="line">        OpretatorTest minusTest = new OpretatorTest(new MinusOpretator());</span><br><span class="line">        System.out.println(plusTest.opretator(2d, 3d));</span><br><span class="line">        System.out.println(minusTest.opretator(3d,2d));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>打印的结果是5.0   1.0;</p><h2 id="会员价格计算"><a href="#会员价格计算" class="headerlink" title="会员价格计算"></a>会员价格计算</h2><p>用户累计消费多少后，价格的计算如下:</p><ol><li>0-10000 普通会员 原价;<br></li><li>10000-20000 VIP 9折;<br></li><li>20000-30000 SuperVIP 8折;<br></li><li>30000以上 GoldVIP 7折.<br></li></ol><p>首先定义一个价格计算的接口，也就是抽象策略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface CalPrice &#123;</span><br><span class="line"></span><br><span class="line">    //根据原价返回一个最终的价格</span><br><span class="line">    Double calPrice(Double orgnicPrice);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>然后实现具体四种策略：</p><p>普通会员<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Orgnic implements CalPrice &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Double calPrice(Double orgnicPrice) &#123;</span><br><span class="line">        return orgnicPrice;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>VIP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Vip implements CalPrice &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Double calPrice(Double orgnicPrice) &#123;</span><br><span class="line">        return orgnicPrice*0.9;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>SuperVIP</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class SuperVip implements CalPrice &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Double calPrice(Double orgnicPrice) &#123;</span><br><span class="line">        return orgnicPrice*0.8;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>GoldVIP</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class GoldVip implements CalPrice &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Double calPrice(Double orgnicPrice) &#123;</span><br><span class="line">        return orgnicPrice*0.7;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后定义一个具体环节，比如玩家:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class Player &#123;</span><br><span class="line"></span><br><span class="line">    private Double totalAmount = 0D;//客户在鹅厂消费的总额</span><br><span class="line">    private Double amount = 0D;//客户单次消费金额</span><br><span class="line">    private CalPrice calPrice = new Orgnic();//每个客户都有一个计算价格的策略，初始都是普通计算，即原价</span><br><span class="line"></span><br><span class="line">    //客户购买皮肤，就会增加它的总额</span><br><span class="line">    public void buy(Double amount) &#123;</span><br><span class="line">        this.amount = amount;</span><br><span class="line">        totalAmount += amount;</span><br><span class="line">        if (totalAmount &gt; 30000) &#123;//30000则改为金牌会员计算方式</span><br><span class="line">            calPrice = new GoldVip();</span><br><span class="line">        &#125; else if (totalAmount &gt; 20000) &#123;//类似</span><br><span class="line">            calPrice = new SuperVip();</span><br><span class="line">        &#125; else if (totalAmount &gt; 10000) &#123;//类似</span><br><span class="line">            calPrice = new Vip();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //计算客户最终要付的钱</span><br><span class="line">    public Double calLastAmount() &#123;</span><br><span class="line">        return calPrice.calPrice(amount);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>然后测试一下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Client &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Player player = new Player();</span><br><span class="line">        player.buy(5000D);</span><br><span class="line">        System.out.println(&quot;玩家需要付钱：&quot; + player.calLastAmount());</span><br><span class="line">        player.buy(12000D);</span><br><span class="line">        System.out.println(&quot;玩家需要付钱：&quot; + player.calLastAmount());</span><br><span class="line">        player.buy(12000D);</span><br><span class="line">        System.out.println(&quot;玩家需要付钱：&quot; + player.calLastAmount());</span><br><span class="line">        player.buy(12000D);</span><br><span class="line">        System.out.println(&quot;玩家需要付钱：&quot; + player.calLastAmount());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行以后会发现，第一次是原价，第二次是九折，第三次是八折，最后一次则是七价。这样设计的好处是，客户不再依赖于具体的收费策略，依赖于抽象永远是正确的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;写代码时总会出很多的if…else，或者case。如果在一个条件语句中又包含了多个条件语句就会使得代码变得臃肿，维护的成本也会加大，而策略模
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://nastublog.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="http://nastublog.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java8学习（二）-Stream流</title>
-    <link href="http://nastublog.com/2018/05/06/Java8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89-Stream%E6%B5%81/"/>
-    <id>http://nastublog.com/2018/05/06/Java8学习（二）-Stream流/</id>
-    <published>2018-05-06T02:32:23.000Z</published>
-    <updated>2018-06-09T09:08:41.258Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="流的基本概念"><a href="#流的基本概念" class="headerlink" title="流的基本概念"></a>流的基本概念</h1><h2 id="1-1是流"><a href="#1-1是流" class="headerlink" title="1.1是流"></a>1.1是流</h2><p>流是Java8引入的全新概念，它用来处理集合中的数据，暂且可以把它理解为一种高级集合。</p><p>众所周知，集合操作非常麻烦，若要对集合进行筛选、投影，需要写大量的代码，而流是以声明的形式操作集合，它就像SQL语句，我们只需告诉流需要对集合进行什么操作，它就会自动进行操作，并将执行结果交给你，无需我们自己手写代码。</p><p>因此，流的集合操作对我们来说是透明的，我们只需向流下达命令，它就会自动把我们想要的结果给我们。由于操作过程完全由Java处理，因此它可以根据当前硬件环境选择最优的方法处理，我们也无需编写复杂又容易出错的多线程代码了。</p><h2 id="1-2-流的特点"><a href="#1-2-流的特点" class="headerlink" title="1.2 流的特点"></a>1.2 流的特点</h2><p>1.只能遍历一次 <br><br>我们可以把流想象成一条流水线，流水线的源头是我们的数据源(一个集合)，数据源中的元素依次被输送到流水线上，我们可以在流水线上对元素进行各种操作。一旦元素走到了流水线的另一头，那么这些元素就被“消费掉了”，我们无法再对这个流进行操作。当然，我们可以从数据源那里再获得一个新的流重新遍历一遍。<br><br>2.采用内部迭代方式 <br><br>若要对集合进行处理，则需我们手写处理代码，这就叫做外部迭代。而要对流进行处理，我们只需告诉流我们需要什么结果，处理过程由流自行完成，这就称为内部迭代。</p><h2 id="1-3-流的操作种类"><a href="#1-3-流的操作种类" class="headerlink" title="1.3 流的操作种类"></a>1.3 流的操作种类</h2><p>流的操作分为两种，分别为中间操作 和 终端操作。<br><br>1.中间操作<br><br>当数据源中的数据上了流水线后，这个过程对数据进行的所有操作都称为“中间操作”。<br>中间操作仍然会返回一个流对象，因此多个中间操作可以串连起来形成一个流水线。<br><br>2.终端操作 <br><br>当所有的中间操作完成后，若要将数据从流水线上拿下来，则需要执行终端操作。<br>终端操作将返回一个执行结果，这就是你想要的数据。</p><p><img src="/2018/05/06/Java8学习（二）-Stream流/streamOperation.jpg" alt="流的操作种类"></p><h2 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h2><p>map()的类型推断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; collected = Stream.of(&quot;a&quot;,&quot;b&quot;,&quot;hello&quot;).map(string-&gt;string.toUpperCase()).collect(collectors.toList());</span><br></pre></td></tr></table></figure></p><p>map()里的实现方法是函数式接口</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;流的基本概念&quot;&gt;&lt;a href=&quot;#流的基本概念&quot; class=&quot;headerlink&quot; title=&quot;流的基本概念&quot;&gt;&lt;/a&gt;流的基本概念&lt;/h1&gt;&lt;h2 id=&quot;1-1是流&quot;&gt;&lt;a href=&quot;#1-1是流&quot; class=&quot;headerlink&quot; title=
-      
-    
-    </summary>
-    
-      <category term="Java学习" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="Stream流" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/Stream%E6%B5%81/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java8学习(一)-常见的函数式接口</title>
-    <link href="http://nastublog.com/2018/05/05/Java8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://nastublog.com/2018/05/05/Java8学习（一）-Lambda表达式/</id>
-    <published>2018-05-05T07:04:42.000Z</published>
-    <updated>2018-05-05T08:07:39.803Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在学习Java8的新特性之前，我们需要对函数式接口有一个初步的了解。</p><h1 id="什么是函数式接口"><a href="#什么是函数式接口" class="headerlink" title="什么是函数式接口"></a>什么是函数式接口</h1><p>函数式接口（Functional Interface）就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。<br><br>注:抽象方法就是只有方法声明，没有方法实现体的方法。抽象方法一般存在于抽象类或者接口中。<br></p><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><code>从JKD8开始，添加了一种新功能-默认方法。默认方法允许接口方法定义默认实现，而所有子类都将拥有该方法及实现。</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface DefaultFuncInter &#123;</span><br><span class="line">    int getInt();</span><br><span class="line">    default String getString()&#123;</span><br><span class="line">        return &quot;Default String&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="函数式接口的特点"><a href="#函数式接口的特点" class="headerlink" title="函数式接口的特点"></a>函数式接口的特点</h1><p>1  函数式接口里允许定义默认方法：<br><br>函数式接口里是可以包含默认方法，因为默认方法不是抽象方法，其有一个默认实现，所以是符合函数式接口的定义的；<br><br>2 函数式接口里允许定义静态方法：<br><br>函数式接口里是可以包含静态方法，因为静态方法不能是抽象方法，是一个已经实现了的方法，所以是符合函数式接口的定义的；<br><br>3  函数式接口里允许定义java.lang.Object里的public方法：<br><br>函数式接口里是可以包含Object里的public方法，这些方法对于函数式接口来说，不被当成是抽象方法（虽然它们是抽象方法）；因为任何一个函数式接口的实现，默认都继承了Object类，包含了来自java.lang.Object里对这些抽象方法的实现；<br><br>4  函数式接口里允许子接口继承多个父接口，但每个父接口中都只能存在一个抽象方法，且必须的相同的抽象方法。<br><br>注:如果多个父接口中有各自不同的抽象方法，则子接口也会存在继承多个抽象方法，此时，子接口就不是函数式接口。</p><p>下面给出几个函数式接口的例子:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">public interface Predicate&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">    boolean test(T t);</span><br><span class="line"></span><br><span class="line">    default Predicate&lt;T&gt; and(Predicate&lt;? super T&gt; other) &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        return (t) -&gt; test(t) &amp;&amp; other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    default Predicate&lt;T&gt; negate() &#123;</span><br><span class="line">        return (t) -&gt; !test(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    default Predicate&lt;T&gt; or(Predicate&lt;? super T&gt; other) &#123;</span><br><span class="line">        Objects.requireNonNull(other);</span><br><span class="line">        return (t) -&gt; test(t) || other.test(t);</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    static &lt;T&gt; Predicate&lt;T&gt; isEqual(Object targetRef) &#123;</span><br><span class="line">        return (null == targetRef)</span><br><span class="line">                ? Objects::isNull</span><br><span class="line">                : object -&gt; targetRef.equals(object);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h1 id="FunctionalInterface注解"><a href="#FunctionalInterface注解" class="headerlink" title="@FunctionalInterface注解"></a>@FunctionalInterface注解</h1><p>Java 8为函数式接口引入了一个新注解@FunctionalInterface，主要用于编译级错误检查，加上该注解，当你写的接口不符合函数式接口定义的时候，编译器会报错。加不加@FunctionalInterface对于接口是不是函数式接口没有影响，该注解只是提醒编译器去检查该接口是否仅包含一个抽象方法。</p><h1 id="四种基本的函数式接口"><a href="#四种基本的函数式接口" class="headerlink" title="四种基本的函数式接口"></a>四种基本的函数式接口</h1><p>现在介绍一下四种最基本的函数式接口，为了节约篇幅，只给出这些函数式接口里的抽象方法。</p><h4 id="1-Predicate-接口：接受一个T类型参数，返回boolean类型值。"><a href="#1-Predicate-接口：接受一个T类型参数，返回boolean类型值。" class="headerlink" title="1.Predicate 接口：接受一个T类型参数，返回boolean类型值。"></a>1.Predicate<t> 接口：接受一个T类型参数，返回boolean类型值。</t></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boolean test(T t);</span><br></pre></td></tr></table></figure><h4 id="2-Function-lt-T-R-gt-功能接口：接受一个T类型参数，返回R类型值。"><a href="#2-Function-lt-T-R-gt-功能接口：接受一个T类型参数，返回R类型值。" class="headerlink" title="2.Function&lt;T, R&gt; 功能接口：接受一个T类型参数，返回R类型值。"></a>2.Function&lt;T, R&gt; 功能接口：接受一个T类型参数，返回R类型值。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">R apply(T t);</span><br></pre></td></tr></table></figure><h4 id="3-Supplier-接口：无参数，返回一个T类型值。"><a href="#3-Supplier-接口：无参数，返回一个T类型值。" class="headerlink" title="3.Supplier 接口：无参数，返回一个T类型值。"></a>3.Supplier<t> 接口：无参数，返回一个T类型值。</t></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T get();</span><br></pre></td></tr></table></figure><h4 id="4-Consumer-接口：接受一个T类型参数，无返回值。"><a href="#4-Consumer-接口：接受一个T类型参数，无返回值。" class="headerlink" title="4.Consumer 接口：接受一个T类型参数，无返回值。"></a>4.Consumer<t> 接口：接受一个T类型参数，无返回值。</t></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void accept(T t);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;在学习Java8的新特性之前，我们需要对函数式接口有一个初步的了解。&lt;/p&gt;
-&lt;h1 id=&quot;什么是函数式接口&quot;&gt;&lt;a href=&quot;#什么是
-      
-    
-    </summary>
-    
-      <category term="Java学习" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="函数式接口" scheme="http://nastublog.com/categories/Java%E5%AD%A6%E4%B9%A0/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习---泛型总结</title>
-    <link href="http://nastublog.com/2018/05/03/Java%E6%B3%9B%E5%9E%8B%E6%80%BB%E7%BB%93/"/>
-    <id>http://nastublog.com/2018/05/03/Java泛型总结/</id>
-    <published>2018-05-03T15:30:21.000Z</published>
-    <updated>2018-07-31T15:41:01.736Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>泛型是Java中一个非常重要的知识点，在Java集合类框架中泛型被广泛应用。本文我们将从零开始来看一下Java泛型的设计，将会涉及到通配符处理，以及让人苦恼的类型擦除。</p><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>泛型在Java中有着很重要的地位，在面向对象的变成和设计模式中有着广泛的应用。<br><br>什么是泛型?为什么要使用泛型?<br><br>泛型，即”参数化类型”。一提到参数，最熟悉的就是定义方式时有形参，然后调用此方法时传递实参。<br><br>参数化类型，顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在调用的时候传入类型实参</p><h1 id="泛型基础"><a href="#泛型基础" class="headerlink" title="泛型基础"></a>泛型基础</h1><p>我们首先定义一个简单的Box类：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Box &#123;</span><br><span class="line">    private String object;</span><br><span class="line">    public void set(String object) &#123; this.object = object; &#125;</span><br><span class="line">    public String get() &#123; return object; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 泛型方法的基本介绍</span><br><span class="line"> * @param tClass 传入的泛型实参</span><br><span class="line"> * @return T 返回值为T类型</span><br><span class="line"> * 说明：</span><br><span class="line"> *     1）public 与 返回值中间&lt;T&gt;非常重要，可以理解为声明此方法为泛型方法。</span><br><span class="line"> *     2）只有声明了&lt;T&gt;的方法才是泛型方法，泛型类中的使用了泛型的成员方法并不是泛型方法。</span><br><span class="line"> *     3）&lt;T&gt;表明该方法将使用泛型类型T，此时才可以在方法中使用泛型类型T。</span><br><span class="line"> *     4）与泛型类的定义一样，此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型。</span><br><span class="line"> */</span><br><span class="line">public &lt;T&gt; T genericMethod(Class&lt;T&gt; tClass)throws InstantiationException ,</span><br><span class="line">  IllegalAccessException&#123;</span><br><span class="line">        T instance = tClass.newInstance();</span><br><span class="line">        return instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;泛型是Java中一个非常重要的知识点，在Java集合类框架中泛型被广泛应用。本文我们将从零开始来看一下Java泛型的设计，将会涉及到通配符处
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://nastublog.com/categories/Java/"/>
-    
-    
-      <category term="泛型" scheme="http://nastublog.com/tags/%E6%B3%9B%E5%9E%8B/"/>
-    
-      <category term="Java" scheme="http://nastublog.com/tags/Java/"/>
     
   </entry>
   
