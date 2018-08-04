@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -82,7 +82,7 @@
 
 
 <meta name="description" content="引言之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。 建造者模式的定义建造者模式（Builder Pattern）的定义如下:将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-建造者模式(Builder)">
 <meta property="og:url" content="http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/index.html">
@@ -90,7 +90,7 @@
 <meta property="og:description" content="引言之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。 建造者模式的定义建造者模式（Builder Pattern）的定义如下:将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/builder.jpg">
-<meta property="og:updated_time" content="2018-07-24T15:43:32.742Z">
+<meta property="og:updated_time" content="2018-08-04T03:29:51.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-建造者模式(Builder)">
 <meta name="twitter:description" content="引言之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。 建造者模式的定义建造者模式（Builder Pattern）的定义如下:将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创">
@@ -197,22 +197,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
+            归档
           </a>
         </li>
       
@@ -227,12 +217,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            归档
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -321,18 +321,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Java学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java学习/设计模式/" itemprop="url" rel="index">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
                     <span itemprop="name">设计模式</span>
                   </a>
                 </span>
@@ -448,6 +437,35 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/07/16/设计模式-建造者模式-Builder/">设计模式-建造者模式(Builder)</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
+  <p><span>发布时间:</span>2018年07月16日 - 22:07</p>
+  <p><span>最后更新:</span>2018年08月04日 - 11:08</p>
+  <p><span>原始链接:</span><a href="/2018/07/16/设计模式-建造者模式-Builder/" title="设计模式-建造者模式(Builder)">http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
       
   </div>
 
@@ -471,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
+            <a href="/tags/设计模式/" <i class="fa fa-tag"></i> 设计模式</a>
           
         </div>
       
@@ -582,7 +600,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -593,7 +611,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -604,7 +622,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -682,7 +700,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.2k字</span>
+  <span class="post-count">博客全站共18.6k字</span>
 </div>
 
 <!--

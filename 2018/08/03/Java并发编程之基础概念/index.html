@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="概念,并发," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夏至微风" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="引言最近还是一直在准备面试这块的内容，大多数互联网公司面试，避免不了的会问到并发这块的内容，所以，准备写几篇Blog来总结一下Java并发方面知识，于是就先写一篇最基础的，也就是并发编程中涉及到的基础概念，因为主要是想到什么写什么，所以可能会有遗漏，就当看个热闹吧。这边文章参考了网上众多文章，并加上了自己的理解，也可能会有理解不周到的地方，如有错误，请及时指出。 进程和线程定义进程(Process">
+<meta name="keywords" content="概念,并发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java并发编程之基础概念">
+<meta property="og:url" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/index.html">
+<meta property="og:site_name" content="夏至微风">
+<meta property="og:description" content="引言最近还是一直在准备面试这块的内容，大多数互联网公司面试，避免不了的会问到并发这块的内容，所以，准备写几篇Blog来总结一下Java并发方面知识，于是就先写一篇最基础的，也就是并发编程中涉及到的基础概念，因为主要是想到什么写什么，所以可能会有遗漏，就当看个热闹吧。这边文章参考了网上众多文章，并加上了自己的理解，也可能会有理解不周到的地方，如有错误，请及时指出。 进程和线程定义进程(Process">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/并发和并行.png">
+<meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/临界区.png">
+<meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/同步和异步.png">
+<meta property="og:updated_time" content="2018-08-04T07:35:38.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java并发编程之基础概念">
+<meta name="twitter:description" content="引言最近还是一直在准备面试这块的内容，大多数互联网公司面试，避免不了的会问到并发这块的内容，所以，准备写几篇Blog来总结一下Java并发方面知识，于是就先写一篇最基础的，也就是并发编程中涉及到的基础概念，因为主要是想到什么写什么，所以可能会有遗漏，就当看个热闹吧。这边文章参考了网上众多文章，并加上了自己的理解，也可能会有理解不周到的地方，如有错误，请及时指出。 进程和线程定义进程(Process">
+<meta name="twitter:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/并发和并行.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://nastublog.com/2018/08/03/Java并发编程之基础概念/"/>
+
+
+
+
+
+  <title>Java并发编程之基础概念 | 夏至微风</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/shao19950821" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夏至微风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/03/Java并发编程之基础概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="なつ初夏倾城">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏至微风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java并发编程之基础概念</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T10:54:56+08:00">
+                2018-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/并发/" itemprop="url" rel="index">
+                    <span itemprop="name">并发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/03/Java并发编程之基础概念/" class="leancloud_visitors" data-flag-title="Java并发编程之基础概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>°C</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,489
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  15
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>最近还是一直在准备面试这块的内容，大多数互联网公司面试，避免不了的会问到并发这块的内容，所以，准备写几篇Blog来总结一下Java并发方面知识，于是就先写一篇最基础的，也就是并发编程中涉及到的基础概念，因为主要是想到什么写什么，所以可能会有遗漏，就当看个热闹吧。<br>这边文章参考了网上众多文章，并加上了自己的理解，也可能会有理解不周到的地方，如有错误，请及时指出。</p>
+<h1 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>进程(Process):具有一定独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配的一个独立单位（PS:若不支持线程机制，进程也是系统调度的单位。否则，线程是系统调度的单位。因为随着cpu的性能越来越好，所以才将资源分配和调度分开，于是才有了线程这个概念）。比如我们打开一个程序，这个程序就是一个进程。</p>
+<p>线程(Thread or Lightweight Process LWP):从其英文定义可以看出，线程也可以被称之为轻量级进程。线程是进程的一个实体，是程序执行流的最小单元。<br>通常将进程看作是分配资源的最小单位，而线程则是操作系统调度的最小单位。线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。</p>
+<h2 id="进程和线程的关系以及区别"><a href="#进程和线程的关系以及区别" class="headerlink" title="进程和线程的关系以及区别"></a>进程和线程的关系以及区别</h2><p>1.线程是进程的组成部分，一个进程可以拥有很多线程，但至少有一个线程，但是一个线程只能属于一个进程；<br>2.操作系统的资源是分配给进程的，同一进程内的线程共享该进程的所有资源,但CPU是分配给线程的，即真正在处理及上运行的是线程；<br>3、不同的进程使用不同的内存空间，而一个进程内的所有线程共享父进程所拥有的全部空间，这极大提高了程序的运行效率(PS:内存空间不同于栈空间，每个线程都拥有单独的栈内存用来存储本地数据。线程拥有自己的堆栈、自己的程序计数器和自己的局部变量，但他不拥有系统资源)；<br>4.线程的调度和管理由进程本身负责完成。操作系统对进程进行调度，管理和资源分配；<br>5.同一个进程的线程之间可以直接通信，但是进程之间的交流需要借助中间代理来实现；<br>6.一个线程可以操作同一进程的其他线程，但是进程只能操作其子进程;<br>7.线程的启动速度快，进程的启动速度慢。</p>
+<h2 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h2><p>Java原生并不提供对协程的支持，但有的框架模拟出了协程的功能，比如Kilim框架，这里我们就简单提一下协程的概念。<br>协程(Coroutines)，是一种比线程更加轻量级的存在。一个进程可以拥有多个线程，一个线程也可以拥有多个协程。<br>协程的切换不是被操作系统的内核管理，而是直接由程序控制<br>线程进程都是同步机制，而协程则是异步。协程能保留上一次调用时的状态，每次过程重入时，就相当于进入上一次调用的状态。<br>协程的暂停完全由程序控制，而线程之间状态的切换是由操作系统的内核实现的，所以协程的开销远远小于线程的开销。</p>
+<h1 id="多进程和多线程"><a href="#多进程和多线程" class="headerlink" title="多进程和多线程"></a>多进程和多线程</h1><p>就拿我们平时使用电脑来举个例子:<br>1.我们打开chrome浏览器，用浏览器一边下载文件、一边听歌、一边看网页，这就是多线程；<br>2.我们同时打开了QQ、微信、浏览器等，这就是多进程。</p>
+<h2 id="多进程和多线程的比较"><a href="#多进程和多线程的比较" class="headerlink" title="多进程和多线程的比较"></a>多进程和多线程的比较</h2><p>从上面例子，我们从来分析一下多进程和多线程之间的优劣势</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>多进程</th>
+<th>多线程</th>
+<th>总结</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据共享、同步</td>
+<td>数据共享复杂，需要用IPC；数据是分开的，同步简单</td>
+<td>因为共享进程数据，数据共享简单，但也是因为这个原因导致同步复杂</td>
+<td>各有优势</td>
+</tr>
+<tr>
+<td>内存、CPU</td>
+<td>占用内存多，切换复杂，CPU利用率低</td>
+<td>占用内存少，切换简单，CPU利用率高</td>
+<td>线程占优</td>
+</tr>
+<tr>
+<td>数据共享、同步</td>
+<td>数据共享复杂，需要用IPC；数据是分开的，同步简单</td>
+<td>因为共享进程数据，数据共享简单，但也是因为这个原因导致同步复杂</td>
+<td>各有优势</td>
+</tr>
+<tr>
+<td>创建销毁、切换</td>
+<td>创建销毁、切换复杂，速度慢</td>
+<td>创建销毁、切换简单，速度很快</td>
+<td>线程占优</td>
+</tr>
+<tr>
+<td>编程、调试</td>
+<td>编程简单，调试简单</td>
+<td>编程复杂，调试复杂</td>
+<td>进程占优</td>
+</tr>
+<tr>
+<td>可靠性</td>
+<td>进程间不会相互影响</td>
+<td>因为共享进程数据，所以导致一旦一个线程挂掉，整个进程也会随之挂掉</td>
+<td>进程占优</td>
+</tr>
+<tr>
+<td>分布式</td>
+<td>适应于多核、多机分布式；如果一台机器不够，扩展到多台机器比较简单</td>
+<td>适应于多核分布式</td>
+<td>进程占优</td>
+</tr>
+</tbody>
+</table>
+<h2 id="多线程的好处"><a href="#多线程的好处" class="headerlink" title="多线程的好处"></a>多线程的好处</h2><p>1.同一进程的线程之间共享内存，但是进程之间不能共享内存；<br>2.系统创建进程需要重新为其分配系统资源，但是线程并不需要，所以代价会小很多，效率也会更高；<br>3.资源利用率更好；<br>4.程序设计更加简单；<br>5.程序响应更快。<br>这里可以参考<a href="http://ifeve.com/benefits/" target="_blank" rel="noopener">并发编程网</a><br>总而言之，随着CPU性能的越来越好，多线程可以让我们充分利用CPU的资源，帮助我们编写出高性能高效率的程序。</p>
+<h1 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>从时间上来说，并行是指两个或多个时间在同一时刻同时发生，而并发则是指两个或多个事件在同一时间段内同时发生；<br>从空间上来说，并行实在多个不同实体上进行的，而并发是在同一个实体上进行的。<br>并发编程的目标是充分的利用处理器的每一个核，以达到最高的处理性能。</p>
+<h2 id="图片解释"><a href="#图片解释" class="headerlink" title="图片解释"></a>图片解释</h2><p><img src="/2018/08/03/Java并发编程之基础概念/并发和并行.png" alt="并发和并行"></p>
+<h2 id="现实场景"><a href="#现实场景" class="headerlink" title="现实场景"></a>现实场景</h2><p>举个惊悚点的例子:<br>普通人只有1个脑子，一边吃饭一边说话，其实有脑子有任务切换在里面，所以是并发。(PS：只是因为这个切换速度非常快，所以让人产生了是并行的感觉)<br>一个双脑人，一个脑吃饭，一个脑说话，俩脑子彼此独立互不冲突，这是并行。<br>一个双脑人，一个脑子吃饭+看书，一个脑子说话，这是并行中含有并发(有个脑子在轮换吃饭 和 看书)。<br>一个三脑人，一个脑子吃饭，一个脑子看书，一个脑子说话，这是并行。<br>让一个CPU执行多个【可并行 ( 可分解，可单独核心运行)】 的任务，就是并发(concurrence)<br>多个CPU分别执行【可并行】任务，就是并行(parallel)<br>在现实中<br>单核的机器，都是并发 concurrence 执行的。<br>多核的机器，都是并行 parallel 中嵌套着并发 concurrence 运行的。<br>如果存在无限核心的机器，则所有任务都可以是并行运行的。</p>
+<h1 id="临界区"><a href="#临界区" class="headerlink" title="临界区"></a>临界区</h1><h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><p>临界区用来表示一种公共资源或者说是共享数据，可以被多个线程使用。但是每一次只能有一个线程使用它，一旦临界区资源被占用，其他线程要想使用这个资源，就必须等待。</p>
+<h2 id="画图解释"><a href="#画图解释" class="headerlink" title="画图解释"></a>画图解释</h2><p><img src="/2018/08/03/Java并发编程之基础概念/临界区.png" alt="临界区"></p>
+<h2 id="现实场景-1"><a href="#现实场景-1" class="headerlink" title="现实场景"></a>现实场景</h2><p>打印机，我们工作的时候肯定会经常用到打印机，打印机就是一个临界区的最好例子。一台打印机一次只能执行一个任务，如果 A 和 B 同时需要打印文件，很显然，如果 A 先发下打印的任务，打印机就开始打印 A 的文件。B 的任务就只能等待 A 打印结束之后才能打印。</p>
+<h1 id="同步和异步、阻塞和非阻塞"><a href="#同步和异步、阻塞和非阻塞" class="headerlink" title="同步和异步、阻塞和非阻塞"></a>同步和异步、阻塞和非阻塞</h1><h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><h3 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h3><p>同步和异步通常用来形容一次方法的调用。<br>同步方法调用一旦开始，调用者必须等到方法调用返回后，才能继续后续的行为。<br>异步方法调用更像一个消息传递，一旦开始，方法调用就会立即返回，但调用者并不一定会得到结果，而且调用者可以继续后续的操作。</p>
+<h3 id="图片解释-1"><a href="#图片解释-1" class="headerlink" title="图片解释"></a>图片解释</h3><p><img src="/2018/08/03/Java并发编程之基础概念/同步和异步.png" alt="同步和异步"></p>
+<h2 id="阻塞和非阻塞"><a href="#阻塞和非阻塞" class="headerlink" title="阻塞和非阻塞"></a>阻塞和非阻塞</h2><p>这里把同步异步和阻塞非阻塞放在一起，主要是很多时候对这几个概念有点模糊，这里具体说一下。<br>同步和异步关心的是消息传输机制，而阻塞非阻塞关心的是程序在等待调用结果返回时的状态。<br>所以上面四种概念，会有四种组合方式，分别是:<br>同步阻塞、同步非阻塞、异步阻塞和异步非阻塞。</p>
+<h2 id="现实场景-2"><a href="#现实场景-2" class="headerlink" title="现实场景"></a>现实场景</h2><p>这样讲会可能比较抽象，那我们继续结合实际来说一下，首先是烧水的例子，我们拥有两个水壶，一个是会响的水壶，简称响水壶，一个是普通水壶。<br>1.用普通水壶煮水，并且站在那里，不管水开没开，每隔一定时间看看水开了没。－同步阻塞<br>2.还是用普通水壶煮水，不再傻傻的站在那里看水开，跑去寝室上网，但是还是会每隔一段时间过来看看水开了没有，水没有开就走人。－同步非阻塞<br>3.使用高大上的响水壶来煮水，站在那里，但是不会再每隔一段时间去看水开，而是等水开了，水壶会自动的通知他。－异步阻塞<br>4.还是使用响水壶煮水，跑到客厅上网去，等着响水壶自己把水煮熟了以后通知他。－异步非阻塞</p>
+<p>这里可以看出<br>同步就是烧开水，需要自己去轮询（每隔一段时间去看看水开了没），异步就是水开了，然后水壶会通知你水已经开了，你可以回来处理这些开水了。<br>同步和异步是相对于操作结果来说，就是会不会等待结果返回。<br>阻塞就是说在煮水的过程中，你不可以去干其他的事情，非阻塞就是在同样的情况下，可以同时去干其他的事情。阻塞和非阻塞是相对于线程是否被阻塞。</p>
+<p>再讲一个下载的例子:<br>1.同步阻塞：一直盯着下载进度条，到 100% 的时候就完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">同步体现在：等待下载完成通知；</span><br><span class="line">阻塞体现在：等待下载完成通知过程中，不能做其他任务处理；</span><br></pre></td></tr></table></figure>
+<p>2.同步非阻塞：小明提交下载任务后就去干别的，每过一段时间就去瞄一眼进度条，看到 100% 就完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">同步体现在：等待下载完成通知；</span><br><span class="line">非阻塞体现在：等待下载完成通知过程中，去干别的任务了，只是时不时会瞄一眼进度条；【小明必须要在两个任务间切换，关注下载进度】</span><br></pre></td></tr></table></figure>
+<p>3.异步阻塞：小明换了个有下载完成通知功能的软件，下载完成就“叮”一声。不过小明仍然一直等待“叮”的声音。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">异步体现在：下载完成“叮”一声通知；</span><br><span class="line">阻塞体现在：等待下载完成“叮”一声通知过程中，不能做其他任务处理；</span><br></pre></td></tr></table></figure>
+<p>4.异步非阻塞：仍然是那个会“叮”一声的下载软件，小明提交下载任务后就去干别的，听到“叮”的一声就知道完成了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">异步体现在：下载完成“叮”一声通知；</span><br><span class="line">非阻塞体现在：等待下载完成“叮”一声通知过程中，去干别的任务了，只需要接收“叮”声通知即可；【软件处理下载任务，小明处理其他任务，不需关注进度，只需接收软件“叮”声通知，即可】</span><br></pre></td></tr></table></figure>
+<p>同步和异步关注的是消息如何通知的机制，而阻塞和非阻塞关注的则是等待消息通知时的状态，这两个概念是理解同步、异步、阻塞、非阻塞的关键所在。</p>
+<h1 id="死锁、饥饿、活锁"><a href="#死锁、饥饿、活锁" class="headerlink" title="死锁、饥饿、活锁"></a>死锁、饥饿、活锁</h1><h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><h3 id="介绍-3"><a href="#介绍-3" class="headerlink" title="介绍"></a>介绍</h3><p>死锁，是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程称为死锁进程。</p>
+<p>例如，线程A已经获取资源R1，线程B已经获取资源R2，之后线程A尝试获取资源R2，这个时候因为资源R2已经被线程B获得了，所以线程A只能阻塞直到线程B释放资源R2。另一方面，线程B在已经获得资源R2的前提下尝试获取由线程A持有的资源R1，那么由于资源R1已经被线程A持有了，那么线程B只能被阻塞直到线程A释放资源R1。这样线程A和线程B都在等待对方持有的资源，就造成了死锁。</p>
+<h3 id="死锁的四个条件"><a href="#死锁的四个条件" class="headerlink" title="死锁的四个条件"></a>死锁的四个条件</h3><p>1.互斥条件：线程使用的资源必须至少有一个是不能共享的（至少有锁）；<br>2.请求与保持条件：至少有一个线程必须持有一个资源并且正在等待获取一个当前被其它线程持有的资源（至少两个线程持有不同锁，又在等待对方持有锁）；<br>3.非剥夺条件：分配资源不能从相应的线程中被强制剥夺（不能强行获取被其他线程持有锁）；<br>4.循环等待条件：第一个线程等待其它线程，后者又在等待第一个线程（线程A等线程B；线程B等线程C;…;线程N等线程A。如此形成环路）。</p>
+<h3 id="避免死锁的方法"><a href="#避免死锁的方法" class="headerlink" title="避免死锁的方法"></a>避免死锁的方法</h3><p>1.尽可能减少锁的范围，如在Java中尽量使用同步代码块而不使用同步方法；<br>2.尽量不编写在同一时刻获取多个锁的代码，因为在一个线程持有多个资源的时候很容易发生死锁；<br>3.根据情况将过大范围的锁进行切分，让每个锁的作用范围减小，从而降低死锁发生的概率。这以原则的典型应用是ConcurrentHashMap的锁分段技术。</p>
+<h2 id="饥饿"><a href="#饥饿" class="headerlink" title="饥饿"></a>饥饿</h2><p>饥饿是指某一个或者多个线程因为种种原因无法获得所需要的资源，导致一直无法执行。<br>产生这种情况的原因是多种的，可能是它的线程优先级太低，而高优先级的线程不抢占它需要的资源，导致低优先级线程无法工作。也可能是某个线程一直占着关键资源不放，导致其他需要这个资源的线程无法正常执行。</p>
+<h2 id="活锁"><a href="#活锁" class="headerlink" title="活锁"></a>活锁</h2><p>活锁指的是线程不断重复执行相同的操作，但每次操作的结果都是失败的。尽管这个问题不会阻塞线程，但是程序也无法继续执行。<br>举个现实生活中的例子，，一条狭窄的道路，A 和 B 迎面相遇了，缘分使然，A绅士的想让出道路让B先过，这时B也保持良好的淑女形象想让出道路让A先过，导致两人都避让了；两人尴尬一笑，之后A想着B既然让了，就准备先过，巧的是，这时B心里也想着，A既然让了，不如先过，两人又撞上了；然后又开始礼貌性的相互避让，避让之后各自又想先走结果又撞上了，结果两人都没过去。这种情况就是活锁。<br>线程都秉承着”谦让”的原则，主动将资源释放给他人使用，那么就会出现资源不断在两个线程之间跳动，而没有一个线程可以同时拿到所有资源而正常执行。<br>活锁通常发生在处理事务消息的应用程序中，如果不能成功处理这个事务那么事务将回滚整个操作。解决活锁的办法是在每次重复执行的时候引入随机机制，这样由于出现的可能性不同使得程序可以继续执行其他的任务。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>本文参考众多文章总计而成，这里参考太多，所以只列举比较重要的几篇文章。<br><a href="http://www.androidchina.net/2987.html" target="_blank" rel="noopener">Java多线程和并发性知识点总结</a><br><a href="https://www.cnblogs.com/study-everyday/p/6856807.html" target="_blank" rel="noopener">并发编程的几个概念</a><br><a href="https://www.jianshu.com/p/aed6067eeac9" target="_blank" rel="noopener">聊聊同步、异步、阻塞与非阻塞</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/08/03/Java并发编程之基础概念/">Java并发编程之基础概念</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
+  <p><span>发布时间:</span>2018年08月03日 - 10:08</p>
+  <p><span>最后更新:</span>2018年08月04日 - 15:08</p>
+  <p><span>原始链接:</span><a href="/2018/08/03/Java并发编程之基础概念/" title="Java并发编程之基础概念">http://nastublog.com/2018/08/03/Java并发编程之基础概念/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/03/Java并发编程之基础概念/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+  </div>
+
+    
+
+    
+
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/概念/" <i class="fa fa-tag"></i> 概念</a>
+          
+            <a href="/tags/并发/" <i class="fa fa-tag"></i> 并发</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/01/开发也要懂点算法-冒泡排序/" rel="next" title="开发也要懂点算法-冒泡排序">
+                <i class="fa fa-chevron-left"></i> 开发也要懂点算法-冒泡排序
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxNS8xNTA0Mw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="なつ初夏倾城" />
+            
+              <p class="site-author-name" itemprop="name">なつ初夏倾城</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程和线程"><span class="nav-number">2.</span> <span class="nav-text">进程和线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程的关系以及区别"><span class="nav-number">2.2.</span> <span class="nav-text">进程和线程的关系以及区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协程"><span class="nav-number">2.3.</span> <span class="nav-text">协程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多进程和多线程"><span class="nav-number">3.</span> <span class="nav-text">多进程和多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多进程和多线程的比较"><span class="nav-number">3.1.</span> <span class="nav-text">多进程和多线程的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程的好处"><span class="nav-number">3.2.</span> <span class="nav-text">多线程的好处</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发和并行"><span class="nav-number">4.</span> <span class="nav-text">并发和并行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片解释"><span class="nav-number">4.2.</span> <span class="nav-text">图片解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现实场景"><span class="nav-number">4.3.</span> <span class="nav-text">现实场景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#临界区"><span class="nav-number">5.</span> <span class="nav-text">临界区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍-1"><span class="nav-number">5.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画图解释"><span class="nav-number">5.2.</span> <span class="nav-text">画图解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现实场景-1"><span class="nav-number">5.3.</span> <span class="nav-text">现实场景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步和异步、阻塞和非阻塞"><span class="nav-number">6.</span> <span class="nav-text">同步和异步、阻塞和非阻塞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#同步和异步"><span class="nav-number">6.1.</span> <span class="nav-text">同步和异步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-2"><span class="nav-number">6.1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片解释-1"><span class="nav-number">6.1.2.</span> <span class="nav-text">图片解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻塞和非阻塞"><span class="nav-number">6.2.</span> <span class="nav-text">阻塞和非阻塞</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现实场景-2"><span class="nav-number">6.3.</span> <span class="nav-text">现实场景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁、饥饿、活锁"><span class="nav-number">7.</span> <span class="nav-text">死锁、饥饿、活锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">7.1.</span> <span class="nav-text">死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍-3"><span class="nav-number">7.1.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死锁的四个条件"><span class="nav-number">7.1.2.</span> <span class="nav-text">死锁的四个条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免死锁的方法"><span class="nav-number">7.1.3.</span> <span class="nav-text">避免死锁的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#饥饿"><span class="nav-number">7.2.</span> <span class="nav-text">饥饿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#活锁"><span class="nav-number">7.3.</span> <span class="nav-text">活锁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">なつ初夏倾城</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共18.6k字</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+   
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("iHgb7sdOAC2jARdOCih10Kwg-gzGzoHsz", "z20dd5JdTmCB3OlR1nBWH1Kl");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
