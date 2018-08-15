@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法," />
+  <meta name="keywords" content="Java,并发,线程," />
 
 
 
@@ -81,15 +81,18 @@
 
 
 
-<meta name="keywords" content="算法">
+<meta name="description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
+<meta name="keywords" content="Java,并发,线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发也要懂点算法-冒泡排序">
-<meta property="og:url" content="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/index.html">
+<meta property="og:title" content="Java并发编程之线程(Thread)的状态和相关方法">
+<meta property="og:url" content="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/index.html">
 <meta property="og:site_name" content="夏至微风">
+<meta property="og:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-04T03:30:02.404Z">
+<meta property="og:updated_time" content="2018-08-07T03:34:25.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发也要懂点算法-冒泡排序">
+<meta name="twitter:title" content="Java并发编程之线程(Thread)的状态和相关方法">
+<meta name="twitter:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/"/>
+  <link rel="canonical" href="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/"/>
 
 
 
 
 
-  <title>开发也要懂点算法-冒泡排序 | 夏至微风</title>
+  <title>Java并发编程之线程(Thread)的状态和相关方法 | 夏至微风</title>
   
 
 
@@ -264,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/">
+    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="なつ初夏倾城">
@@ -281,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开发也要懂点算法-冒泡排序</h1>
+          <h1 class="post-title" itemprop="name headline">Java并发编程之线程(Thread)的状态和相关方法</h1>
         
 
         <div class="post-meta">
@@ -293,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T10:23:14+08:00">
-                2018-08-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-04T18:55:02+08:00">
+                2018-08-04
               </time>
             
 
@@ -316,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/并发/" itemprop="url" rel="index">
+                    <span itemprop="name">并发</span>
                   </a>
                 </span>
 
@@ -333,7 +336,7 @@
 
           
           
-             <span id="/2018/08/01/开发也要懂点算法-冒泡排序/" class="leancloud_visitors" data-flag-title="开发也要懂点算法-冒泡排序">
+             <span id="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" class="leancloud_visitors" data-flag-title="Java并发编程之线程(Thread)的状态和相关方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -361,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  637
                 </span>
               
 
@@ -377,7 +380,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -398,7 +401,12 @@
       
 
       
-        
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。</p>
+<h1 id="Java中线程的六大状态"><a href="#Java中线程的六大状态" class="headerlink" title="Java中线程的六大状态"></a>Java中线程的六大状态</h1><p>在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMINATED。<br>下面就是Thread类描述线程状态的源码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">public enum State &#123;</span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread which has not yet started.</span><br><span class="line">         */</span><br><span class="line">        NEW,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a runnable thread.  A thread in the runnable</span><br><span class="line">         * state is executing in the Java virtual machine but it may</span><br><span class="line">         * be waiting for other resources from the operating system</span><br><span class="line">         * such as processor.</span><br><span class="line">         */</span><br><span class="line">        RUNNABLE,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread blocked waiting for a monitor lock.</span><br><span class="line">         * A thread in the blocked state is waiting for a monitor lock</span><br><span class="line">         * to enter a synchronized block/method or</span><br><span class="line">         * reenter a synchronized block/method after calling</span><br><span class="line">         * &#123;@link Object#wait() Object.wait&#125;.</span><br><span class="line">         */</span><br><span class="line">        BLOCKED,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread.</span><br><span class="line">         * A thread is in the waiting state due to calling one of the</span><br><span class="line">         * following methods:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait() Object.wait&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join() Thread.join&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#park() LockSupport.park&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         *</span><br><span class="line">         * &lt;p&gt;A thread in the waiting state is waiting for another thread to</span><br><span class="line">         * perform a particular action.</span><br><span class="line">         *</span><br><span class="line">         * For example, a thread that has called &lt;tt&gt;Object.wait()&lt;/tt&gt;</span><br><span class="line">         * on an object is waiting for another thread to call</span><br><span class="line">         * &lt;tt&gt;Object.notify()&lt;/tt&gt; or &lt;tt&gt;Object.notifyAll()&lt;/tt&gt; on</span><br><span class="line">         * that object. A thread that has called &lt;tt&gt;Thread.join()&lt;/tt&gt;</span><br><span class="line">         * is waiting for a specified thread to terminate.</span><br><span class="line">         */</span><br><span class="line">        WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread with a specified waiting time.</span><br><span class="line">         * A thread is in the timed waiting state due to calling one of</span><br><span class="line">         * the following methods with a specified positive waiting time:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #sleep Thread.sleep&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait(long) Object.wait&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join(long) Thread.join&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkNanos LockSupport.parkNanos&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkUntil LockSupport.parkUntil&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         */</span><br><span class="line">        TIMED_WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a terminated thread.</span><br><span class="line">         * The thread has completed execution.</span><br><span class="line">         */</span><br><span class="line">        TERMINATED;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>NEW(初始):新创建了一个线程对象，但还没有调用start()方法。<br>RUNNABLE(运行):很多文章都有提到过线程在运行前有个READY(就绪),运行中则是RUNNING(运行中)，Java中将READY和RUNNING笼统的称为RUNNABLE。创建了线程对象后，其他线程(比如主线程main)调用了该线程对象的start()方法</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/GooPolaris/p/8079490.html" target="_blank" rel="noopener">Java中一个线程只有六个状态。至于阻塞、可运行、挂起状态都是人们为了便于理解，自己加上去的。</a></p>
+
       
     </div>
     
@@ -414,12 +422,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/08/01/开发也要懂点算法-冒泡排序/">开发也要懂点算法-冒泡排序</a></p>
+  <p><span>本文标题:</span><a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/">Java并发编程之线程(Thread)的状态和相关方法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
-  <p><span>发布时间:</span>2018年08月01日 - 10:08</p>
-  <p><span>最后更新:</span>2018年08月04日 - 11:08</p>
-  <p><span>原始链接:</span><a href="/2018/08/01/开发也要懂点算法-冒泡排序/" title="开发也要懂点算法-冒泡排序">http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年08月04日 - 18:08</p>
+  <p><span>最后更新:</span>2018年08月07日 - 11:08</p>
+  <p><span>原始链接:</span><a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" title="Java并发编程之线程(Thread)的状态和相关方法">http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -460,7 +468,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" <i class="fa fa-tag"></i> 算法</a>
+            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/并发/" <i class="fa fa-tag"></i> 并发</a>
+          
+            <a href="/tags/线程/" <i class="fa fa-tag"></i> 线程</a>
           
         </div>
       
@@ -473,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/29/面试总结-追致科技/" rel="next" title="面试总结-追致科技">
-                <i class="fa fa-chevron-left"></i> 面试总结-追致科技
+              <a href="/2018/08/03/Java并发编程之基础概念/" rel="next" title="Java并发编程之基础概念">
+                <i class="fa fa-chevron-left"></i> Java并发编程之基础概念
               </a>
             
           </div>
@@ -483,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/03/Java并发编程之基础概念/" rel="prev" title="Java并发编程之基础概念">
-                Java并发编程之基础概念 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/05/Java四种引用方式/" rel="prev" title="Java四种引用方式">
+                Java四种引用方式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -570,8 +582,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -652,6 +673,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中线程的六大状态"><span class="nav-number">2.</span> <span class="nav-text">Java中线程的六大状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

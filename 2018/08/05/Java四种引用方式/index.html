@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法," />
+  <meta name="keywords" content="Java,引用," />
 
 
 
@@ -81,15 +81,18 @@
 
 
 
-<meta name="keywords" content="算法">
+<meta name="description" content="引言今天在看ThreadLocal源码的时候，看到了内部有一个WeakReference类，不知道这是什么意思，一查原来代表的是Java里的弱引用，想到自己对引用这块比较模糊，就去看了一下有关引用的文章，然后写一个总结记录一下自己的新的。 Java四种引用Java四种引用的类型从JDK1.2版本起，Java把引用分为四个等级，平时我们用的最多的1Object object = new Object">
+<meta name="keywords" content="Java,引用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发也要懂点算法-冒泡排序">
-<meta property="og:url" content="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/index.html">
+<meta property="og:title" content="Java四种引用方式">
+<meta property="og:url" content="http://nastublog.com/2018/08/05/Java四种引用方式/index.html">
 <meta property="og:site_name" content="夏至微风">
+<meta property="og:description" content="引言今天在看ThreadLocal源码的时候，看到了内部有一个WeakReference类，不知道这是什么意思，一查原来代表的是Java里的弱引用，想到自己对引用这块比较模糊，就去看了一下有关引用的文章，然后写一个总结记录一下自己的新的。 Java四种引用Java四种引用的类型从JDK1.2版本起，Java把引用分为四个等级，平时我们用的最多的1Object object = new Object">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-04T03:30:02.404Z">
+<meta property="og:updated_time" content="2018-08-07T03:12:05.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发也要懂点算法-冒泡排序">
+<meta name="twitter:title" content="Java四种引用方式">
+<meta name="twitter:description" content="引言今天在看ThreadLocal源码的时候，看到了内部有一个WeakReference类，不知道这是什么意思，一查原来代表的是Java里的弱引用，想到自己对引用这块比较模糊，就去看了一下有关引用的文章，然后写一个总结记录一下自己的新的。 Java四种引用Java四种引用的类型从JDK1.2版本起，Java把引用分为四个等级，平时我们用的最多的1Object object = new Object">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/"/>
+  <link rel="canonical" href="http://nastublog.com/2018/08/05/Java四种引用方式/"/>
 
 
 
 
 
-  <title>开发也要懂点算法-冒泡排序 | 夏至微风</title>
+  <title>Java四种引用方式 | 夏至微风</title>
   
 
 
@@ -264,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/">
+    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/05/Java四种引用方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="なつ初夏倾城">
@@ -281,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开发也要懂点算法-冒泡排序</h1>
+          <h1 class="post-title" itemprop="name headline">Java四种引用方式</h1>
         
 
         <div class="post-meta">
@@ -293,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T10:23:14+08:00">
-                2018-08-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-05T16:53:21+08:00">
+                2018-08-05
               </time>
             
 
@@ -316,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -333,7 +336,7 @@
 
           
           
-             <span id="/2018/08/01/开发也要懂点算法-冒泡排序/" class="leancloud_visitors" data-flag-title="开发也要懂点算法-冒泡排序">
+             <span id="/2018/08/05/Java四种引用方式/" class="leancloud_visitors" data-flag-title="Java四种引用方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -361,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  2,252
                 </span>
               
 
@@ -377,7 +380,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
@@ -398,7 +401,27 @@
       
 
       
-        
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>今天在看ThreadLocal源码的时候，看到了内部有一个WeakReference类，不知道这是什么意思，一查原来代表的是Java里的弱引用，想到自己对引用这块比较模糊，就去看了一下有关引用的文章，然后写一个总结记录一下自己的新的。</p>
+<h1 id="Java四种引用"><a href="#Java四种引用" class="headerlink" title="Java四种引用"></a>Java四种引用</h1><h2 id="Java四种引用的类型"><a href="#Java四种引用的类型" class="headerlink" title="Java四种引用的类型"></a>Java四种引用的类型</h2><p>从JDK1.2版本起，Java把引用分为四个等级，平时我们用的最多的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object object = new Object()</span><br></pre></td></tr></table></figure></p>
+<p>就是四种里面的第一级别-强引用，而剩下的三中引用分别是软引用、弱引用和虚引用，这四个对内存的敏感程度分别为:强引用-软引用-弱引用-虚引用。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>Java为什么要给我们提供这四个引用呢，主要有两个目的：<br>1.可以让我们程序员通过代码决定对象的生命周期；<br>2.有利于JVM进行垃圾回收。</p>
+<p>下面我们就分别一一阐述这四种引用。</p>
+<h1 id="强引用-StrongReference）"><a href="#强引用-StrongReference）" class="headerlink" title="强引用(StrongReference）"></a>强引用(StrongReference）</h1><p>StrongReference只是对强引用的一种称呼，其他三种引用在Java中都有对应的类，但是强引用并没有。强引用是我们平时用的最多的、最普遍的引用类型。如下面这段代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object object = new Object();</span><br><span class="line">String str = &quot;hello&quot;;</span><br></pre></td></tr></table></figure></p>
+<p>其中obj和str都是强引用。<br>使用强引用的对象就算是内存出现OOM（OutOfMemory）的异常也不会回收。也就是说该对象永远不会被垃圾回收器回收，不论内存是否充足。</p>
+<p>可以看个Demo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package Refrence;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @Author: qixiang.shao</span><br><span class="line"> * @Description:</span><br><span class="line"> * @Date: Created in 17:12 2018/8/5</span><br><span class="line"> * @Modified By:</span><br><span class="line"> */</span><br><span class="line">public class StrongRefrence &#123;</span><br><span class="line">    static Object object = new Object();</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Object obj = object;</span><br><span class="line">        object = null;</span><br><span class="line">        System.gc();</span><br><span class="line">        System.out.print(&quot;after system.gc-strongReference---obj = &quot; + object);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>打印结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">after system.gc-strongReference---obj = java.lang.Object@60e53b93</span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure></p>
+<p>虽然obj所指向的对象被置为null,但gc不会回收该强引用对象.</p>
+<p>但是，我们可以显示的将引用赋值为null，弱化引用和对象之间的关联，这样gc就可以在合适的时间去回收这个对象，具体什么时候收集这要取决于gc的算法。<br>PS:Vector类的clear方法中就是通过将引用赋值为null来实现清理工作的,看一下源码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">    * Removes all of the elements from this Vector.  The Vector will</span><br><span class="line">    * be empty after this call returns (unless it throws an exception).</span><br><span class="line">    *</span><br><span class="line">    * @since 1.2</span><br><span class="line">    */</span><br><span class="line">   public void clear() &#123;</span><br><span class="line">       removeAllElements();</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">    /**</span><br><span class="line">    * Removes all components from this vector and sets its size to zero.</span><br><span class="line">    *</span><br><span class="line">    * &lt;p&gt;This method is identical in functionality to the &#123;@link #clear&#125;</span><br><span class="line">    * method (which is part of the &#123;@link List&#125; interface).</span><br><span class="line">    */</span><br><span class="line">   public synchronized void removeAllElements() &#123;</span><br><span class="line">       modCount++;</span><br><span class="line">       // Let gc do its work</span><br><span class="line">       for (int i = 0; i &lt; elementCount; i++)</span><br><span class="line">           elementData[i] = null;</span><br><span class="line"></span><br><span class="line">       elementCount = 0;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="软引用（SoftReference）"><a href="#软引用（SoftReference）" class="headerlink" title="软引用（SoftReference）"></a>软引用（SoftReference）</h1><p>软引用是用来描述一些有用但并不是必需的对象，在Java中用SoftReference类来表示<br>如果一个对象具有软引用，内存空间足够，垃圾回收器就不会回收它；<br>如果内存空间不足了，就会回收这些对象的内存。只要垃圾回收器没有回收它，该对象就可以被程序使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str=new String(&quot;abc&quot;);                                     // 强引用</span><br><span class="line">SoftReference&lt;String&gt; softRef=new SoftReference&lt;String&gt;(str);     // 软引用</span><br></pre></td></tr></table></figure></p>
+<p>上面这段代码中，str就是一个强引用，softRef就是一个软引用。<br>从软引用的定义可以看出，软引用十分适合用于实现类似缓存的功能，在内存足够的情况下直接通过软引用取值，无需从繁忙的真实来源查询数据，提升速度；当内存不足时，自动删除这部分缓存数据，从真正的来源查询这些数据。<br>实际上来说，Web浏览器的后退、前进就适合软引用，如果内存足够，就从缓存里取，省去了网页加载的时间，如果内存不足够，就重新加载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Browser prev = new Browser();               // 获取页面进行浏览</span><br><span class="line">SoftReference sr = new SoftReference(prev); // 浏览完毕后置为软引用        </span><br><span class="line">if(sr.get()!=null)&#123; </span><br><span class="line">    rev = (Browser) sr.get();           // 还没有被回收器回收，直接获取</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    prev = new Browser();               // 由于内存吃紧，所以对软引用的对象回收了</span><br><span class="line">    sr = new SoftReference(prev);       // 重新构建</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>软引用可以和一个引用队列（ReferenceQueue）联合使用，如果软引用所引用的对象被垃圾回收器回收，Java虚拟机就会把这个软引用加入到与之关联的引用队列中。</p>
+<h1 id="弱引用（WeakReference）"><a href="#弱引用（WeakReference）" class="headerlink" title="弱引用（WeakReference）"></a>弱引用（WeakReference）</h1><p>在强度上弱于软引用，通过类WeakReference来表示。它的作用是引用一个对象，但是并不阻止该对象被回收。如果使用一个强引用的话，只要该引用存在，那么被引用的对象是不能被回收的。弱引用则没有这个问题。在垃圾回收器线程扫描它所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程，因此不一定会很快发现那些只具有弱引用的对象。<br>弱引用最常见的用处是在集合类中，尤其在哈希表中。哈希表的接口允许使用任何Java对象作为键来使用。当一个键值对被放入到哈希表中之后，哈希表对象本身就有了对这些键和值对象的引用。如果这种引用是强引用的话，那么只要哈希表对象本身还存活，其中所包含的键和值对象是不会被回收的。如果某个存活时间很长的哈希表中包含的键值对很多，最终就有可能消耗掉JVM中全部的内存<br>对于这种情况的解决办法就是使用弱引用来引用这些对象，这样哈希表中的键和值对象都能被垃圾回收。Java中提供了WeakHashMap来满足这一常见需求。</p>
+<p>弱引用也可以和一个引用队列（ReferenceQueue）联合使用，如果软引用所引用的对象被垃圾回收器回收，Java虚拟机就会把这个软引用加入到与之关联的引用队列中。</p>
+<h1 id="虚引用"><a href="#虚引用" class="headerlink" title="虚引用"></a>虚引用</h1><p>虚引用，又被称为幽灵引用，顾名思义，就是形同虚设，与其他几种引用都不同，虚引用并不会决定对象的生命周期。如果一个对象仅持有虚引用，那么它就和没有任何引用一样，在任何时候都可能被垃圾回收器回收。<br>可以看一下虚引用的源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class PhantomReference&lt;T&gt; extends Reference&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Returns this reference object&apos;s referent.  Because the referent of a</span><br><span class="line">     * phantom reference is always inaccessible, this method always returns</span><br><span class="line">     * &lt;code&gt;null&lt;/code&gt;.</span><br><span class="line">     *</span><br><span class="line">     * @return  &lt;code&gt;null&lt;/code&gt;</span><br><span class="line">     */</span><br><span class="line">    public T get() &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Creates a new phantom reference that refers to the given object and</span><br><span class="line">     * is registered with the given queue.</span><br><span class="line">     *</span><br><span class="line">     * &lt;p&gt; It is possible to create a phantom reference with a &lt;tt&gt;null&lt;/tt&gt;</span><br><span class="line">     * queue, but such a reference is completely useless: Its &lt;tt&gt;get&lt;/tt&gt;</span><br><span class="line">     * method will always return null and, since it does not have a queue, it</span><br><span class="line">     * will never be enqueued.</span><br><span class="line">     *</span><br><span class="line">     * @param referent the object the new phantom reference will refer to</span><br><span class="line">     * @param q the queue with which the reference is to be registered,</span><br><span class="line">     *          or &lt;tt&gt;null&lt;/tt&gt; if registration is not required</span><br><span class="line">     */</span><br><span class="line">    public PhantomReference(T referent, ReferenceQueue&lt;? super T&gt; q) &#123;</span><br><span class="line">        super(referent, q);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，虚引用的创建必须和引用队列(ReferenceQueue)联合使用，当垃圾回收器准备回收一个对象时，如果发现它还有虚引用，就会在回收对象的内存之前，把这个虚引用加入到与之关联的引用队列中。这样子程序就可以通过判断引用队列中是否已经加入了虚引用，来了解被引用的对象是否将要被垃圾回收。如果程序发现某个虚引用已经被加入到引用队列，那么就可以在所引用的对象的内存被回收之前采取必要的行动。<br>虚引用主要用于对象销毁前的一些操作，比如说资源释放等。为什么不用finalize，因为这个方法既不安全又低效，具体可以参考<a href="https://blog.csdn.net/aitangyong/article/details/39450341" target="_blank" rel="noopener">Effective Java Item7:Avoid Finalizers,解释为什么finalize是不安全的，不建议使用</a>。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这篇文章只是大致粗略介绍了一下四种引用，关于其详细用法和具体应用场景并没有过多描述，还有比较重要的引用队列(ReferenceQueue)的使用方法也没有具体提交，等博主好好研究一下再来完善这篇文章。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://www.cnblogs.com/gudi/p/6403953.html" target="_blank" rel="noopener">Java 的强引用、弱引用、软引用、虚引用</a><br><a href="https://www.cnblogs.com/mjorcen/p/3968018.html" target="_blank" rel="noopener">java中四种引用类型</a></p>
+
       
     </div>
     
@@ -414,12 +437,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/08/01/开发也要懂点算法-冒泡排序/">开发也要懂点算法-冒泡排序</a></p>
+  <p><span>本文标题:</span><a href="/2018/08/05/Java四种引用方式/">Java四种引用方式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
-  <p><span>发布时间:</span>2018年08月01日 - 10:08</p>
-  <p><span>最后更新:</span>2018年08月04日 - 11:08</p>
-  <p><span>原始链接:</span><a href="/2018/08/01/开发也要懂点算法-冒泡排序/" title="开发也要懂点算法-冒泡排序">http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/01/开发也要懂点算法-冒泡排序/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年08月05日 - 16:08</p>
+  <p><span>最后更新:</span>2018年08月07日 - 11:08</p>
+  <p><span>原始链接:</span><a href="/2018/08/05/Java四种引用方式/" title="Java四种引用方式">http://nastublog.com/2018/08/05/Java四种引用方式/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/05/Java四种引用方式/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -460,7 +483,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" <i class="fa fa-tag"></i> 算法</a>
+            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/引用/" <i class="fa fa-tag"></i> 引用</a>
           
         </div>
       
@@ -473,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/29/面试总结-追致科技/" rel="next" title="面试总结-追致科技">
-                <i class="fa fa-chevron-left"></i> 面试总结-追致科技
+              <a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" rel="next" title="Java并发编程之线程(Thread)的状态和相关方法">
+                <i class="fa fa-chevron-left"></i> Java并发编程之线程(Thread)的状态和相关方法
               </a>
             
           </div>
@@ -483,8 +508,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/03/Java并发编程之基础概念/" rel="prev" title="Java并发编程之基础概念">
-                Java并发编程之基础概念 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/08/synchronized/" rel="prev" title="synchronized关键字详解">
+                synchronized关键字详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -570,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -652,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java四种引用"><span class="nav-number">2.</span> <span class="nav-text">Java四种引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java四种引用的类型"><span class="nav-number">2.1.</span> <span class="nav-text">Java四种引用的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">2.2.</span> <span class="nav-text">作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强引用-StrongReference）"><span class="nav-number">3.</span> <span class="nav-text">强引用(StrongReference）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软引用（SoftReference）"><span class="nav-number">4.</span> <span class="nav-text">软引用（SoftReference）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弱引用（WeakReference）"><span class="nav-number">5.</span> <span class="nav-text">弱引用（WeakReference）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚引用"><span class="nav-number">6.</span> <span class="nav-text">虚引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

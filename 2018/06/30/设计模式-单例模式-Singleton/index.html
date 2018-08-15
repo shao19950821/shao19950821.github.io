@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="夏至微风">
 <meta property="og:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。 单例模式的使用场景在一个系统中，要求一个类有且仅能有一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T13:48:07.694Z">
+<meta property="og:updated_time" content="2018-08-07T03:23:37.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-单例模式(Singleton)">
 <meta name="twitter:description" content="引言这里举个例子，古代的时候，一般只会有一个皇帝，比如秦朝。可以这样理解，皇帝是一个类，秦始皇则是一个对象实例。只会有一个皇帝实例，不然就乱套了，这在代码设计的思想中，就被称之为单例模式（Singleton Pattern）。 单例模式的定义和使用场景定义单例模式，定义如下:确保某一个类只有一个实例，并且自行实例化并向整个系统提供这个实例。 单例模式的使用场景在一个系统中，要求一个类有且仅能有一个">
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,911
+                  2,117
                 </span>
               
 
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  8
                 </span>
               
             </div>
@@ -425,9 +425,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                instance = new Singleton();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>但是这种同步并不能起到线程同步的作用。跟第3种实现方式遇到的情形一致，假如一个线程进入了if (singleton == null)判断语句块，还未来得及往下执行，另一个线程也通过了这个判断语句，这时便会产生多个实例。</p>
 <p>为了解决这个问题，可以采取双重加锁，就是在同步代码块内部在进行一次判断，杜绝这个问题的产生：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">            		 if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;            </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种方法在多线程的开发中被称之为Double-Check双重检查，这样实现单例模式的方法，不仅具备了懒汉式延时加载，资源占用较少的有点，也避免了线程不安全以及同步方法效率低的缺点，是比较推荐的方式。</p>
-<p>单例模式还有其他的实现方式，比如静态内部类、枚举等，单都不如上面常见，在此不一一列举，如有兴趣，可以参考以下Blog:<br><br><a href="https://www.cnblogs.com/zhaoyan001/p/6365064.html" target="_blank" rel="noopener">单例模式的八种写法比较</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private static volatile Singleton instance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">            		 if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;            </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方法在多线程的开发中被称之为Double-Check双重检查，这样实现单例模式的方法，不仅具备了懒汉式延时加载，资源占用较少的有点，也避免了线程不安全以及同步方法效率低的缺点，是比较推荐的方式。<br>这里采用了volatile关键字保证了instance的可见性，因为Java在运行过程中分主内存和工作内存，为了效率，都是从工作内存中去读取，于是就有可能存在主内存和工作内存不一样的情况，volatile关键字的加上避免了这种情况，但是volatile不可以保证原子性，具体的话可以参考一下网上关于volatile的解析，这里不做过多解释。</p>
+<p>单例模式还有其他的实现方式，比如静态内部类、枚举等，在这里Po一下枚举的写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    public void whateverMethod() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>借助JDK1.5中添加的枚举来实现单例模式。不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象。可能是因为枚举在JDK1.5中才添加，所以在实际项目开发中，很少见人这么写过。<br>这里可以参考Blog：<br><a href="https://www.cnblogs.com/zhaoyan001/p/6365064.html" target="_blank" rel="noopener">单例模式的八种写法比较</a></p>
 <h1 id="多例模式"><a href="#多例模式" class="headerlink" title="多例模式"></a>多例模式</h1><p>一个类想要有多个对象，很简单，new关键字就可以实现，一个类如果想只有一个对象，则可以使用单例模式，但是一个类如果想产生指定个数的对象，又该如何实现呢？<br><br>这里提供一个思路，在类里定义一个静态int变量，用来表明最多能产生的实例数量，然后定义一个List用来存放产生的对象，然后在类的静态代码块里写生成对象的逻辑，这样就可以实现一个类产生指定个数的对象。(同样，这是在类加载的时候就产生实例的)<br><br>这里举一个皇帝类作为代码的时候，具体可参照《设计模式之禅》第七章《单例模式》。</p>
 <p>代码实现如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class Emperor &#123;</span><br><span class="line">    private static int maxEmperorNum = 2;</span><br><span class="line"></span><br><span class="line">    private static int numOfEmperorNum = 0;</span><br><span class="line"></span><br><span class="line">    private static List&lt;Emperor&gt; emperorList = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    private static List&lt;String&gt; emperorNameList = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        for (int i = 0; i &lt; maxEmperorNum; i++) &#123;</span><br><span class="line">            emperorList.add(new Emperor(&quot;皇&quot; + （i+1） + &quot;帝&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Emperor() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Emperor(String emperorName) &#123;</span><br><span class="line">        emperorNameList.add(emperorName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 随机取得一个皇帝</span><br><span class="line">    public static Emperor getInstance() &#123;</span><br><span class="line">        Random random = new Random();</span><br><span class="line">        int numOfEmperorNum = random.nextInt(maxEmperorNum);</span><br><span class="line">        return emperorList.get(numOfEmperorNum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void say() &#123;</span><br><span class="line">        System.out.println(emperorNameList.get(numOfEmperorNum));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><p>单例模式是23个设计模式中比较简单的模式，应用也很广泛，最最常见的，Spring中的Bean就是单例的。Spring可以管理这些Bean，决定他们什么时候创建，什么时候销毁。</p>
@@ -599,7 +600,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +611,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -621,7 +622,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -638,6 +639,16 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shao19950821" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -699,7 +710,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.6k字</span>
+  <span class="post-count">博客全站共28.8k字</span>
 </div>
 
 <!--

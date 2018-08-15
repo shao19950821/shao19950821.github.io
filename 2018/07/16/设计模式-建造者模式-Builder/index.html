@@ -90,7 +90,7 @@
 <meta property="og:description" content="引言之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。 建造者模式的定义建造者模式（Builder Pattern）的定义如下:将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/builder.jpg">
-<meta property="og:updated_time" content="2018-08-04T03:29:51.126Z">
+<meta property="og:updated_time" content="2018-08-07T03:29:56.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-建造者模式(Builder)">
 <meta name="twitter:description" content="引言之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。 建造者模式的定义建造者模式（Builder Pattern）的定义如下:将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创">
@@ -406,7 +406,7 @@
         <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>之前在看《Effective Java》的时候，说到对象属性比较复杂的时候考虑使用构建器构造对象，加上StringBuilder类源码的阅读，让我对建造者模式有了一定的了解，乘着刚看完《设计模式之禅》有关于建造者模式的章节，以及阅读了几位大佬的博客，写了这篇文章。</p>
 <h1 id="建造者模式的定义"><a href="#建造者模式的定义" class="headerlink" title="建造者模式的定义"></a>建造者模式的定义</h1><p>建造者模式（Builder Pattern）的定义如下:<br><br>将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创建不同的表示，这样的设计模式被称为建造者模式。</p>
 <p>建造者模式具体的UML类图如下:<br><img src="/2018/07/16/设计模式-建造者模式-Builder/builder.jpg" alt="建造者模式"></p>
-<p>在建造者模式中，有如下四个角色，在这里，我们用一个土豪定制自己的跑车的实例，分别对着四个角色进行描述:<br><br>1.Product 产品类<br>代表着具体的产品，比如，土豪的跑车，跑车有着轮胎、引擎，车身等等多重属性，一般产品类还可以联合模板方法模式，也就是说有模板方法和基本方法，这个具体可以参考模板模式，之后会写一篇专门介绍。</p>
+<p>在建造者模式中，有如下四个角色，在这里，我们用一个土豪定制自己的跑车的实例，分别对着四个角色进行描述:<br><br>1.Product 产品类<br>代表着具体的产品，比如，土豪的跑车，跑车有着轮胎、引擎、车身等等多重属性，一般产品类还可以联合模板方法模式，也就是说有模板方法和基本方法，这个具体可以参考模板模式，之后会写一篇专门介绍。</p>
 <p>2.Builder 抽象建造者<br>用来规范产品的组建，而一般产品的组建是由其子类实现。在这个例子，我们可以理解为所有提供组装跑车的工厂。</p>
 <p>3.ConcreteBuilder 具体建造者<br>实现抽象建造者定义的所有方法，并且返回一个已经组装好的对象。比如，我们这个土豪想定制一台劳斯莱斯的跑车，就需要一个专门定制劳斯莱斯跑车的工厂。</p>
 <p>4.Director 导演类<br>负责安排已有建造顺序，并且找到对应的具体建造者。我们土豪肯定不会大费周折的去找一个劳斯莱斯的跑车工厂，所以，他会去找一个专门提供跑车定制的门店，由这个门店联系工厂，告诉工厂土豪需要什么样的跑车。</p>
@@ -423,7 +423,7 @@
 <p>下面是我们程序的输出结果:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">我要去买车了</span><br><span class="line">老板来一辆车</span><br><span class="line">找到组装工厂</span><br><span class="line">车组装好了：</span><br><span class="line">看看我的新车吧：</span><br><span class="line">品牌是：劳斯莱斯</span><br><span class="line">轮胎是：米其林轮胎</span><br><span class="line">车身是：流线型车声</span><br><span class="line">发动机是: 涡轮发动机</span><br></pre></td></tr></table></figure></p>
 <p>好了，至此，我们土豪买车的过程到此结束。</p>
 <h1 id="建造者模式的应用"><a href="#建造者模式的应用" class="headerlink" title="建造者模式的应用"></a>建造者模式的应用</h1><h2 id="建造者模式的优点"><a href="#建造者模式的优点" class="headerlink" title="建造者模式的优点"></a>建造者模式的优点</h2><p>1.封装性<br>使用建造者模式，可以让客户端不必知道产品内部的组成细节。<br>2.易于扩展<br>具体建造者ConcreteBuilder之间是相互独立的，易于扩展。<br>3.便于控制细节风险<br>由于具体的建造者式独立的，因此可以对建造的过程逐步细化，而不会对其他的模块产生影响。</p>
-<h2 id="建造者模式的缺点"><a href="#建造者模式的缺点" class="headerlink" title="建造者模式的缺点"></a>建造者模式的缺点</h2><p>1.如果产品内部变化十分复杂的话，就会需要定义许多具体的建造者来满足这些变化，这样会让系统变得十分庞大。<br>2，适用范围有限，一般要求所创建的产品具有较多的共同点。</p>
+<h2 id="建造者模式的缺点"><a href="#建造者模式的缺点" class="headerlink" title="建造者模式的缺点"></a>建造者模式的缺点</h2><p>1.如果产品内部变化十分复杂的话，就会需要定义许多具体的建造者来满足这些变化，这样会让系统变得十分庞大。<br>2.适用范围有限，一般要求所创建的产品具有较多的共同点。</p>
 <h2 id="建造者模式的使用场景"><a href="#建造者模式的使用场景" class="headerlink" title="建造者模式的使用场景"></a>建造者模式的使用场景</h2><p>1.相同的方法，不同的执行顺序，产生不同的事件结果时，就可以采用建造者模式。<br>2.需要生成的产品内部结构复杂，但是这些产品之间又具有一定的共性；<br>总之，就是在需要隔离复杂对象的创建，并且这些对象之间有相同的共性，而且不同的创建顺序会得到不同的结果的时候，就可以用到建造者模式了。</p>
 <h1 id="建造者模式的总结"><a href="#建造者模式的总结" class="headerlink" title="建造者模式的总结"></a>建造者模式的总结</h1><p>建造者模式虽然和工厂模式同为创建型的设计模式，但本质上存在着的一定的区别，建造者模式关注的时装配的顺序，也就是说基本的方法已经实现，只是方法执行顺序不同产生的结果不同。而工厂方法的重点则是创建，创建零件是其主要职责，而装配的顺序并不是其所关心的。</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/lmb55/article/details/50990732" target="_blank" rel="noopener">大话设计模式—建造者模式</a><br><a href="https://blog.csdn.net/carson_ho/article/details/54910597" target="_blank" rel="noopener">建造者模式（Builder Pattern）- 最易懂的设计模式解析</a><br><a href="https://blog.csdn.net/u013256816/article/details/50978024" target="_blank" rel="noopener">设计模式：建造者模式（Builder）</a></p>
@@ -446,7 +446,7 @@
   <p><span>本文标题:</span><a href="/2018/07/16/设计模式-建造者模式-Builder/">设计模式-建造者模式(Builder)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
   <p><span>发布时间:</span>2018年07月16日 - 22:07</p>
-  <p><span>最后更新:</span>2018年08月04日 - 11:08</p>
+  <p><span>最后更新:</span>2018年08月07日 - 11:08</p>
   <p><span>原始链接:</span><a href="/2018/07/16/设计模式-建造者模式-Builder/" title="设计模式-建造者模式(Builder)">http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/07/16/设计模式-建造者模式-Builder/"  aria-label="复制成功！"></i></span>
   </p>
@@ -628,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -639,7 +639,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -650,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -667,6 +667,16 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shao19950821" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -728,7 +738,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.6k字</span>
+  <span class="post-count">博客全站共28.8k字</span>
 </div>
 
 <!--

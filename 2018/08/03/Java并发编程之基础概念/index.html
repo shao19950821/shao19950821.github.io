@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/并发和并行.png">
 <meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/临界区.png">
 <meta property="og:image" content="http://nastublog.com/2018/08/03/Java并发编程之基础概念/同步和异步.png">
-<meta property="og:updated_time" content="2018-08-04T07:35:38.310Z">
+<meta property="og:updated_time" content="2018-08-07T03:25:10.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java并发编程之基础概念">
 <meta name="twitter:description" content="引言最近还是一直在准备面试这块的内容，大多数互联网公司面试，避免不了的会问到并发这块的内容，所以，准备写几篇Blog来总结一下Java并发方面知识，于是就先写一篇最基础的，也就是并发编程中涉及到的基础概念，因为主要是想到什么写什么，所以可能会有遗漏，就当看个热闹吧。这边文章参考了网上众多文章，并加上了自己的理解，也可能会有理解不周到的地方，如有错误，请及时指出。 进程和线程定义进程(Process">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,489
+                  4,492
                 </span>
               
 
@@ -492,7 +492,7 @@
 <h3 id="死锁的四个条件"><a href="#死锁的四个条件" class="headerlink" title="死锁的四个条件"></a>死锁的四个条件</h3><p>1.互斥条件：线程使用的资源必须至少有一个是不能共享的（至少有锁）；<br>2.请求与保持条件：至少有一个线程必须持有一个资源并且正在等待获取一个当前被其它线程持有的资源（至少两个线程持有不同锁，又在等待对方持有锁）；<br>3.非剥夺条件：分配资源不能从相应的线程中被强制剥夺（不能强行获取被其他线程持有锁）；<br>4.循环等待条件：第一个线程等待其它线程，后者又在等待第一个线程（线程A等线程B；线程B等线程C;…;线程N等线程A。如此形成环路）。</p>
 <h3 id="避免死锁的方法"><a href="#避免死锁的方法" class="headerlink" title="避免死锁的方法"></a>避免死锁的方法</h3><p>1.尽可能减少锁的范围，如在Java中尽量使用同步代码块而不使用同步方法；<br>2.尽量不编写在同一时刻获取多个锁的代码，因为在一个线程持有多个资源的时候很容易发生死锁；<br>3.根据情况将过大范围的锁进行切分，让每个锁的作用范围减小，从而降低死锁发生的概率。这以原则的典型应用是ConcurrentHashMap的锁分段技术。</p>
 <h2 id="饥饿"><a href="#饥饿" class="headerlink" title="饥饿"></a>饥饿</h2><p>饥饿是指某一个或者多个线程因为种种原因无法获得所需要的资源，导致一直无法执行。<br>产生这种情况的原因是多种的，可能是它的线程优先级太低，而高优先级的线程不抢占它需要的资源，导致低优先级线程无法工作。也可能是某个线程一直占着关键资源不放，导致其他需要这个资源的线程无法正常执行。</p>
-<h2 id="活锁"><a href="#活锁" class="headerlink" title="活锁"></a>活锁</h2><p>活锁指的是线程不断重复执行相同的操作，但每次操作的结果都是失败的。尽管这个问题不会阻塞线程，但是程序也无法继续执行。<br>举个现实生活中的例子，，一条狭窄的道路，A 和 B 迎面相遇了，缘分使然，A绅士的想让出道路让B先过，这时B也保持良好的淑女形象想让出道路让A先过，导致两人都避让了；两人尴尬一笑，之后A想着B既然让了，就准备先过，巧的是，这时B心里也想着，A既然让了，不如先过，两人又撞上了；然后又开始礼貌性的相互避让，避让之后各自又想先走结果又撞上了，结果两人都没过去。这种情况就是活锁。<br>线程都秉承着”谦让”的原则，主动将资源释放给他人使用，那么就会出现资源不断在两个线程之间跳动，而没有一个线程可以同时拿到所有资源而正常执行。<br>活锁通常发生在处理事务消息的应用程序中，如果不能成功处理这个事务那么事务将回滚整个操作。解决活锁的办法是在每次重复执行的时候引入随机机制，这样由于出现的可能性不同使得程序可以继续执行其他的任务。</p>
+<h2 id="活锁"><a href="#活锁" class="headerlink" title="活锁"></a>活锁</h2><p>活锁指的是线程不断重复执行相同的操作，但每次操作的结果都是失败的。尽管这个问题不会阻塞线程，但是程序也无法继续执行。<br>举个现实生活中的例子，一条狭窄的道路，男子A和女子B迎面相遇了，缘分使然，A绅士的想让出道路让B先过，这时B也保持良好的淑女形象想让出道路让A先过，导致两人都避让了；两人尴尬一笑，之后A想着B既然让了，就准备先过，巧的是，这时B心里也想着，A既然让了，不如先过，两人又撞上了；然后又开始礼貌性的相互避让，避让之后各自又想先走结果又撞上了，结果两人都没过去。这种情况就是活锁。<br>线程都秉承着”谦让”的原则，主动将资源释放给他人使用，那么就会出现资源不断在两个线程之间跳动，而没有一个线程可以同时拿到所有资源而正常执行。<br>活锁通常发生在处理事务消息的应用程序中，如果不能成功处理这个事务那么事务将回滚整个操作。解决活锁的办法是在每次重复执行的时候引入随机机制，这样由于出现的可能性不同使得程序可以继续执行其他的任务。</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>本文参考众多文章总计而成，这里参考太多，所以只列举比较重要的几篇文章。<br><a href="http://www.androidchina.net/2987.html" target="_blank" rel="noopener">Java多线程和并发性知识点总结</a><br><a href="https://www.cnblogs.com/study-everyday/p/6856807.html" target="_blank" rel="noopener">并发编程的几个概念</a><br><a href="https://www.jianshu.com/p/aed6067eeac9" target="_blank" rel="noopener">聊聊同步、异步、阻塞与非阻塞</a></p>
 
       
@@ -513,7 +513,7 @@
   <p><span>本文标题:</span><a href="/2018/08/03/Java并发编程之基础概念/">Java并发编程之基础概念</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
   <p><span>发布时间:</span>2018年08月03日 - 10:08</p>
-  <p><span>最后更新:</span>2018年08月04日 - 15:08</p>
+  <p><span>最后更新:</span>2018年08月07日 - 11:08</p>
   <p><span>原始链接:</span><a href="/2018/08/03/Java并发编程之基础概念/" title="Java并发编程之基础概念">http://nastublog.com/2018/08/03/Java并发编程之基础概念/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/03/Java并发编程之基础概念/"  aria-label="复制成功！"></i></span>
   </p>
@@ -580,6 +580,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" rel="prev" title="Java并发编程之线程(Thread)的状态和相关方法">
+                Java并发编程之线程(Thread)的状态和相关方法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -693,7 +697,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -704,7 +708,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -715,7 +719,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -732,6 +736,16 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shao19950821" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -793,7 +807,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.6k字</span>
+  <span class="post-count">博客全站共28.8k字</span>
 </div>
 
 <!--
