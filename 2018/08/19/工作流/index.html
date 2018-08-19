@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,并发,线程," />
+  <meta name="keywords" content="工作流,Activiti,BPMN," />
 
 
 
@@ -81,18 +81,22 @@
 
 
 
-<meta name="description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
-<meta name="keywords" content="Java,并发,线程">
+<meta name="description" content="从开始接手现在项目的流程开发到现在，也算接触了大半年的工作流引擎，很长一段时间内，都是为了完成任务式的去编写代码，没有对其有一个更深入的思考，知道去百世汇通面试回来，面试过程中，面试官也没有多问技术上的问题，而是一直在问实现方式、以及为什么要这么实现?其中印象比较深的一个问题就是，你们为什么要引入工作流引擎，它的意义在哪。 面试官首先提出，你所说的业务场景，我用一般的方法都可以实现，为什么还要用工">
+<meta name="keywords" content="工作流,Activiti,BPMN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java并发编程之线程(Thread)的状态和相关方法">
-<meta property="og:url" content="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/index.html">
+<meta property="og:title" content="工作流引擎">
+<meta property="og:url" content="http://nastublog.com/2018/08/19/工作流/index.html">
 <meta property="og:site_name" content="夏至微风">
-<meta property="og:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
+<meta property="og:description" content="从开始接手现在项目的流程开发到现在，也算接触了大半年的工作流引擎，很长一段时间内，都是为了完成任务式的去编写代码，没有对其有一个更深入的思考，知道去百世汇通面试回来，面试过程中，面试官也没有多问技术上的问题，而是一直在问实现方式、以及为什么要这么实现?其中印象比较深的一个问题就是，你们为什么要引入工作流引擎，它的意义在哪。 面试官首先提出，你所说的业务场景，我用一般的方法都可以实现，为什么还要用工">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T03:34:25.066Z">
+<meta property="og:image" content="http://nastublog.com/2018/08/19/工作流/workflow.png">
+<meta property="og:image" content="http://nastublog.com/2018/08/19/工作流/workflow2.png">
+<meta property="og:image" content="http://nastublog.com/2018/08/19/工作流/workflow3.png">
+<meta property="og:updated_time" content="2018-08-19T15:13:14.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java并发编程之线程(Thread)的状态和相关方法">
-<meta name="twitter:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
+<meta name="twitter:title" content="工作流引擎">
+<meta name="twitter:description" content="从开始接手现在项目的流程开发到现在，也算接触了大半年的工作流引擎，很长一段时间内，都是为了完成任务式的去编写代码，没有对其有一个更深入的思考，知道去百世汇通面试回来，面试过程中，面试官也没有多问技术上的问题，而是一直在问实现方式、以及为什么要这么实现?其中印象比较深的一个问题就是，你们为什么要引入工作流引擎，它的意义在哪。 面试官首先提出，你所说的业务场景，我用一般的方法都可以实现，为什么还要用工">
+<meta name="twitter:image" content="http://nastublog.com/2018/08/19/工作流/workflow.png">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/"/>
+  <link rel="canonical" href="http://nastublog.com/2018/08/19/工作流/"/>
 
 
 
 
 
-  <title>Java并发编程之线程(Thread)的状态和相关方法 | 夏至微风</title>
+  <title>工作流引擎 | 夏至微风</title>
   
 
 
@@ -267,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/">
+    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/19/工作流/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="なつ初夏倾城">
@@ -284,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java并发编程之线程(Thread)的状态和相关方法</h1>
+          <h1 class="post-title" itemprop="name headline">工作流引擎</h1>
         
 
         <div class="post-meta">
@@ -296,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-04T18:55:02+08:00">
-                2018-08-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T15:57:16+08:00">
+                2018-08-19
               </time>
             
 
@@ -319,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/并发/" itemprop="url" rel="index">
-                    <span itemprop="name">并发</span>
+                  <a href="/categories/Activiti/" itemprop="url" rel="index">
+                    <span itemprop="name">Activiti</span>
                   </a>
                 </span>
 
@@ -336,7 +340,7 @@
 
           
           
-             <span id="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" class="leancloud_visitors" data-flag-title="Java并发编程之线程(Thread)的状态和相关方法">
+             <span id="/2018/08/19/工作流/" class="leancloud_visitors" data-flag-title="工作流引擎">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  637
+                  1,224
                 </span>
               
 
@@ -380,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -401,11 +405,27 @@
       
 
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。</p>
-<h1 id="Java中线程的六大状态"><a href="#Java中线程的六大状态" class="headerlink" title="Java中线程的六大状态"></a>Java中线程的六大状态</h1><p>在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMINATED。<br>下面就是Thread类描述线程状态的源码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">public enum State &#123;</span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread which has not yet started.</span><br><span class="line">         */</span><br><span class="line">        NEW,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a runnable thread.  A thread in the runnable</span><br><span class="line">         * state is executing in the Java virtual machine but it may</span><br><span class="line">         * be waiting for other resources from the operating system</span><br><span class="line">         * such as processor.</span><br><span class="line">         */</span><br><span class="line">        RUNNABLE,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a thread blocked waiting for a monitor lock.</span><br><span class="line">         * A thread in the blocked state is waiting for a monitor lock</span><br><span class="line">         * to enter a synchronized block/method or</span><br><span class="line">         * reenter a synchronized block/method after calling</span><br><span class="line">         * &#123;@link Object#wait() Object.wait&#125;.</span><br><span class="line">         */</span><br><span class="line">        BLOCKED,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread.</span><br><span class="line">         * A thread is in the waiting state due to calling one of the</span><br><span class="line">         * following methods:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait() Object.wait&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join() Thread.join&#125; with no timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#park() LockSupport.park&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         *</span><br><span class="line">         * &lt;p&gt;A thread in the waiting state is waiting for another thread to</span><br><span class="line">         * perform a particular action.</span><br><span class="line">         *</span><br><span class="line">         * For example, a thread that has called &lt;tt&gt;Object.wait()&lt;/tt&gt;</span><br><span class="line">         * on an object is waiting for another thread to call</span><br><span class="line">         * &lt;tt&gt;Object.notify()&lt;/tt&gt; or &lt;tt&gt;Object.notifyAll()&lt;/tt&gt; on</span><br><span class="line">         * that object. A thread that has called &lt;tt&gt;Thread.join()&lt;/tt&gt;</span><br><span class="line">         * is waiting for a specified thread to terminate.</span><br><span class="line">         */</span><br><span class="line">        WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a waiting thread with a specified waiting time.</span><br><span class="line">         * A thread is in the timed waiting state due to calling one of</span><br><span class="line">         * the following methods with a specified positive waiting time:</span><br><span class="line">         * &lt;ul&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #sleep Thread.sleep&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link Object#wait(long) Object.wait&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link #join(long) Thread.join&#125; with timeout&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkNanos LockSupport.parkNanos&#125;&lt;/li&gt;</span><br><span class="line">         *   &lt;li&gt;&#123;@link LockSupport#parkUntil LockSupport.parkUntil&#125;&lt;/li&gt;</span><br><span class="line">         * &lt;/ul&gt;</span><br><span class="line">         */</span><br><span class="line">        TIMED_WAITING,</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * Thread state for a terminated thread.</span><br><span class="line">         * The thread has completed execution.</span><br><span class="line">         */</span><br><span class="line">        TERMINATED;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>NEW(初始):新创建了一个线程对象，但还没有调用start()方法。<br>RUNNABLE(运行):很多文章都有提到过线程在运行前有个READY(就绪),运行中则是RUNNING(运行中)，Java中将READY和RUNNING笼统的称为RUNNABLE。创建了线程对象后，其他线程(比如主线程main)调用了该线程对象的start()方法</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/GooPolaris/p/8079490.html" target="_blank" rel="noopener">Java中一个线程只有六个状态。至于阻塞、可运行、挂起状态都是人们为了便于理解，自己加上去的。</a></p>
+        <p>从开始接手现在项目的流程开发到现在，也算接触了大半年的工作流引擎，很长一段时间内，都是为了完成任务式的去编写代码，没有对其有一个更深入的思考，知道去百世汇通面试回来，面试过程中，面试官也没有多问技术上的问题，而是一直在问实现方式、以及为什么要这么实现?其中印象比较深的一个问题就是，你们为什么要引入工作流引擎，它的意义在哪。</p>
+<p>面试官首先提出，你所说的业务场景，我用一般的方法都可以实现，为什么还要用工作流?</p>
+<p>当时我也比较懵逼，但是，随着面试官的循循善诱式的发问，我逐渐了解到了工作流引擎的意义。</p>
+<p>首先，我们要明白，工作流是什么？工作流(Workflow)，就是业务过程的部分或整体在计算机应用环境下的自动化。是对工作流程及各操作步骤之间的业务规则的抽象、概括描述。</p>
+<p>工作流主要解决的问题就是：在一个业务流程中，为了实现某一个业务目标，利用计算机在多个参与者之间按照一开始制定好的规则自动传递文档、信息或者任务。</p>
+<p>工作流引擎就是将工作流作为业务应用系统的一部分，解决包括流程设计、流程流转、节点管理等功能。</p>
+<p>说到这里，可能有的人已经明白，工作流引擎引入的意义就是将业务逻辑和流程处理逻辑分离，没错，大概上就是这么个意思。</p>
+<p>我们可以举个例子(这里引用的是CSDN知名博主的例子)：</p>
+<p><img src="/2018/08/19/工作流/workflow.png" alt=""></p>
+<p>这是一个比较简单的业务流程，实现了订货这个需求：</p>
+<p>1.首先由客户提交采购的订单；<br>2.然后由业务员执行订单处理，这边流程产生了分支，也就是不同条件的流向不同；<br>3.如果缺货，先是通知工厂生产，然后仓库出货；<br>4.如果货物尚有存余，则仓库直接出货；<br>5.由物流发货</p>
+<p>我们可以思考一下，如果我们不使用工作流技术，去开发这个流程的业务逻辑，需要做什么，这么做又有什么问题?</p>
+<p>1.首先，针对这个流程中的每一个活动，我们都需要单独为其编写处理逻辑，以及前台交互页面；<br>2.每个节点办理完成后，到下一个节点之前，我们都需要编写代码去判断当前条件，以及设置下一个节点的审批人；<br>3.每次操作都需要我们去修改业务数据和流程数据。    </p>
+<p>最终结果就如下图:<br><img src="/2018/08/19/工作流/workflow2.png" alt=""></p>
+<p>好的，后期我们流程发生了变更，新加了一个活动节点，我们又需要为其编写额外代码实现其逻辑，不仅如此，新加入的节点还会对之前已有的节点代码产生影响，比如加在了A和B之间，A原本指定下个节点审批人的代码肯定需要修改，不仅繁琐，而且维护麻烦。</p>
+<p>但是，如果我们使用了工作流技术，会产生什么样的变化？</p>
+<p><img src="/2018/08/19/工作流/workflow3.png" alt=""></p>
+<p>从上图可以看出，引入了工作流引擎后，实现了业务逻辑和流程数据的分离:</p>
+<p>1.工作流引擎专门去维护流程的数据，不需要我们在编写业务代码的时候还去维护流程数据；<br>2.现在大部分的流程引擎，都提供了流程设计工具，让我们基于可视化的页面去配置业务流程的节点和流转方向；<br>3.大多数工作流引擎都提供了众多api方便我们进行二次开发，比如activiti，现在所在的项目就基于activiti的api开发了许多额外扩展功能。</p>
+<p>所以说，项目中引入工作流，对于基础开发来说，十分有益处：<br>1.降低了开发风险，减少了业务人员通技术沟通交流的成本，节点、活动、状态、流转这种术语，技术同业务都能理解；<br>2.加快开发，开发者不必再去手动设置流程的参与者、节点的链接等等，这些都交给了流程引擎去实现；<br>3.降低了需求变更的风险，因为流程可以重新部署，所以就算之后流程发生了改变，也不需要大面积的去修改代码。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/xiaoxian8023/article/details/34468739" target="_blank" rel="noopener">从程序员的角度来看为什么我们需要工作流</a></p>
 
       
     </div>
@@ -422,12 +442,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/">Java并发编程之线程(Thread)的状态和相关方法</a></p>
+  <p><span>本文标题:</span><a href="/2018/08/19/工作流/">工作流引擎</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
-  <p><span>发布时间:</span>2018年08月04日 - 18:08</p>
-  <p><span>最后更新:</span>2018年08月07日 - 11:08</p>
-  <p><span>原始链接:</span><a href="/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/" title="Java并发编程之线程(Thread)的状态和相关方法">http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/04/Java并发编程之线程-Thread-的状态和相关方法/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年08月19日 - 15:08</p>
+  <p><span>最后更新:</span>2018年08月19日 - 23:08</p>
+  <p><span>原始链接:</span><a href="/2018/08/19/工作流/" title="工作流引擎">http://nastublog.com/2018/08/19/工作流/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/19/工作流/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -468,11 +488,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
+            <a href="/tags/工作流/" <i class="fa fa-tag"></i> 工作流</a>
           
-            <a href="/tags/并发/" <i class="fa fa-tag"></i> 并发</a>
+            <a href="/tags/Activiti/" <i class="fa fa-tag"></i> Activiti</a>
           
-            <a href="/tags/线程/" <i class="fa fa-tag"></i> 线程</a>
+            <a href="/tags/BPMN/" <i class="fa fa-tag"></i> BPMN</a>
           
         </div>
       
@@ -485,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/03/Java并发编程之基础概念/" rel="next" title="Java并发编程之基础概念">
-                <i class="fa fa-chevron-left"></i> Java并发编程之基础概念
+              <a href="/2018/08/16/设计模式-工厂模式-Factory/" rel="next" title="设计模式-工厂模式(Factory)">
+                <i class="fa fa-chevron-left"></i> 设计模式-工厂模式(Factory)
               </a>
             
           </div>
@@ -494,10 +514,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/05/Java四种引用方式/" rel="prev" title="Java四种引用方式">
-                Java四种引用方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -683,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java中线程的六大状态"><span class="nav-number">2.</span> <span class="nav-text">Java中线程的六大状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
