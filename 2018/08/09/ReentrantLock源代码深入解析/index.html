@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,并发,源码," />
+  <meta name="keywords" content="并发,Java,源码," />
 
 
 
@@ -82,7 +82,7 @@
 
 
 <meta name="description" content="引言JDK1.5中最引人注目的的便是concurrent包，Doug Lea这名神一样的男人，在JDK1.5中为我们为我们引入了这个包，让并发程序的开发变得更加得心应手，谈到并发，我们不得不谈ReentrantLock，而谈到ReentrantLock，我们就不得不介绍AbstractQueuedSynchronized（AQS）。类如其名，抽象的队列式的同步器，AQS定义了一套多线程访问共享资源">
-<meta name="keywords" content="Java,并发,源码">
+<meta name="keywords" content="并发,Java,源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReentrantLock实现及AQS源代码深入解析">
 <meta property="og:url" content="http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/index.html">
@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/线程1.png">
 <meta property="og:image" content="http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/线程2.png">
 <meta property="og:image" content="http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/队列.png">
-<meta property="og:updated_time" content="2018-08-12T01:57:00.690Z">
+<meta property="og:updated_time" content="2018-08-24T08:58:20.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReentrantLock实现及AQS源代码深入解析">
 <meta name="twitter:description" content="引言JDK1.5中最引人注目的的便是concurrent包，Doug Lea这名神一样的男人，在JDK1.5中为我们为我们引入了这个包，让并发程序的开发变得更加得心应手，谈到并发，我们不得不谈ReentrantLock，而谈到ReentrantLock，我们就不得不介绍AbstractQueuedSynchronized（AQS）。类如其名，抽象的队列式的同步器，AQS定义了一套多线程访问共享资源">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,658
+                  6,104
                 </span>
               
 
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  24
+                  25
                 </span>
               
             </div>
@@ -408,13 +408,13 @@
         <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>JDK1.5中最引人注目的的便是concurrent包，Doug Lea这名神一样的男人，在JDK1.5中为我们为我们引入了这个包，让并发程序的开发变得更加得心应手，谈到并发，我们不得不谈ReentrantLock，而谈到ReentrantLock，我们就不得不介绍AbstractQueuedSynchronized（AQS）。<br>类如其名，抽象的队列式的同步器，AQS定义了一套多线程访问共享资源的同步器框架，许多同步类实现都依赖于它，如常用的ReentrantLock、CountDownLatch等。<br>网上关于ReentrantLock的文章有很多很多，介绍其与synchronized的区别的文章也很多，但大多数都很片面，直到今天，拜读了一位博主的文章，跟着他的文章，打开ReentrantLock的源码，一起阅读，终于对其有了一定的理解，也十分佩服Doug Lea的思维，现在，就让我们跟随大师的思路，一起来研究一下ReentrantLock的源码。</p>
 <h1 id="AbstractQueuedSynchronizer-AQS"><a href="#AbstractQueuedSynchronizer-AQS" class="headerlink" title="AbstractQueuedSynchronizer(AQS)"></a>AbstractQueuedSynchronizer(AQS)</h1><p>ReentrantLock实现的前提就是AbstractQueuedSynchronized(AQS),这个类是cocurrent包的核心，CountDownLatch、ReentrantLock、FutureTask等都有一个内部类是这个抽象类的子类,AQS是典型的模板方法设计模式的应用，其中大部分方法都由AQS本身实现好，我们在应该时，只需要重写部分方法就行，如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">protected boolean tryAcquire(int arg) &#123;</span><br><span class="line">        throw new UnsupportedOperationException();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>可以看到这个方法只是抛出了一个异常，需要我们在子类中重写，那么为什么不把方法定义成抽象方法呢，因为Doug Lea考虑到:一般独占锁只需要重写tryAcquire()和tryRelease()方法，共享锁只需要实现tryAcquireShared()和tryRelease()方法，为了减少我们编程人员的工作量，才不将方法设置为抽象方法。</p>
+<p>可以看到这个方法只是抛出了一个异常，需要我们在子类中重写，那么为什么不把方法定义成抽象方法呢，因为Doug Lea考虑到：一般独占锁只需要重写tryAcquire()和tryRelease()方法，共享锁只需要实现tryAcquireShared()和tryRelease()方法，为了减少我们编程人员的工作量，才不将方法设置为抽象方法。</p>
 <p>由于AQS是基于FIFO的队列实现，队列肯定由一个个Node节点组成，我们先来看一下Node的属性</p>
 <table>
 <thead>
 <tr>
 <th>属    性</th>
-<th>多进程</th>
+<th>含    义</th>
 </tr>
 </thead>
 <tbody>
@@ -464,6 +464,94 @@
 </tr>
 </tbody>
 </table>
+<p>看完了Node，下面再看一下AQS中有哪些变量和方法：</p>
+<table>
+<thead>
+<tr>
+<th>属    性</th>
+<th>含    义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thread exclusiveOwnerThread</td>
+<td>这个是AQS父类AbstractOwnableSynchronizer的属性，表示独占模式同步器的当前拥有者</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>内部FIFO队列的基本单位</td>
+</tr>
+<tr>
+<td>Node head</td>
+<td>FIFO队列的头结点</td>
+</tr>
+<tr>
+<td>Node tail</td>
+<td>FIFO队列的尾节点</td>
+</tr>
+<tr>
+<td>int state</td>
+<td>表示同步状态，0表示未锁，一般调用一次加锁方法，state会自动加1</td>
+</tr>
+<tr>
+<td>setState(int newState)</td>
+<td>设置同步状态</td>
+</tr>
+<tr>
+<td>boolean compareAndSetState(int expect, int update)</td>
+<td>利用CAS设置同步状态</td>
+</tr>
+<tr>
+<td>long spinForTimeoutThreshold = 1000L</td>
+<td>设置线程自旋等待时间</td>
+</tr>
+<tr>
+<td>Node addWaiter(Node mode)</td>
+<td>根据指定Node的模式创建一个包含当前线程的节点并加入FIFO队列中，如果队列为空，则会执行enq()方法新建一个队列，并用一个空的Node作为头结点</td>
+</tr>
+<tr>
+<td>Node enq(final Node node）</td>
+<td>新建一个FIFO队列，并用一个空的Node作为头结点</td>
+</tr>
+<tr>
+<td>void setHead(Node node)</td>
+<td>设置队列的头Node</td>
+</tr>
+<tr>
+<td>void unparkSuccessor(Node node)</td>
+<td>如果存在的话，唤起Node持有的线程</td>
+</tr>
+<tr>
+<td>tryAcquire(int arg)</td>
+<td>独占模式尝试获取锁(子类去实现)</td>
+</tr>
+<tr>
+<td>tryRelease(int arg)</td>
+<td>独占模式尝试释放锁(子类去实现)</td>
+</tr>
+<tr>
+<td>tryAcquireShared(int arg)</td>
+<td>共享模式尝试获取锁(子类去实现)</td>
+</tr>
+<tr>
+<td>tryAcquireShared(int arg)</td>
+<td>共享模式尝试释放锁(子类去实现)</td>
+</tr>
+<tr>
+<td>compareAndSetHead(Node update)</td>
+<td>利用CAS设置头Node</td>
+</tr>
+<tr>
+<td>compareAndSetTail(Node expect, Node update)</td>
+<td>利用CAS设置尾Node</td>
+</tr>
+<tr>
+<td>compareAndSetWaitStatus(Node node, int expect, int update)</td>
+<td>利用CAS设置    某个Node中的等待状态</td>
+</tr>
+</tbody>
+</table>
+<p>整个AQS的类设计的十分巧妙，用到了模板方法设计模式。对于FIFO的队列的操作以及加锁释放锁的整体流程在类中已经设计好了，我们要做的只是重写tryAcquire(int arg)和tryRelease(int arg)方法(注意，如果实现的是共享锁，则需要重写tryAcquireShared(int arg)和tryAcquireShared(int arg)方法)。</p>
 <h1 id="ReentrantLock的源码实现"><a href="#ReentrantLock的源码实现" class="headerlink" title="ReentrantLock的源码实现"></a>ReentrantLock的源码实现</h1><p>先来看ReentrantLock里最基本的结构，废话少说，上源码:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public ReentrantLock() &#123;</span><br><span class="line">     sync = new NonfairSync();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> /**</span><br><span class="line">  * Creates an instance of &#123;@code ReentrantLock&#125; with the</span><br><span class="line">  * given fairness policy.</span><br><span class="line">  *</span><br><span class="line">  * @param fair &#123;@code true&#125; if this lock should use a fair ordering policy</span><br><span class="line">  */</span><br><span class="line"> public ReentrantLock(boolean fair) &#123;</span><br><span class="line">     sync = fair ? new FairSync() : new NonfairSync();</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <p>首先是ReentrantLock的构造函数，从中可以看出，其构造函数分为无参和有参的构造函数，无参的构造函数默认生成一个NonfairSync的对象，而有参的构造函数根据传入的boolean类型的值，如果是true，则生成一个FairSync的对象，如果是false，则生成NonfairSync的对象。<br>FairSync和NonfairSync分别代表什么呢?他们对应的其实就是锁中的公平锁和非公平锁的概念，那么什么是公平锁，什么是非公平锁呢，这里简单介绍一下，好让大家有个概念?<br>举个例子吧，我们去火车站买票，看到拍了很长的队伍，这时候，不同的情况我们会采取不同的做法，第一种情况，我们有很多时间，不着急，我们选择去队伍一个一个排队，这就是公平的，第二种情况，我们时间很紧，我们走到最前面，问柜员我们是否能先买票，因为我们赶时间，这就是不公平，当然，我们会得到两个结果，比较通情理的柜员就会让我们先买，或者让我们冲新区排队。<br>这个例子或许很抽象，但是，放到并发编程的概念里，就是，公平锁就是严格按照线程的顺序获取锁，而非公平锁，则是可以插队执行，这之后的源代码会介绍到，非公平锁在加锁的方法中，都会先执行一次抢占锁的方法，这就突出了非公平的概念。<br>而从构造方法来看，默认的ReentrantLock都是非公平的。<br></p>
@@ -557,7 +645,7 @@
   <p><span>本文标题:</span><a href="/2018/08/09/ReentrantLock源代码深入解析/">ReentrantLock实现及AQS源代码深入解析</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
   <p><span>发布时间:</span>2018年08月09日 - 20:08</p>
-  <p><span>最后更新:</span>2018年08月12日 - 09:08</p>
+  <p><span>最后更新:</span>2018年08月24日 - 16:08</p>
   <p><span>原始链接:</span><a href="/2018/08/09/ReentrantLock源代码深入解析/" title="ReentrantLock实现及AQS源代码深入解析">http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/09/ReentrantLock源代码深入解析/"  aria-label="复制成功！"></i></span>
   </p>
@@ -600,9 +688,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/并发/" <i class="fa fa-tag"></i> 并发</a>
+          
+            <a href="/tags/Java/" <i class="fa fa-tag"></i> Java</a>
           
             <a href="/tags/源码/" <i class="fa fa-tag"></i> 源码</a>
           
@@ -627,8 +715,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/16/设计模式-工厂模式-Factory/" rel="prev" title="设计模式-工厂模式(Factory)">
-                设计模式-工厂模式(Factory) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/19/工作流/" rel="prev" title="工作流引擎">
+                工作流引擎 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -743,7 +831,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +842,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -765,7 +853,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -853,7 +941,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共32.4k字</span>
+  <span class="post-count">博客全站共32.2k字</span>
 </div>
 
 <!--

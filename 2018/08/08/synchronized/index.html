@@ -90,7 +90,7 @@
 <meta property="og:description" content="在JDK1.5出现前，线程的同步大部分都是由关键字synchronized实现的，顾名思义，就是保证代码在多线程的环境下，控制被synchronized修饰的代码不被同步执行。synchronized既可以加在一段代码上，也可以加在方法上。但是，不同情况下，sychronized的情况也不同，比如，加在普通方法上、加在静态方法上、修饰代码块，这些不同的情况下，sychronized锁住的究竟是什么">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nastublog.com/2018/08/08/synchronized/sychronized.png">
-<meta property="og:updated_time" content="2018-08-19T05:10:22.552Z">
+<meta property="og:updated_time" content="2018-08-21T05:44:26.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="synchronized关键字详解">
 <meta name="twitter:description" content="在JDK1.5出现前，线程的同步大部分都是由关键字synchronized实现的，顾名思义，就是保证代码在多线程的环境下，控制被synchronized修饰的代码不被同步执行。synchronized既可以加在一段代码上，也可以加在方法上。但是，不同情况下，sychronized的情况也不同，比如，加在普通方法上、加在静态方法上、修饰代码块，这些不同的情况下，sychronized锁住的究竟是什么">
@@ -366,7 +366,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,819
+                  3,795
                 </span>
               
 
@@ -413,7 +413,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class TestSynchronized &#123;</span><br><span class="line"></span><br><span class="line">    public synchronized void test1() &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void test2() &#123;</span><br><span class="line">        synchronized (this)&#123;</span><br><span class="line">        		</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面分别展示了两种使用synchronized的方法，现在我们用javac编译一下这个java文件，并用javap查看一下生成的class文件来看一下synchronized的实现机制：</p>
 <p><img src="/2018/08/08/synchronized/sychronized.png" alt=""></p>
-<p>我们可以看到，test2()方法也就是同步代码块的实现，是借助monitorenter和monitorexit指令实现的，而同步方法在这里看不出来实现方法，看到网上的资料说是借助读取常量池中方法发的ACC_SYNCHRONIZED标志来实现的，需要看JVM的底层源码，具体可以参考以下博文：<br><a href="https://blog.csdn.net/javazejian/article/details/72828483" target="_blank" rel="noopener">深入理解Java并发之synchronized实现原理</a></p>
+<p>我们可以看到，test2()方法也就是同步代码块的实现，是借助monitorenter和monitorexit指令实现的，而同步方法在这里看不出来实现方法，看到网上的资料说是借助读取常量池中方法的ACC_SYNCHRONIZED标志来实现的，需要看JVM的底层源码，具体可以参考以下博文：<br><a href="https://blog.csdn.net/javazejian/article/details/72828483" target="_blank" rel="noopener">深入理解Java并发之synchronized实现原理</a></p>
 <p>当同步代码块执行到monitorenter指令时，就会尝试获取对象monitor的所有权，这里其实就是我们上面说到的内置锁，也就是监视器锁(monitor锁)。任何一个对象都有着自己对应的monitor，当一个monitor被持有后，他将处于一个锁定的状态，知道执行到monitorexit指令，才会被释放。</p>
 <h1 id="synchronized的使用"><a href="#synchronized的使用" class="headerlink" title="synchronized的使用"></a>synchronized的使用</h1><p>首先看一段代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">class Sync &#123;</span><br><span class="line"></span><br><span class="line">    public  void test() &#123;</span><br><span class="line">       synchronized (this) &#123;</span><br><span class="line">            System.out.println(&quot;test开始..&quot;);</span><br><span class="line">            try &#123;</span><br><span class="line">                Thread.sleep(1000);</span><br><span class="line">            &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;test结束..&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class MyThread extends Thread &#123;</span><br><span class="line"></span><br><span class="line">    public void run() &#123;</span><br><span class="line">        Sync sync = new Sync();</span><br><span class="line">        sync.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Main &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        for (int i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">            Thread thread = new MyThread();</span><br><span class="line">            thread.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -459,8 +459,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package net.jcip.examples;</span><br><span class="line"></span><br><span class="line">import java.math.BigInteger;</span><br><span class="line">import javax.servlet.*;</span><br><span class="line"></span><br><span class="line">import net.jcip.annotations.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * SynchronizedFactorizer</span><br><span class="line"> *</span><br><span class="line"> * Servlet that caches last result, but with unnacceptably poor concurrency</span><br><span class="line"> *</span><br><span class="line"> * @author Brian Goetz and Tim Peierls</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">@ThreadSafe</span><br><span class="line">public class SynchronizedFactorizer extends GenericServlet implements Servlet &#123;</span><br><span class="line">    @GuardedBy(&quot;this&quot;) private BigInteger lastNumber;</span><br><span class="line">    @GuardedBy(&quot;this&quot;) private BigInteger[] lastFactors;</span><br><span class="line"></span><br><span class="line">    public synchronized void service(ServletRequest req,</span><br><span class="line">                                     ServletResponse resp) &#123;</span><br><span class="line">        BigInteger i = extractFromRequest(req);</span><br><span class="line">        if (i.equals(lastNumber))</span><br><span class="line">            encodeIntoResponse(resp, lastFactors);</span><br><span class="line">        else &#123;</span><br><span class="line">            BigInteger[] factors = factor(i);</span><br><span class="line">            lastNumber = i;</span><br><span class="line">            lastFactors = factors;</span><br><span class="line">            encodeIntoResponse(resp, factors);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    BigInteger extractFromRequest(ServletRequest req) &#123;</span><br><span class="line">        return new BigInteger(&quot;7&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    BigInteger[] factor(BigInteger i) &#123;</span><br><span class="line">        // Doesn&apos;t really factor</span><br><span class="line">        return new BigInteger[] &#123; i &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里采取的同步方法就是synchronized修饰service()方法，虽然能实现同步，但是，这背离了Servlet框架的设计初衷，在这段代码里，service()方法每次只有一个线程可以执行，在并发量很大的情况下，这会给用户带来很糟糕的体验，如果service()方法需要执行很长时间，那么其他的客户端就必须一直等待，这时候我们就可以采用同步代码块的方式，在service()方法内部执行同步操作，降低锁的范围，提高性能。</p>
 <p>所以，我们在编写代码，使用synchronized代码块同步关键代码即可，除非同步代码块无法满足我们的需求，否则尽量不要用同步方法的方式。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>上面的文章只是针对synchronized的使用作了简单的介绍，简单的介绍了一下monitor对象，但是由于monitor监视器锁的操作是基于操作系统的底层Mutex Lock实现的，对所要加锁线程加上互斥锁，但是加锁时间相比其他指令就长很多了，因此将这种基于互斥锁的加锁机制被称为重量级锁。<br>而在JDK1.6以后，对sychronized进行的优化，根据不同情形出现了偏向锁、轻量锁、对象锁，自旋锁（或自适应自旋锁）等，因此，现在的synchronized可以说是一个几种锁过程的封装。具体synchronized优化，找个时间总结一下，再写一篇博文介绍一下。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/QQParadise/articles/5059824.html" target="_blank" rel="noopener">synchronized锁住的是代码还是对象</a><br><a href="http://zhh9106.iteye.com/blog/2151791" target="_blank" rel="noopener">java synchronized关键字的用法</a><br><a href="https://blog.csdn.net/shandian000/article/details/54927876" target="_blank" rel="noopener">深入分析synchronized的实现原理</a><br><a href="https://blog.csdn.net/javazejian/article/details/72828483" target="_blank" rel="noopener">深入理解Java并发之synchronized实现原理</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>上面的文章只是针对synchronized的使用作了简单的介绍，简单的介绍了一下monitor对象，但是由于monitor监视器锁的操作是基于操作系统的底层Mutex Lock实现的，对所要加锁线程加上互斥锁，但是加锁时间相比其他指令就长很多了，因此将这种基于互斥锁的加锁机制被称为重量级锁。<br>而在JDK1.6以后，对sychronized进行的优化，根据不同情形出现了偏向锁、轻量锁、对象锁，自旋锁（或自适应自旋锁）等，因此，现在的synchronized可以说是一个几种锁过程的封装。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/QQParadise/articles/5059824.html" target="_blank" rel="noopener">synchronized锁住的是代码还是对象</a><br><a href="http://zhh9106.iteye.com/blog/2151791" target="_blank" rel="noopener">java synchronized关键字的用法</a><br><a href="https://blog.csdn.net/shandian000/article/details/54927876" target="_blank" rel="noopener">深入分析synchronized的实现原理</a><br><a href="https://blog.csdn.net/javazejian/article/details/72828483" target="_blank" rel="noopener">深入理解Java并发之synchronized实现原理</a>                                                                        </p>
 
       
     </div>
@@ -480,7 +480,7 @@
   <p><span>本文标题:</span><a href="/2018/08/08/synchronized/">synchronized关键字详解</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 なつ初夏倾城 的个人博客">なつ初夏倾城</a></p>
   <p><span>发布时间:</span>2018年08月08日 - 15:08</p>
-  <p><span>最后更新:</span>2018年08月19日 - 13:08</p>
+  <p><span>最后更新:</span>2018年08月21日 - 13:08</p>
   <p><span>原始链接:</span><a href="/2018/08/08/synchronized/" title="synchronized关键字详解">http://nastublog.com/2018/08/08/synchronized/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://nastublog.com/2018/08/08/synchronized/"  aria-label="复制成功！"></i></span>
   </p>
@@ -664,7 +664,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +675,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -686,7 +686,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -774,7 +774,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共32.4k字</span>
+  <span class="post-count">博客全站共32.2k字</span>
 </div>
 
 <!--
