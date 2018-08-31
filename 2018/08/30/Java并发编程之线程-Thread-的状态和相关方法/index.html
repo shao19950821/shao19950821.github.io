@@ -89,12 +89,12 @@
 <meta property="og:site_name" content="夏至微风">
 <meta property="og:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://nastublog.com/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态">
-<meta property="og:updated_time" content="2018-08-31T03:42:13.358Z">
+<meta property="og:image" content="http://nastublog.com/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态.png">
+<meta property="og:updated_time" content="2018-08-31T03:45:51.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java并发编程之线程(Thread)的状态和相关方法">
 <meta name="twitter:description" content="引言网上很多关于线程状态的文章，但是很多都没有基于Java的源代码来分析，今天偶然看到一篇基于Java源代码来分析线程状态的文章，看完之后感触颇深，于是想着写一篇Blog总结一下。 Java中线程的六大状态在Java中，线程的状态是Thread类里的一个枚举类型来描述的。这个枚举类型一共六个值，分别是:NEW、RUNNABLE、BLOCKED、TIMED_WAITING、WAITING、TERMI">
-<meta name="twitter:image" content="http://nastublog.com/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态">
+<meta name="twitter:image" content="http://nastublog.com/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态.png">
 
 
 
@@ -413,7 +413,7 @@
 <p>4.WAITING(等待状态):线程因为调用如下方法进入了等待状态：Object类的wait()方法，Thread类的join()方法，LockSupport的park()方法，在这个状态的线程需要等待其他线程做出特殊的动作(比如通知或者中断)。</p>
 <p>5.超时等待(TIMED_WAITING)：该状态不同于WAITING，它可以在指定的时间后自行返回。通常调用了Object类的带参数的wait(long)方法，或者是Thread类带参数的join(long)方法，还有就是LockSupport.parkNanos()和 LockSupport.parkUntil()方法，这两个我们用的比较少。</p>
 <p>6.终止(TERMINATED)：表示该线程已经执行完毕。</p>
-<h1 id="线程的状态图"><a href="#线程的状态图" class="headerlink" title="线程的状态图"></a>线程的状态图</h1><p><img src="/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态" alt="线程状态"></p>
+<h1 id="线程的状态图"><a href="#线程的状态图" class="headerlink" title="线程的状态图"></a>线程的状态图</h1><p><img src="/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/线程状态.png" alt="线程状态"></p>
 <h1 id="线程相关方法的详细介绍"><a href="#线程相关方法的详细介绍" class="headerlink" title="线程相关方法的详细介绍"></a>线程相关方法的详细介绍</h1><p>对于线程的大致方法，我之前一直很模糊，特别是yield()、join()、notify()、notifyAll()这些方法，所以，这里针对每个方法做一下介绍。</p>
 <h2 id="sleep-和wait-方法"><a href="#sleep-和wait-方法" class="headerlink" title="sleep()和wait()方法"></a>sleep()和wait()方法</h2><p>这两个方法大致上都了解，大致说一下他们的不同：<br>1.sleep()是Thread类的方法，wait()是Object类的方法；<br>2.sleep()不会释放对象锁，即使当前线程使用sleep()方法让出了cpu，但其他被同步锁挡住了的线程也无法得到执行，而wait()会释放对象锁，所以wait()只能在同步控制方法或者同步控制块里面使用，而sleep可以在任何地方使用；<br>3.sleep()方法抛出了InterruptedException异常，所以使用它必须捕获异常，但是wait()方法就不必捕获异常；<br>4.sleep方法必须传入参数，用于表示睡眠的时间，单位是毫秒，但是wait()方法可以不必传入参数，调用wait()方法的线程必须要通过notify()和notifyAll()方法唤醒。</p>
 <p><font color="red" size="4">但是有一点必须注意的是，sleep()方法是Thread类的静态方法，所以即使是在a线程里调用了b线程的sleep方法，最终sleep的仍然是a。</font>。</p>
