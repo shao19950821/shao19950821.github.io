@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="夏至微风" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="可见性可见性是一种复杂的属性，因为可见性中的错误总是会违背我们的直觉。单线程环境中，如果想某个变量先写入值，然后在没有其他写入操作的情况下读取这个变量，总能得到相同的值。但是如果在不同的线程中执行，结果就并非如此。看一下本书3.1节的例子： 123456789101112131415161718public class NoVisibility&amp;#123;          private sta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="夏至微风">
+<meta property="og:url" content="http://nastublog.com/2018/08/27/this引用逸出/index.html">
+<meta property="og:site_name" content="夏至微风">
+<meta property="og:description" content="可见性可见性是一种复杂的属性，因为可见性中的错误总是会违背我们的直觉。单线程环境中，如果想某个变量先写入值，然后在没有其他写入操作的情况下读取这个变量，总能得到相同的值。但是如果在不同的线程中执行，结果就并非如此。看一下本书3.1节的例子： 123456789101112131415161718public class NoVisibility&amp;#123;          private sta">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-29T06:59:34.698Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="夏至微风">
+<meta name="twitter:description" content="可见性可见性是一种复杂的属性，因为可见性中的错误总是会违背我们的直觉。单线程环境中，如果想某个变量先写入值，然后在没有其他写入操作的情况下读取这个变量，总能得到相同的值。但是如果在不同的线程中执行，结果就并非如此。看一下本书3.1节的例子： 123456789101112131415161718public class NoVisibility&amp;#123;          private sta">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://nastublog.com/2018/08/27/this引用逸出/"/>
+
+
+
+
+
+  <title> | 夏至微风</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/shao19950821" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">夏至微风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nastublog.com/2018/08/27/this引用逸出/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="なつ初夏倾城">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏至微风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-27T16:06:29+08:00">
+                2018-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/27/this引用逸出/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>°C</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,208
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h1><p>可见性是一种复杂的属性，因为可见性中的错误总是会违背我们的直觉。<br>单线程环境中，如果想某个变量先写入值，然后在没有其他写入操作的情况下读取这个变量，总能得到相同的值。<br>但是如果在不同的线程中执行，结果就并非如此。<br>看一下本书3.1节的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class NoVisibility&#123;</span><br><span class="line">          private static boolean ready;</span><br><span class="line">          private static int number;</span><br><span class="line"></span><br><span class="line">          private static class ReaderThead extends Thread&#123;</span><br><span class="line">                    public void run()&#123;</span><br><span class="line">                        while(!ready)    </span><br><span class="line">                        	Thrad.yield();</span><br><span class="line">                        System.out.println(number); </span><br><span class="line">                    &#125;</span><br><span class="line">               &#125;</span><br><span class="line"></span><br><span class="line">          private static void main(String[] args)&#123;</span><br><span class="line">                    new TeaderThread().static();</span><br><span class="line">                    number=42;</span><br><span class="line">                    ready=true; </span><br><span class="line">               &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码在多线程</p>
+<h2 id="失效数据"><a href="#失效数据" class="headerlink" title="失效数据"></a>失效数据</h2><p>失效数据的意思就是，读取了一个已经失效的值，例如NoVisibility的number成员。</p>
+<h1 id="this引用逸出"><a href="#this引用逸出" class="headerlink" title="this引用逸出"></a>this引用逸出</h1><p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">package net.jcip.examples;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * ThisEscape</span><br><span class="line"> * &lt;p/&gt;</span><br><span class="line"> * Implicitly allowing the this reference to escape</span><br><span class="line"> *</span><br><span class="line"> * @author Brian Goetz and Tim Peierls</span><br><span class="line"> */</span><br><span class="line">public class ThisEscape &#123;</span><br><span class="line">    public ThisEscape(EventSource source) &#123;</span><br><span class="line">        source.registerListener(new EventListener() &#123;</span><br><span class="line">            public void onEvent(Event e) &#123;</span><br><span class="line">                doSomething(e);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void doSomething(Event e) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    interface EventSource &#123;</span><br><span class="line">        void registerListener(EventListener e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    interface EventListener &#123;</span><br><span class="line">        void onEvent(Event e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    interface Event &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>逸出就是在不该发布的时候发布了一个引用。在这个例子里面，当我们实例化ThisEscape对象时，会调用source的registerListener方法，这时便启动了一个线程，而且这个线程持有了ThisEscape对象（调用了对象的doSomething方法），但此时ThisEscape对象却没有实例化完成（还没有返回一个引用），所以我们说，此时造成了一个this引用逸出，即还没有完成的实例化ThisEscape对象的动作，却已经暴露了对象的引用。其他线程访问还没有构造好的对象，可能会造成意料不到的问题。</p>
+<h1 id="线程封闭"><a href="#线程封闭" class="headerlink" title="线程封闭"></a>线程封闭</h1><p>当访问共享的可变数据时，通常需要使用同步，而如果想避免同步，其中有一种方式就是不共享数据。这种做法被称为线程封闭。<br>通过把对象封装到一个线程里，别的线程无法访问到这个对象，就算这个对象不是线程安全的，也不会有任何安全问题。<br>下面列举一些常用的线程封闭的方法。</p>
+<h2 id="Ad-hoc线程封闭"><a href="#Ad-hoc线程封闭" class="headerlink" title="Ad-hoc线程封闭"></a>Ad-hoc线程封闭</h2><p>Ad-hoc线程封闭是指，维护线程封闭型的职责全部由程序来实现。但是这是非常脆弱的，因为没有任何一种语言特性，能够实现将对象封闭到目标线程上。</p>
+<h2 id="栈封闭"><a href="#栈封闭" class="headerlink" title="栈封闭"></a>栈封闭</h2><p>栈封闭是我们平常编程中晕倒的最多的线程封闭，它是线程封闭的一种特例。在栈封闭中，只能通过局部变量才能访问对象。</p>
+<p>这是Java并发实战里举的一个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public int loadTheArk(Collection&lt;Animal&gt; candidates) &#123;</span><br><span class="line">       SortedSet&lt;Animal&gt; animals;</span><br><span class="line">       int numPairs = 0;</span><br><span class="line">       Animal candidate = null;</span><br><span class="line">   </span><br><span class="line">       // animals被封闭在方法中，不要使它们逸出！</span><br><span class="line">       animals = new TreeSet&lt;Animal&gt;(new SpeciesGenderComparator());</span><br><span class="line">       animals.addAll(candidates);</span><br><span class="line">       for (Animal a : animals) &#123;</span><br><span class="line">           if (candidate == null || !candidate.isPotentialMate(a))</span><br><span class="line">               candidate = a;</span><br><span class="line">           else &#123;</span><br><span class="line">               ark.load(new AnimalPair(candidate, a));</span><br><span class="line">               ++numPairs;</span><br><span class="line">               candidate = null;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       return numPairs;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>首先，对于基本类型的局部变量，比如方法中的numPairs，无论我们做什么操作，都不会破坏栈封闭性。因为Java的语言特性决定了，任何方法都无法获得对基本类型方法的引用。<br>但是，对于维护对象引用的栈封闭性，则需要我们程序员多做一些工作用于确定引用的对象不会溢出。如上面animals，如果发布了对集合animals(或该对象中任何内部数据)的引用，那么栈封闭性就会遭到破坏。<br>所以，在实际编程过程中，能用局部变量，就尽量不要用全局变量。</p>
+<p>##ThreadLocal类<br>ThreadLocal，意思就是线程本地变量，也被叫做线程本地存储。<br>很多人可能知道ThreadLocal为变量在每个线程中都创建了一个副本，对于同一个static ThreadLocal，不同线程只能从中get，set，remove自己的变量，而不会影响其他线程的变量。</p>
+<h3 id="ThreadLocal类方法解析"><a href="#ThreadLocal类方法解析" class="headerlink" title="ThreadLocal类方法解析"></a>ThreadLocal类方法解析</h3><p>先看一下ThreadLocal类提供的几个方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public T get() &#123; &#125;</span><br><span class="line">public void set(T value) &#123; &#125;</span><br><span class="line">public void remove() &#123; &#125;</span><br><span class="line">protected T initialValue() &#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>ThreadLocal.get: 获取ThreadLocal中当前线程保存的变量副本。<br>ThreadLocal.set: 设置ThreadLocal中当前线程的变量副本。<br>ThreadLocal.remove: 移除ThreadLocal中当前线程保存的变量副本<br>ThreadLocal.initialValue: 可以看到这是一个protected方法，通常在我们使用的时候进行重写，是一个延迟加载的方法。具体用于变量副本没有被当前线程赋值时或当前线程刚调用remove方法后调用get方法，返回此方法值。</p>
+<p>看时下内部是如何实现的,首先是get方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public T get() &#123;</span><br><span class="line">        Thread t = Thread.currentThread();</span><br><span class="line">        ThreadLocalMap map = getMap(t);</span><br><span class="line">        if (map != null) &#123;</span><br><span class="line">            ThreadLocalMap.Entry e = map.getEntry(this);</span><br><span class="line">            if (e != null) &#123;</span><br><span class="line">                @SuppressWarnings(&quot;unchecked&quot;)</span><br><span class="line">                T result = (T)e.value;</span><br><span class="line">                return result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return setInitialValue();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，先通过Thread.currentThread()方法获取当前线程，然后调用getMa(t)方法，传入当前线程，获取一个类型为ThreadLocalMap的map。<br>如果获取到的map为空，则调用setInitialValue()返回值。<br>如果不为空，首先获取map的键值对，注意这里获取键值对传进去的是  this，而不是当前线程t。<br>如果获取成功，则返回value值。</p>
+<p>基于上面的代码，我们逐句分析一下，首先是getMap()方法做了什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ThreadLocalMap getMap(Thread t) &#123;</span><br><span class="line">       return t.threadLocals;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到getMap方法返回的是当前线程内部的一个成员变量threadLocals，也就是Thread类的成员变量，那我们跳到Thread类内部，看一下threadLocals是什么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ThreadLocal.ThreadLocalMap threadLocals = null;</span><br></pre></td></tr></table></figure>
+<p>可以看到，这就是ThreadLocal类里的ThreadLocalMap，这是一个内部类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">static class ThreadLocalMap &#123;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * The entries in this hash map extend WeakReference, using</span><br><span class="line">         * its main ref field as the key (which is always a</span><br><span class="line">         * ThreadLocal object).  Note that null keys (i.e. entry.get()</span><br><span class="line">         * == null) mean that the key is no longer referenced, so the</span><br><span class="line">         * entry can be expunged from table.  Such entries are referred to</span><br><span class="line">         * as &quot;stale entries&quot; in the code that follows.</span><br><span class="line">         */</span><br><span class="line">        static class Entry extends WeakReference&lt;ThreadLocal&lt;?&gt;&gt; &#123;</span><br><span class="line">            /** The value associated with this ThreadLocal. */</span><br><span class="line">            Object value;</span><br><span class="line"></span><br><span class="line">            Entry(ThreadLocal&lt;?&gt; k, Object v) &#123;</span><br><span class="line">                super(k);</span><br><span class="line">                value = v;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到内部的Entry继承了WeakReference，WeakReference的类型是ThreadLocal。</p>
+<p>阅读到这里，我有两个疑问，很幸运的是，网上的一篇博文解答了我的疑惑，这里po出我的疑问，具体参考博文是<a href="https://www.cnblogs.com/micrari/p/6790229.html" target="_blank" rel="noopener">ThreadLocal源码解读</a>。</p>
+<p>1.getMap获取的是Thread类的threadLocals成员变量，而这个成员变量实际上又是ThreadLocal类的内部类ThreadLocalMap？<br>这样做实现的就是，每个线程有一个自己的ThreadLocalMap。ThreadLocalMap有自己的独立实现，可以简单地将它的key视作ThreadLocal，value为代码中放入的值（实际上key并不是ThreadLocal本身，而是它的一个弱引用）。每个线程在往某个ThreadLocal里塞值的时候，都会往自己的ThreadLocalMap里存，读也是以某个ThreadLocal作为引用，在自己的map里找对应的key，从而实现了线程隔离。</p>
+<p>2.为什么要使用弱引用?<br>因为如果这里使用普通的key-value形式来定义存储结构，实质上就会造成节点的生命周期与线程强绑定，只要线程没有销毁，那么节点在GC分析中一直处于可达状态，没办法被回收，而程序本身也无法判断是否可以清理节点。弱引用是Java中四档引用的第三档，比软引用更加弱一些，如果一个对象没有强引用链可达，那么一般活不过下一次GC。当某个ThreadLocal已经没有强引用可达，则随着它被垃圾回收，在ThreadLocalMap里对应的Entry的键值会失效，这为ThreadLocalMap本身的垃圾清理提供了便利。</p>
+<p>看到这里，可以大致了解到</p>
+<h1 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h1><p>满足同步需求的另一种方法是使用不可变的对象。那么什么是不可变对象？<br>如果某个对象在被创建后其状态就不能修改，那么这个对象就被称为不可变对象。线程安全性就是不可变对象的固有属性一致，即不可变对象一定是县城安全的。<br>满足以下条件，对象才是不可变的：<br>1.对象创建后其状态就不能修改。<br>2.对象的所有域都是final类型。<br>3.对象是正确创建的(在对象的创建期间，this引用没有逸出)</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.cnblogs.com/micrari/p/6790229.html" target="_blank" rel="noopener">ThreadLocal源码解读</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+      
+  </div>
+
+    
+
+    
+
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/19/工作流/" rel="next" title="工作流引擎">
+                <i class="fa fa-chevron-left"></i> 工作流引擎
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/30/Java并发编程之线程-Thread-的状态和相关方法/" rel="prev" title="Java并发编程之线程(Thread)的状态和相关方法">
+                Java并发编程之线程(Thread)的状态和相关方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+          <div class="-mob-share-ui-button -mob-share-open">分享</div>
+                                <div class="-mob-share-ui" style="display: none">
+                                    <ul class="-mob-share-list">
+                                        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+                                        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+                                        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+                                        <li class="-mob-share-qq"><p>QQ好友</p></li>
+                                        <li class="-mob-share-weixin"><p>微信</p></li>
+                                        <li class="-mob-share-douban"><p>豆瓣</p></li>
+                                        <li class="-mob-share-renren"><p>人人网</p></li>
+                                        <li class="-mob-share-kaixin"><p>开心网</p></li>
+                                        <li class="-mob-share-facebook"><p>Facebook</p></li>
+                                        <li class="-mob-share-twitter"><p>Twitter</p></li>
+                                        <li class="-mob-share-pocket"><p>Pocket</p></li>
+                                        <li class="-mob-share-google"><p>Google+</p></li>
+                                        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+                                        <li class="-mob-share-mingdao"><p>明道</p></li>
+                                        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+                                        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+                                        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+                                        <li class="-mob-share-linkedin"><p>LinkedIn</p></li>
+                                    </ul>
+                                    <div class="-mob-share-close">取消</div>
+                                </div>
+                                <div class="-mob-share-ui-bg"></div>
+                                <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=2738071a2ecfc"></script>
+                                <!--MOB SHARE END-->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODUxNS8xNTA0Mw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="なつ初夏倾城" />
+            
+              <p class="site-author-name" itemprop="name">なつ初夏倾城</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shao19950821" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可见性"><span class="nav-number">1.</span> <span class="nav-text">可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#失效数据"><span class="nav-number">1.1.</span> <span class="nav-text">失效数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this引用逸出"><span class="nav-number">2.</span> <span class="nav-text">this引用逸出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程封闭"><span class="nav-number">3.</span> <span class="nav-text">线程封闭</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ad-hoc线程封闭"><span class="nav-number">3.1.</span> <span class="nav-text">Ad-hoc线程封闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈封闭"><span class="nav-number">3.2.</span> <span class="nav-text">栈封闭</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ThreadLocal类方法解析"><span class="nav-number">3.2.1.</span> <span class="nav-text">ThreadLocal类方法解析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不变性"><span class="nav-number">4.</span> <span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">なつ初夏倾城</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共38.0k字</span>
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+   
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("iHgb7sdOAC2jARdOCih10Kwg-gzGzoHsz", "z20dd5JdTmCB3OlR1nBWH1Kl");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
